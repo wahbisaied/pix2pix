@@ -112,9 +112,10 @@ class NiftiAlignedDataset(BaseDataset):
         slice_B = (slice_B - np.min(slice_B)) / (np.max(slice_B) - np.min(slice_B)) * 255.0
         
         # Convert to PIL Image to use existing transforms
-        # The model expects 3 channels by default, so we convert grayscale to RGB
-        A = Image.fromarray(np.uint8(slice_A)).convert('RGB')
-        B = Image.fromarray(np.uint8(slice_B)).convert('RGB')
+        # Convert to PIL Image to use existing transforms. 
+        # 'L' mode is for single-channel grayscale.
+        A = Image.fromarray(np.uint8(slice_A)).convert('L')
+        B = Image.fromarray(np.uint8(slice_B)).convert('L')
 
         # Apply the transformations (e.g., normalization to tensor)
         A = self.transform(A)

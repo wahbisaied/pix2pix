@@ -23,6 +23,8 @@ IMG_EXTENSIONS = [
     ".TIF",
     ".tiff",
     ".TIFF",
+    ".nii.gz",
+    ".nii",
 ]
 
 
@@ -50,7 +52,7 @@ class ImageFolder(data.Dataset):
     def __init__(self, root, transform=None, return_paths=False, loader=default_loader):
         imgs = make_dataset(root)
         if len(imgs) == 0:
-            raise (RuntimeError("Found 0 images in: " + root + "\n" "Supported image extensions are: " + ",".join(IMG_EXTENSIONS)))
+            raise (RuntimeError("Found 0 images in: " + root + "\n" + "Supported image extensions are: " + ",".join(IMG_EXTENSIONS)))
 
         self.root = root
         self.imgs = imgs

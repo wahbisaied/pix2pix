@@ -11,6 +11,11 @@ import torchvision.transforms as transforms
 from abc import ABC, abstractmethod
 
 
+# Helper function to replace the lambda that causes issues with multiprocessing on Windows
+def __make_power_2_transform(img, method=transforms.InterpolationMode.BICUBIC):
+    return __make_power_2(img, base=4, method=method)
+
+
 class BaseDataset(data.Dataset, ABC):
     """This class is an abstract base class (ABC) for datasets.
 
@@ -96,7 +101,7 @@ def get_transform(opt, params=None, grayscale=False, method=transforms.Interpola
             transform_list.append(transforms.Lambda(lambda img: __crop(img, params["crop_pos"], opt.crop_size)))
 
     if opt.preprocess == "none":
-        transform_list.append(transforms.Lambda(lambda img: __make_power_2(img, base=4, method=method)))
+        transform_list.append(__make_power_2_transform)
 
     if not opt.no_flip:
         if params is None:
