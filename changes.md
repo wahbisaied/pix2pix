@@ -272,3 +272,196 @@ This file tracks all modifications and actions performed on the project.
 -   **Bug Fix (Dataloader):**
     -   Corrected a bug in `data/nifti_aligned_dataset.py`.
     -   Changed `.convert('RGB')` to `.convert('L')` to ensure that NIfTI slices are correctly processed as single-channel grayscale images, matching the `--input_nc 1` and `--output_nc 1` training flags.
+
+    ////////////////////
+    python train.py --dataroot ./datasets/ct_phases_dataset --name ct_phase0_generator --model pix2pix --dataset_mode nifti_aligned --preprocess none --input_nc 1 --output_nc 1 --axial_slice
+
+////////////////////////////
+error : 
+PS C:\Users\wahbi\OneDrive\Desktop\pytorch-CycleGAN-and-pix2pix> python train.py --dataroot ./datasets/ct_phases_dataset --name ct_phase0_generator --model pix2pix --dataset_mode nifti_aligned --preprocess none --input_nc 1 --output_nc 1 --axial_slice
+>> 
+----------------- Options ---------------
+              axial_slice: True                                 [default: False]
+               batch_size: 1
+                    beta1: 0.5
+          checkpoints_dir: ./checkpoints
+           continue_train: False
+                crop_size: 256
+                 dataroot: ./datasets/ct_phases_dataset         [default: None]
+             dataset_mode: nifti_aligned                        [default: aligned]
+                direction: AtoB
+             display_freq: 400
+          display_winsize: 256
+                    epoch: latest
+              epoch_count: 1
+                 gan_mode: vanilla
+                init_gain: 0.02
+                init_type: normal
+                 input_nc: 1                                    [default: 3]
+                  isTrain: True                                 [default: None]
+                lambda_L1: 100.0
+                load_iter: 0                                    [default: 0]
+                load_size: 286
+                       lr: 0.0002
+           lr_decay_iters: 50
+                lr_policy: linear
+         max_dataset_size: inf
+                    model: pix2pix                              [default: cycle_gan]
+                 n_epochs: 100
+           n_epochs_decay: 100
+               n_layers_D: 3
+                     name: ct_phase0_generator                  [default: experiment_name]
+                      ndf: 64
+                     netD: basic
+                     netG: unet_256
+                      ngf: 64
+               no_dropout: False
+                  no_flip: False
+                  no_html: False
+                     norm: batch
+              num_threads: 4
+                output_nc: 1                                    [default: 3]
+                    phase: train
+                pool_size: 0
+               preprocess: none                                 [default: resize_and_crop]
+               print_freq: 100
+             save_by_iter: False
+          save_epoch_freq: 5
+         save_latest_freq: 5000
+           serial_batches: False
+                   suffix:
+         update_html_freq: 1000
+                use_wandb: False
+                  verbose: False
+       wandb_project_name: CycleGAN-and-pix2pix
+----------------- End -------------------
+Initialized with device cuda:0
+dataset [NiftiAlignedDataset] was created
+Traceback (most recent call last):
+  File "C:\Users\wahbi\OneDrive\Desktop\pytorch-CycleGAN-and-pix2pix\train.py", line 33, in <module>
+    dataset = create_dataset(opt)  # create a dataset given opt.dataset_mode and other options
+  File "C:\Users\wahbi\OneDrive\Desktop\pytorch-CycleGAN-and-pix2pix\data\__init__.py", line 60, in create_dataset
+    data_loader = CustomDatasetDataLoader(opt)
+  File "C:\Users\wahbi\OneDrive\Desktop\pytorch-CycleGAN-and-pix2pix\data\__init__.py", line 88, in __init__
+    self.dataloader = torch.utils.data.DataLoader(self.dataset, batch_size=opt.batch_size, shuffle=shuffle, sampler=self.sampler, num_workers=int(opt.num_threads))
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wahbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\torch\utils\data\dataloader.py", line 385, in __init__
+    sampler = RandomSampler(dataset, generator=generator)  # type: ignore[arg-type]
+  File "C:\Users\wahbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\torch\utils\data\sampler.py", line 156, in __init__
+    raise ValueError(
+        f"num_samples should be a positive integer value, but got num_samples={self.num_samples}"
+    )
+ValueError: num_samples should be a positive integer value, but got num_samples=0
+
+//////////////////////////////////////////////////////
+cd c:\Users\wahbi\OneDrive\Desktop\pytorch-CycleGAN-and-pix2pix && python check_dimensions.py
+Checking NIfTI file dimensions...
+==================================================
+Patient 1:
+  TrainA shape: (64, 64, 100)
+  TrainB shape: (64, 64, 100)
+  Voxel size A: (np.float32(0.9766), np.float32(0.9766), np.float32(3.0))
+  Voxel size B: (np.float32(0.9766), np.float32(0.9766), np.float32(3.0))
+
+Patient 2:
+  TrainA shape: (64, 64, 100)
+  TrainB shape: (64, 64, 100)
+  Voxel size A: (np.float32(0.9766), np.float32(0.9766), np.float32(3.0))
+  Voxel size B: (np.float32(0.9766), np.float32(0.9766), np.float32(3.0))
+
+Patient 3:
+  TrainA shape: (64, 64, 100)
+  TrainB shape: (64, 64, 100)
+  Voxel size A: (np.float32(0.9766), np.float32(0.9766), np.float32(3.0))
+  Voxel size B: (np.float32(0.9766), np.float32(0.9766), np.float32(3.0))
+
+The script ran successfully! The results show that your NIfTI files have consistent dimensions:
+
+Shape: All files are 64×64×100 voxels (width × height × depth)
+
+Voxel size: 0.9766mm × 0.9766mm × 3.0mm spacing
+
+Consistency: Both trainA and trainB datasets have matching dimensions across all patients
+////////////////////////////////////////////////////////////////////
+
+Performance comparison for your RTX 3060:
+
+GPU training: ~100-1000x faster than CPU
+
+CPU training: Even with 16 cores, significantly slower
+
+Why GPU is faster:
+
+Parallel processing: GPU has ~3584 CUDA cores vs 16 CPU cores
+
+Matrix operations: Neural networks are matrix-heavy, GPU excels at this
+
+Memory bandwidth: GPU memory is much faster for large tensors
+
+To force CPU training (not recommended):
+
+python train.py --dataroot ./datasets/ct_phases_dataset --name ct_phase0_generator --model pix2pix --dataset_mode nifti_aligned --preprocess none --input_nc 1 --output_nc 1 --axial_slice --gpu_ids -1
+
+Copy
+bash
+Better optimization strategy:
+Use GPU for training + CPU cores for data loading:
+
+python train.py --dataroot ./datasets/ct_phases_dataset --name ct_phase0_generator_optimized --model pix2pix --dataset_mode nifti_aligned --preprocess none --input_nc 1 --output_nc 1 --axial_slice --batch_size 8 --num_threads 12 --netG unet_512 --resize_to 512
+
+Copy
+bash
+Estimated training time:
+
+GPU (current): ~2-4 hours for 200 epochs
+
+CPU only: ~2-3 days for same epochs
+////////////////////////////////////
+Model Output: Individual 2D Images (Not 3D Volumes)
+What the model generates:
+
+Input: Single 2D slice (64×64 pixels from average CT)
+
+Output: Single 2D slice (64×64 pixels of phase 0 CT)
+
+Training: Each 2D slice is treated as a separate training sample
+
+Your dataset breakdown:
+
+75 NIfTI volumes × 100 slices per volume = 7,500 individual 2D training images
+
+Each slice trains independently - no 3D context
+
+During testing, the model will:
+
+Take each 2D slice from input volume
+
+Generate corresponding 2D phase 0 slice
+
+Save individual 2D images (not reconstruct 3D volume)
+
+To get full 3D output, you need to:
+
+Run inference on all slices of a volume
+
+Manually stack the generated 2D slices back into 3D NIfTI format
+
+Current limitation:
+
+Model has no 3D spatial awareness
+
+Each slice processed independently
+
+No consistency between adjacent slices guaranteed
+
+For true 3D generation, you'd need:
+
+3D U-Net architecture
+
+3D convolutions
+
+Much more GPU memory
+
+Different dataset loader for 3D patches
+
+Your current setup generates individual 2D images that you'd need to reassemble into 3D volumes post-processing.
