@@ -25,6 +25,7 @@ class NiftiAlignedDataset(BaseDataset):
     def modify_commandline_options(parser, is_train):
         """Add new dataset-specific options, and rewrite default values for existing options."""
         parser.add_argument('--axial_slice', action='store_true', help='if specified, load slices along the axial dimension')
+        parser.add_argument('--resize_to', type=int, default=None, help='resize images to this size (e.g., 256, 512)')
         # You can add other axes (sagittal, coronal) here if needed
         # parser.add_argument('--sagittal_slice', action='store_true', help='load slices along the sagittal dimension')
         # parser.add_argument('--coronal_slice', action='store_true', help='load slices along the coronal dimension')
@@ -108,14 +109,28 @@ class NiftiAlignedDataset(BaseDataset):
         # --- Data Preprocessing ---
         # 1. Normalize the intensity values (e.g., to [0, 255] or [-1, 1])
         # This is a basic example; you might need more sophisticated windowing/leveling for CT
-        slice_A = (slice_A - np.min(slice_A)) / (np.max(slice_A) - np.min(slice_A)) * 255.0
-        slice_B = (slice_B - np.min(slice_B)) / (np.max(slice_B) - np.min(slice_B)) * 255.0
+        denom_A = np.max(slice_A) - np.min(slice_A)
+        if denom_A == 0:
+            slice_A = np.zeros_like(slice_A)
+        else:
+            slice_A = (slice_A - np.min(slice_A)) / denom_A * 255.0
+            
+        denom_B = np.max(slice_B) - np.min(slice_B)
+        if denom_B == 0:
+            slice_B = np.zeros_like(slice_B)
+        else:
+            slice_B = (slice_B - np.min(slice_B)) / denom_B * 255.0
         
         # Convert to PIL Image to use existing transforms
         # Convert to PIL Image to use existing transforms. 
         # 'L' mode is for single-channel grayscale.
         A = Image.fromarray(np.uint8(slice_A)).convert('L')
         B = Image.fromarray(np.uint8(slice_B)).convert('L')
+        
+        # Resize if specified
+        if self.opt.resize_to is not None:
+            A = A.resize((self.opt.resize_to, self.opt.resize_to), Image.LANCZOS)
+            B = B.resize((self.opt.resize_to, self.opt.resize_to), Image.LANCZOS)
 
         # Apply the transformations (e.g., normalization to tensor)
         A = self.transform(A)

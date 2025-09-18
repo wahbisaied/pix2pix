@@ -42,6 +42,8 @@ The source data was located in `C:\Users\wahbi\OneDrive\res_avg` and `C:\Users\w
     ```
 -   **Testing Command:** Once trained, the model can be tested on new data using:
     ```bash
+
+    ** to run the train file 
     python test.py --dataroot ./datasets/ct_phases_dataset --name ct_phase0_generator --model pix2pix --dataset_mode nifti_aligned --preprocess none --input_nc 1 --output_nc 1 --axial_slice
     ```
 
@@ -57,9 +59,30 @@ During the setup, we resolved the following issues:
     1. Add a new `unet_64` architecture option in `models/networks.py` with 6 downsampling layers instead of 7 or 8
     2. Use `--netG unet_64` in the training command
 
-### 5. Final Training Command
+### 5. Resolution Analysis
 
-The model successfully trains using:
+**IMPORTANT FINDING**: The model is actually training on **512x512 pixel** images, not 64x64 as initially suspected.
+
+**Evidence from training configuration:**
+- `--resize_to 512`: Images are resized to 512x512 pixels in the dataset loader
+- `--netG unet_512`: Using U-Net architecture designed for 512x512 images (9 downsampling layers)
+- `--batch_size 4`: Larger batch size possible due to higher resolution training
+
+**Original CT scan dimensions**: The original NIfTI files contain CT slices that are likely around 64x64 pixels natively, but the dataset loader (`nifti_aligned_dataset.py`) automatically resizes them to 512x512 using PIL's LANCZOS interpolation before feeding them to the model.
+
+**Why images might appear low resolution:**
+1. The original CT data has inherently low spatial resolution (64x64 native)
+2. Upsampling from 64x64 to 512x512 doesn't add real detail, just interpolated pixels
+3. The model learns on the upsampled 512x512 images but the underlying information content is still limited by the original 64x64 resolution
+
+### 6. Training Commands
+
+**Original working command:**
 ```bash
 python train.py --dataroot ./datasets/ct_phases_dataset --name ct_phase0_generator --model pix2pix --dataset_mode nifti_aligned --preprocess none --input_nc 1 --output_nc 1 --axial_slice --norm instance --batch_size 1 --netG unet_64
+```
+
+**Optimized command (currently running):**
+```bash
+python train.py --dataroot ./datasets/ct_phases_dataset --name ct_phase0_generator_optimized --model pix2pix --dataset_mode nifti_aligned --preprocess none --input_nc 1 --output_nc 1 --axial_slice --norm instance --netG unet_512 --batch_size 4 --lambda_L1 50 --lr 0.0001 --resize_to 512 --display_freq 100 --save_epoch_freq 5
 ```

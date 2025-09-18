@@ -34,6 +34,7 @@ class BaseModel(ABC):
         self.opt = opt
         self.isTrain = opt.isTrain
         self.save_dir = Path(opt.checkpoints_dir) / opt.name  # save all the checkpoints to save_dir
+        self.save_dir.mkdir(parents=True, exist_ok=True)  # ensure directory exists
         self.device = opt.device
         # with [scale_width], input images might have different sizes, which hurts the performance of cudnn.benchmark.
         if opt.preprocess != "scale_width":
@@ -187,6 +188,9 @@ class BaseModel(ABC):
 
         # Only allow the main process (rank 0) to save the checkpoint
         if not dist.is_initialized() or dist.get_rank() == 0:
+            # Ensure save directory exists
+            self.save_dir.mkdir(parents=True, exist_ok=True)
+            
             for name in self.model_names:
                 if isinstance(name, str):
                     save_filename = f"{epoch}_net_{name}.pth"
@@ -203,8 +207,19 @@ class BaseModel(ABC):
                     if hasattr(model_to_save, "_orig_mod"):
                         model_to_save = model_to_save._orig_mod
 
-                    # 3. Save the final, clean state_dict
-                    torch.save(model_to_save.state_dict(), save_path)
+                    # 3. Save the final, clean state_dict with error handling
+                    try:
+                        torch.save(model_to_save.state_dict(), save_path)
+                    except Exception as e:
+                        print(f"Warning: Failed to save {save_path}: {e}")
+                        # Try alternative save path if original fails
+                        alt_save_path = save_path.with_suffix('.tmp')
+                        torch.save(model_to_save.state_dict(), alt_save_path)
+                        # Replace original file with temp file
+                        if save_path.exists():
+                            save_path.unlink()
+                        alt_save_path.rename(save_path)
+                        print(f"Successfully saved to {save_path} using temporary file")
 
     def __patch_instance_norm_state_dict(self, state_dict, module, keys, i=0):
         """Fix InstanceNorm checkpoints incompatibility (prior to 0.4)"""
