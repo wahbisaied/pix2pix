@@ -465,3 +465,131 @@ Much more GPU memory
 Different dataset loader for 3D patches
 
 Your current setup generates individual 2D images that you'd need to reassemble into 3D volumes post-processing.
+
+///////////////////////////
+Based on the training script, the iterations per epoch is calculated as:
+
+Iterations per epoch = Dataset size ÷ Batch size
+
+From your training settings:
+
+Default epochs: 100 (initial) + 100 (decay) = 200 total epochs
+
+Batch size: Depends on your GPU memory (1, 2, or 4 from your optimized script)
+
+Dataset size: This depends on how many image pairs you have in your dataset
+
+To find out your specific numbers, you can:
+
+Check your dataset size by looking at your training folder:
+
+dir /s "datasets\ct_phases_dataset\train" | find "File(s)"
+
+Copy
+cmd
+Calculate iterations per epoch:
+
+If you have 1000 image pairs and batch_size=2: 500 iterations per epoch
+
+If you have 500 image pairs and batch_size=1: 500 iterations per epoch
+
+Key training frequencies (from the code):
+
+Print losses: Every 100 iterations (print_freq=100)
+
+Display images: Every 400 iterations (display_freq=400)
+
+Save latest model: Every 5000 iterations (save_latest_freq=5000)
+
+Save epoch checkpoint: Every 5 epochs (save_epoch_freq=5)
+
+The training script will print the dataset size when it starts: "The number of training images = {dataset_size}".
+
+es, the number of iterations per epoch is fixed throughout all epochs (assuming you don't change the dataset or batch size).
+
+Here's why:
+
+Iterations per epoch = Dataset size ÷ Batch size
+
+Since both values remain constant during training:
+
+Dataset size: Fixed (same training images every epoch)
+
+Batch size: Fixed (set at start of training)
+
+Example:
+
+Dataset: 1000 image pairs
+
+Batch size: 2
+
+Iterations per epoch: 500 (same for all 200 epochs)
+
+What changes over epochs:
+
+Learning rate: Decreases after epoch 100 (linear decay)
+
+Model weights: Updated each iteration
+
+Loss values: Generally decrease over time
+
+What stays the same:
+
+Number of iterations per epoch: Always 500 (in the example)
+
+Batch size: Always 2
+
+Dataset size: Always 1000 images
+
+Total training iterations:
+
+200 epochs × 500 iterations/epoch = 100,000 total iterations
+
+The only way iterations per epoch would change is if you:
+
+Modify the dataset (add/remove images)
+
+Change the batch size mid-training
+
+Use data augmentation that creates "virtual" samples
+
+But in standard training, iterations per epoch remains constant
+
+
+////////////////////////////////////////
+The modified train_optimized.py now automatically saves all training logs to a text file with these features:
+
+Automatic Log Saving:
+
+Creates timestamped log file: training_log_YYYYMMDD_HHMMSS.txt
+
+Saves training command and start time
+
+Captures all terminal output (stdout and stderr)
+
+Real-time Logging:
+
+Shows output in terminal as usual
+
+Simultaneously writes to log file
+
+Uses flush() for immediate file writing
+
+Complete Coverage:
+
+Logs training progress, losses, epoch info
+
+Captures errors and completion status
+
+Records interruptions and timestamps
+
+Example log file name: training_log_20241215_143022.txt
+
+Now when you run python train_optimized.py, you'll see:
+
+📝 Training logs will be saved to: training_log_20241215_143022.txt
+⏳ Starting training...
+
+Copy
+All subsequent training output will appear in both terminal and the log file automatically.
+///////////////////////////////////////////////

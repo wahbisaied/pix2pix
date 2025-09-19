@@ -74,21 +74,56 @@ def main():
         '--lr', '0.0001',  # Lower learning rate for stability
         '--resize_to', str(settings['image_size']),
         '--display_freq', '100',
-        '--save_epoch_freq', '5'
+        '--save_epoch_freq', '10',  # Less frequent for CT (every 10 epochs)
+        '--save_latest_freq', '2000'  # More frequent backup (every 2000 iterations)
     ]
     
     print(f"\n🔧 Training command:")
     print(' '.join(cmd))
     print(f"\n⏳ Starting training...")
     
+    # Create log file with timestamp
+    import datetime
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_file = f"training_log_{timestamp}.txt"
+    print(f"📝 Training logs will be saved to: {log_file}")
+    
     try:
-        subprocess.run(cmd, check=True)
-        print("✅ Training completed successfully!")
-    except subprocess.CalledProcessError as e:
-        print(f"❌ Training failed with error: {e}")
-        return 1
+        with open(log_file, 'w') as f:
+            # Write command to log file
+            f.write(f"Training command: {' '.join(cmd)}\n")
+            f.write(f"Started at: {datetime.datetime.now()}\n")
+            f.write("=" * 50 + "\n")
+            f.flush()
+            
+            # Run training with output redirected to both terminal and file
+            process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, 
+                                     universal_newlines=True, bufsize=1)
+            
+            for line in process.stdout:
+                print(line, end='')  # Print to terminal
+                f.write(line)        # Write to file
+                f.flush()            # Ensure immediate write
+            
+            process.wait()
+            
+            if process.returncode == 0:
+                print("✅ Training completed successfully!")
+                f.write(f"\nTraining completed successfully at: {datetime.datetime.now()}\n")
+            else:
+                print(f"❌ Training failed with return code: {process.returncode}")
+                f.write(f"\nTraining failed with return code: {process.returncode} at: {datetime.datetime.now()}\n")
+                return 1
+                
     except KeyboardInterrupt:
         print("\n⏹️ Training interrupted by user")
+        with open(log_file, 'a') as f:
+            f.write(f"\nTraining interrupted by user at: {datetime.datetime.now()}\n")
+        return 1
+    except Exception as e:
+        print(f"❌ Unexpected error: {e}")
+        with open(log_file, 'a') as f:
+            f.write(f"\nUnexpected error: {e} at: {datetime.datetime.now()}\n")
         return 1
     
     return 0
