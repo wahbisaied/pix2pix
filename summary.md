@@ -86,3 +86,44 @@ python train.py --dataroot ./datasets/ct_phases_dataset --name ct_phase0_generat
 ```bash
 python train.py --dataroot ./datasets/ct_phases_dataset --name ct_phase0_generator_optimized --model pix2pix --dataset_mode nifti_aligned --preprocess none --input_nc 1 --output_nc 1 --axial_slice --norm instance --netG unet_512 --batch_size 4 --lambda_L1 50 --lr 0.0001 --resize_to 512 --display_freq 100 --save_epoch_freq 5
 ```
+
+### 7. CT-Specific Metadata Saving
+
+To improve model reproducibility and tracking for medical imaging applications, we implemented enhanced model saving with CT-specific metadata.
+
+#### a. Enhanced Model Saving Script
+
+-   **File Created:** `save_ct_metadata.py`
+-   **Functionality:**
+    -   `save_model_with_metadata()`: Saves comprehensive metadata alongside model checkpoints including:
+        - Model type and architecture details
+        - Dataset information (input/output types, image dimensions, voxel spacing)
+        - Training parameters (epoch, batch size, learning rate, lambda values)
+        - Preprocessing settings and normalization ranges
+        - CT-specific parameters (slice thickness: 3.0mm, voxel spacing: 0.9766x0.9766x3.0mm)
+    -   `load_model_with_metadata()`: Loads and returns metadata associated with saved models
+    -   Metadata is saved as JSON files with naming pattern: `{epoch}_metadata.json`
+
+#### b. Integration Benefits
+
+The metadata saving system provides:
+-   **Reproducibility**: Complete record of training configuration and data specifications
+-   **Medical Compliance**: Tracks critical CT scan parameters (voxel spacing, slice thickness)
+-   **Model Versioning**: Easy comparison between different training runs and epochs
+-   **Debugging Support**: Detailed information for troubleshooting model performance issues
+
+#### c. Usage Example
+
+```python
+# In training loop
+from save_ct_metadata import save_model_with_metadata
+
+# Save model with metadata
+metadata = save_model_with_metadata(model, opt, epoch, save_dir)
+
+# Later, load model with metadata
+from save_ct_metadata import load_model_with_metadata
+metadata = load_model_with_metadata('path/to/model.pth')
+```
+
+This enhancement ensures that all CT-specific training parameters and medical imaging specifications are preserved with each model checkpoint, making the training process more transparent and reproducible for medical applications.
