@@ -3,8 +3,8 @@ import shutil
 import glob
 
 # --- Configuration ---
-avg_src_dir = r"C:\Users\wahbi\OneDrive\res_avg"
-phases_src_dir = r"C:\Users\wahbi\OneDrive\res_phases"
+avg_src_dir = r"C:\Users\wahbi\OneDrive\avg"
+phases_src_dir = r"C:\Users\wahbi\OneDrive\final_data"
 train_A_dest = r"c:\Users\wahbi\OneDrive\Desktop\pytorch-CycleGAN-and-pix2pix\datasets\ct_phases_dataset\trainA"
 train_B_dest = r"c:\Users\wahbi\OneDrive\Desktop\pytorch-CycleGAN-and-pix2pix\datasets\ct_phases_dataset\trainB"
 
@@ -48,7 +48,7 @@ for scan_id in scan_folders:
     avg_src_path = avg_files[0] # Use the first NIfTI file found
 
     # --- Find the PHASE 0 scan file ---
-    search_pattern = os.path.join(phases_scan_folder_path, '*Gated 0.0A*.nii*')
+    search_pattern = os.path.join(phases_scan_folder_path, '*Gated 0.0*.nii*')
     phase_0_files = glob.glob(search_pattern)
     if not phase_0_files:
         print(f"--> WARNING: No 'Gated 0.0A' file found in '{phases_scan_folder_path}'. Skipping.")
