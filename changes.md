@@ -593,3 +593,24 @@ Now when you run python train_optimized.py, you'll see:
 Copy
 All subsequent training output will appear in both terminal and the log file automatically.
 ///////////////////////////////////////////////
+
+ound the issue! The horizontal flipping you're seeing is due to data augmentation , not different NIfTI orientations. Here's what's happening:
+
+Line 95-99 in base_dataset.py : The code applies RandomHorizontalFlip() during training unless --no_flip is specified
+
+Your check_orientation_simple.py : Shows raw NIfTI data without any augmentation
+
+The flipping is intentional data augmentation to improve model generalization. To verify this is the cause, you can:
+
+Option 1: Disable flipping during training
+
+python train.py --dataroot ./datasets/ct_phases_dataset --name ct_phases --model cycle_gan --no_flip
+
+Copy
+bash
+Option 2: Create a quick test to confirm
+
+Creating a test script to demonstrate that the horizontal flipping is due to data augmentation, not different NIfTI orientations.
+
+
+//////////////////////
