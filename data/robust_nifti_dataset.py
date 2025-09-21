@@ -7,7 +7,7 @@ from PIL import Image
 import torch
 import logging
 
-class RobustNiftiAlignedDataset(BaseDataset):
+class RobustNiftiDataset(BaseDataset):
     """
     A robust version of NiftiAlignedDataset that handles corrupted files gracefully.
     

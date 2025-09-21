@@ -29,9 +29,10 @@ def load_model(model_name, epoch='latest'):
     # Temporarily modify sys.argv to pass arguments to TestOptions
     original_argv = sys.argv.copy()
     sys.argv = ['use_model.py', '--dataroot', './dummy', '--name', model_name, 
-                '--model', 'pix2pix', '--dataset_mode', 'nifti_aligned',
-                '--preprocess', 'none', '--input_nc', '1', '--output_nc', '1',
-                '--epoch', epoch]
+                '--model', 'pix2pix', '--dataset_mode', 'robust_nifti',
+                '--preprocess', 'resize_and_crop', '--input_nc', '1', '--output_nc', '1',
+                '--netG', 'unet_256', '--crop_size', '256', '--load_size', '286',
+                '--norm', 'instance', '--epoch', epoch]
     
     try:
         # Set up options (mimicking training setup)
@@ -105,6 +106,8 @@ def generate_phase_ct(input_nifti_path, model_name='ct_phase0_generator_optimize
     model, opt = load_model(model_name, epoch)
     
     print(f"Loading input NIfTI: {input_nifti_path}")
+    # Normalize path for cross-platform compatibility
+    input_nifti_path = os.path.normpath(input_nifti_path)
     # Load input NIfTI
     nifti_img = nib.load(input_nifti_path)
     volume = nifti_img.get_fdata()
