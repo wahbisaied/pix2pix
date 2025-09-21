@@ -30,9 +30,9 @@ def load_model(model_name, epoch='latest'):
     original_argv = sys.argv.copy()
     sys.argv = ['use_model.py', '--dataroot', './dummy', '--name', model_name, 
                 '--model', 'pix2pix', '--dataset_mode', 'robust_nifti',
-                '--preprocess', 'resize_and_crop', '--input_nc', '1', '--output_nc', '1',
-                '--netG', 'unet_256', '--crop_size', '256', '--load_size', '286',
-                '--norm', 'instance', '--epoch', epoch]
+                '--preprocess', 'none', '--input_nc', '1', '--output_nc', '1',
+                '--netG', 'unet_256', '--crop_size', '512', '--load_size', '512',
+                '--no_flip', '--norm', 'instance', '--epoch', epoch]
     
     try:
         # Set up options (mimicking training setup)
@@ -81,9 +81,8 @@ def preprocess_slice(slice_2d, opt):
     # Convert to PIL Image
     img = Image.fromarray(np.uint8(slice_2d)).convert('L')
     
-    # Resize to model's expected input size (256x256 based on crop_size)
-    target_size = opt.crop_size if hasattr(opt, 'crop_size') else 256
-    img = img.resize((target_size, target_size), Image.LANCZOS)
+    # Resize to 512x512 directly
+    img = img.resize((512, 512), Image.LANCZOS)
     
     # Apply transforms
     transform = get_transform(opt, grayscale=True)
