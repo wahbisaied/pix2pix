@@ -1,4 +1,5 @@
 import os
+import sys
 import nibabel as nib
 import numpy as np
 from PIL import Image
@@ -16,7 +17,8 @@ slice_img = (slice_img - np.min(slice_img)) / (np.max(slice_img) - np.min(slice_
 pil_img = Image.fromarray(np.uint8(slice_img)).convert('L')
 
 # Create options for transforms
-opt = TrainOptions().parse(['--dataroot', './datasets/ct_phases_dataset', '--name', 'test'])
+sys.argv = ['test_augmentation.py', '--dataroot', './datasets/ct_phases_dataset', '--name', 'test']
+opt = TrainOptions().parse()
 
 # Get transform with flipping enabled (default)
 transform_with_flip = get_transform(opt, grayscale=True)
