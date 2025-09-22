@@ -1417,3 +1417,227 @@ Model trained with crop_size 256 but inference didn't specify
 
 The black images with white stars were artifacts from architecture mismatch. Now it should generate proper CT images matching the web results.
 ///////////////////////////////////////
+Change inference to use 512x512 with no preprocessing and no flipping to prevent slice orientation issues.
+
+use_model.py
++3
+-3
+
+Undo
+Force resize to 512x512 regardless of crop_size setting.
+
+use_model.py
++2
+-3
+
+Undo
+
+Undo all changes
+Now run:
+
+python use_model.py --input_nifti ".\datasets\ct_phases_dataset\trainA\patient_1.nii.gz" --model_name ct_phase0_generator_optimized --epoch 30 --output_dir .\best_results
+
+Copy
+Changes made:
+
+preprocess: none - No random cropping/resizing
+
+crop_size: 512 - Direct 512x512 processing
+
+load_size: 512 - No resizing before crop
+
+--no_flip - Prevents horizontal flipping
+
+Force resize to 512x512 in preprocessing
+
+This will process slices at full 512x512 resolution without any flipping or random transformations.
+////////////////////////////////
+Based on your current setup and the information in your changes.md file, here's what you need to know about running this model on 3D NIfTI data across all axes:
+
+Data Requirements for 3D Multi-Axis Training
+Current setup (axial only): You're training on axial slices only
+For all 3 axes: You'll need roughly 3x more data
+
+Axial slices: ~500-1000 per patient
+
+Sagittal slices: ~500-1000 per patient
+
+Coronal slices: ~500-1000 per patient
+
+Total data increase: 3x your current dataset size
+
+Training Time Estimation
+Current: 2770 seconds/epoch × 200 epochs = ~154 hours (6.4 days)
+
+For 3D all-axis training:
+
+Option 1 (Sequential): Train 3 separate models = ~462 hours (19.2 days)
+
+Option 2 (Combined): Single model with 3x data = ~308 hours (12.8 days)
+
+Option 3 (Transfer learning): Base model + 2 transfers = ~231 hours (9.6 days)
+
+GPU Memory & Hardware Requirements
+Your RTX 3060 12GB:
+
+Current 256×256: ✅ Works fine (batch_size 8)
+
+512×512 all axes: ❌ Insufficient memory
+
+256×256 all axes: ✅ Should work (batch_size 4-6)
+
+Memory usage estimates:
+
+256×256, batch_size 8: ~8-10GB ✅
+512×512, batch_size 4: ~14-16GB ❌
+256×256 all axes, batch_size 4: ~10-12GB ✅
+
+Copy
+Recommendations
+Best approach for your hardware:
+
+Use 256×256 resolution (not 512×512)
+
+Reduce batch_size to 4-6 for all-axis training
+
+Use transfer learning strategy:
+
+Train axial model first (current)
+
+Transfer to sagittal (30-50 epochs)
+
+Transfer to coronal (30-50 epochs)
+
+Optimized command for all-axis:
+
+# Add these flags to your current command:
+--sagittal_slice --coronal_slice --batch_size 4
+
+Copy
+bash
+Verdict: Your RTX 3060 12GB can handle it at 256×256 resolution, but you'll need more training time and data. Consider cloud training (AWS/Google Cloud) with larger GPUs for faster results.
+////////////////////////////////////////
+Free GPU Options
+Google Colab Free
+GPU: Tesla T4 (16GB VRAM)
+Performance: ~3-4x faster than RTX 3060
+Training time: ~1.6-2.1 days (vs 6.4 days)
+Limitations:
+
+12-hour session limit (need to restart)
+
+May get disconnected during peak hours
+
+Limited monthly GPU hours
+
+Kaggle Notebooks Free
+GPU: Tesla P100 (16GB VRAM)
+Performance: ~2-3x faster than RTX 3060
+Training time: ~2.1-3.2 days
+Limitations:
+
+30 hours/week GPU quota
+
+9-hour session limit
+
+Need to split training into chunks
+
+Lightning AI Studio Free
+GPU: Tesla T4 (16GB VRAM)
+Performance: ~3-4x faster than RTX 3060
+Training time: ~1.6-2.1 days
+Limitations:
+
+22 hours/month free GPU
+
+Need multiple accounts or upgrade
+
+Paid GPU Options (Best Value)
+1. Google Colab Pro+ ($49.99/month)
+GPU: A100 (40GB VRAM)
+Performance: ~8-10x faster than RTX 3060
+Training time: ~15-19 hours
+Benefits:
+
+No session limits
+
+Priority access
+
+Background execution Best for: Short-term projects
+
+2. AWS EC2 g5.xlarge ($1.006/hour)
+GPU: A10G (24GB VRAM)
+Performance: ~5-6x faster than RTX 3060
+Training time: ~1.1-1.3 days
+Cost for 6.4 days: ~$154
+Benefits:
+
+Pay per use
+
+Full control
+
+Persistent storage
+
+3. Vast.ai (Cheapest)
+GPU: RTX 4090 (24GB VRAM) - $0.34/hour
+Performance: ~6-7x faster than RTX 3060
+Training time: ~22-26 hours
+Cost for training: ~$8-9
+Benefits:
+
+Extremely cheap
+
+Various GPU options
+
+Community marketplace
+
+4. RunPod ($0.39/hour for RTX 4090)
+GPU: RTX 4090 (24GB VRAM)
+Performance: ~6-7x faster than RTX 3060
+Training time: ~22-26 hours
+Cost for training: ~$9-10
+Benefits:
+
+Easy setup
+
+Jupyter notebooks
+
+Good reliability
+
+Recommendations
+For your 6.4-day training:
+
+Best Free Option: Google Colab Free + session management
+
+Split training into 10-hour chunks
+
+Use checkpointing every 5 epochs
+
+Total time: ~1.6 days actual training
+
+Best Paid Value: Vast.ai RTX 4090
+
+Cost: ~$8-9 total
+
+Time: ~22-26 hours
+
+70x cheaper than buying RTX 4090
+
+Most Reliable: AWS EC2 g5.xlarge
+
+Cost: ~$154 total
+
+Time: ~1.1-1.3 days
+
+Enterprise reliability
+
+Optimal batch sizes for cloud GPUs:
+
+# T4/P100 (16GB): batch_size 16
+# A10G (24GB): batch_size 24  
+# A100 (40GB): batch_size 32
+# RTX 4090 (24GB): batch_size 24
+
+Copy
+bash
+Winner: Vast.ai RTX 4090 at $0.34/hour - you'll save 6+ days and spend less than $10!
