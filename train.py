@@ -68,7 +68,8 @@ class LoggingVisualizer(Visualizer):
         
         # Log to file
         loss_str = ', '.join([f'{k}: {v:.3f}' for k, v in losses.items()])
-        logging.info(f"[Rank {self.opt.gpu_ids[0] if self.opt.gpu_ids else 0}] (epoch: {epoch}, iters: {iters}, time: {t_comp:.3f}, data: {t_data:.3f}) , {loss_str}")
+        gpu_rank = getattr(self.opt, 'gpu_ids', [0])[0] if hasattr(self.opt, 'gpu_ids') and self.opt.gpu_ids else 0
+        logging.info(f"[Rank {gpu_rank}] (epoch: {epoch}, iters: {iters}, time: {t_comp:.3f}, data: {t_data:.3f}) , {loss_str}")
 
 if __name__ == "__main__":
     try:
@@ -115,16 +116,16 @@ if __name__ == "__main__":
                 model.set_input(data)  # unpack data from dataset and apply preprocessing
                 model.optimize_parameters()  # calculate loss functions, get gradients, update network weights
 
-            if total_iters % opt.display_freq == 0:  # display images on visdom and save images to a HTML file
-                save_result = total_iters % opt.update_html_freq == 0
-                model.compute_visuals()
-                visualizer.display_current_results(model.get_current_visuals(), epoch, total_iters, save_result)
+                if total_iters % opt.display_freq == 0:  # display images on visdom and save images to a HTML file
+                    save_result = total_iters % opt.update_html_freq == 0
+                    model.compute_visuals()
+                    visualizer.display_current_results(model.get_current_visuals(), epoch, total_iters, save_result)
 
-            if total_iters % opt.print_freq == 0:  # print training losses and save logging information to the disk
-                losses = model.get_current_losses()
-                t_comp = (time.time() - iter_start_time) / opt.batch_size
-                visualizer.print_current_losses(epoch, epoch_iter, losses, t_comp, t_data)
-                visualizer.plot_current_losses(total_iters, losses)
+                if total_iters % opt.print_freq == 0:  # print training losses and save logging information to the disk
+                    losses = model.get_current_losses()
+                    t_comp = (time.time() - iter_start_time) / opt.batch_size
+                    visualizer.print_current_losses(epoch, epoch_iter, losses, t_comp, t_data)
+                    visualizer.plot_current_losses(total_iters, losses)
 
                 if total_iters % opt.save_latest_freq == 0:  # cache our latest model every <save_latest_freq> iterations
                     print(f"saving the latest model (epoch {epoch}, total_iters {total_iters})")
@@ -135,8 +136,11 @@ if __name__ == "__main__":
                 iter_data_time = time.time()
 
             model.update_learning_rate()  # update learning rates at the end of every epoch
-            current_lr = model.optimizers[0].param_groups[0]['lr']
-            logging.info(f"Learning rate updated to: {current_lr:.6f}")
+            if hasattr(model, 'optimizers') and model.optimizers:
+                current_lr = model.optimizers[0].param_groups[0]['lr']
+                logging.info(f"Learning rate updated to: {current_lr:.6f}")
+            else:
+                logging.info(f"Learning rate updated")
 
             if epoch % opt.save_epoch_freq == 0:  # cache our model every <save_epoch_freq> epochs
                 print(f"saving the model at the end of epoch {epoch}, iters {total_iters}")
