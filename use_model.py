@@ -22,7 +22,7 @@ from models import create_model
 from options.test_options import TestOptions
 from data.base_dataset import get_transform
 
-def load_model(model_name, epoch='latest'):
+def load_model(model_name, epoch='latest', checkpoints_dir=None):
     """Load the trained pix2pix model"""
     import sys
     
@@ -31,8 +31,11 @@ def load_model(model_name, epoch='latest'):
     sys.argv = ['use_model.py', '--dataroot', './dummy', '--name', model_name, 
                 '--model', 'pix2pix', '--dataset_mode', 'robust_nifti',
                 '--preprocess', 'none', '--input_nc', '1', '--output_nc', '1',
-                '--netG', 'unet_256', '--crop_size', '512', '--load_size', '512',
+                '--netG', 'unet_512', '--crop_size', '512', '--load_size', '512',
                 '--no_flip', '--norm', 'instance', '--epoch', epoch]
+    
+    if checkpoints_dir:
+        sys.argv.extend(['--checkpoints_dir', checkpoints_dir])
     
     try:
         # Set up options (mimicking training setup)
@@ -46,21 +49,21 @@ def load_model(model_name, epoch='latest'):
         try:
             model.setup(opt)
         except (AttributeError, KeyError) as e:
-            print(f"Warning: Error during model setup: {e}")
+            print("Warning: Error during model setup: " + str(e))
             print("Trying alternative loading method...")
             # Try to load manually without the problematic patching
             for name in model.model_names:
                 if isinstance(name, str):
                     net = getattr(model, 'net' + name)
-                    load_filename = f"{epoch}_net_{name}.pth"
+                    load_filename = str(epoch) + "_net_" + name + ".pth"
                     load_path = model.save_dir / load_filename
                     if load_path.exists():
-                        print(f"Loading {load_path}")
+                        print("Loading " + str(load_path))
                         state_dict = torch.load(load_path, map_location=str(opt.device), weights_only=True)
                         net.load_state_dict(state_dict, strict=False)
                         net.to(opt.device)
                     else:
-                        print(f"Warning: Model file not found: {load_path}")
+                        print("Warning: Model file not found: " + str(load_path))
                         return None, None
         model.eval()
         
@@ -90,7 +93,7 @@ def preprocess_slice(slice_2d, opt):
     
     return tensor
 
-def generate_phase_ct(input_nifti_path, model_name='ct_phase0_generator_optimized', epoch='latest', output_dir='./results'):
+def generate_phase_ct(input_nifti_path, model_name='ct_phase0_generator_optimized', epoch='latest', output_dir='./results', checkpoints_dir=None):
     """
     Generate phase 0 CT from average CT
     
@@ -99,19 +102,20 @@ def generate_phase_ct(input_nifti_path, model_name='ct_phase0_generator_optimize
         model_name: Name of trained model
         epoch: Which epoch to use ('latest', '200', etc.)
         output_dir: Where to save results
+        checkpoints_dir: Custom checkpoints directory
     """
     
-    print(f"Loading model: {model_name}, epoch: {epoch}")
-    model, opt = load_model(model_name, epoch)
+    print("Loading model: " + model_name + ", epoch: " + str(epoch))
+    model, opt = load_model(model_name, epoch, checkpoints_dir)
     
-    print(f"Loading input NIfTI: {input_nifti_path}")
+    print("Loading input NIfTI: " + input_nifti_path)
     # Normalize path for cross-platform compatibility
     input_nifti_path = os.path.normpath(input_nifti_path)
     # Load input NIfTI
     nifti_img = nib.load(input_nifti_path)
     volume = nifti_img.get_fdata()
     
-    print(f"Input volume shape: {volume.shape}")
+    print("Input volume shape: " + str(volume.shape))
     
     # Create output directory
     os.makedirs(output_dir, exist_ok=True)
@@ -120,11 +124,11 @@ def generate_phase_ct(input_nifti_path, model_name='ct_phase0_generator_optimize
     num_slices = volume.shape[2]
     generated_volume = np.zeros_like(volume)
     
-    print(f"Processing {num_slices} slices...")
+    print("Processing " + str(num_slices) + " slices...")
     
     for slice_idx in range(num_slices):
         if slice_idx % 10 == 0:
-            print(f"Processing slice {slice_idx}/{num_slices}")
+            print("Processing slice " + str(slice_idx) + "/" + str(num_slices))
             
         # Extract slice
         input_slice = volume[:, :, slice_idx]
@@ -146,7 +150,7 @@ def generate_phase_ct(input_nifti_path, model_name='ct_phase0_generator_optimize
             
             # Debug: print range of generated values
             if slice_idx == 0:
-                print(f"Generated slice range: [{generated_slice.min():.3f}, {generated_slice.max():.3f}]")
+                print("Generated slice range: [" + str(round(generated_slice.min(), 3)) + ", " + str(round(generated_slice.max(), 3)) + "]")
             
             # Normalize to [0, 255] - handle different output ranges
             if generated_slice.min() >= -1 and generated_slice.max() <= 1:
@@ -172,16 +176,16 @@ def generate_phase_ct(input_nifti_path, model_name='ct_phase0_generator_optimize
             
             # Save individual slice as PNG
             slice_img = Image.fromarray(np.uint8(generated_slice))
-            slice_img.save(os.path.join(output_dir, f'generated_slice_{slice_idx:03d}.png'))
+            slice_img.save(os.path.join(output_dir, 'generated_slice_' + str(slice_idx).zfill(3) + '.png'))
     
     # Save as NIfTI
     output_nifti = nib.Nifti1Image(generated_volume, nifti_img.affine, nifti_img.header)
     output_path = os.path.join(output_dir, 'generated_phase0_ct.nii.gz')
     nib.save(output_nifti, output_path)
     
-    print(f"Results saved to: {output_dir}")
-    print(f"Generated NIfTI: {output_path}")
-    print(f"Individual slices: {output_dir}/generated_slice_*.png")
+    print("Results saved to: " + output_dir)
+    print("Generated NIfTI: " + output_path)
+    print("Individual slices: " + output_dir + "/generated_slice_*.png")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Generate phase 0 CT from average CT')
@@ -189,7 +193,8 @@ if __name__ == "__main__":
     parser.add_argument('--model_name', default='ct_phase0_generator_optimized', help='Name of trained model')
     parser.add_argument('--epoch', default='latest', help='Which epoch to use (latest, 200, etc.)')
     parser.add_argument('--output_dir', default='./results', help='Output directory')
+    parser.add_argument('--checkpoints_dir', help='Custom checkpoints directory')
     
     args = parser.parse_args()
     
-    generate_phase_ct(args.input_nifti, args.model_name, args.epoch, args.output_dir)
+    generate_phase_ct(args.input_nifti, args.model_name, args.epoch, args.output_dir, args.checkpoints_dir)
