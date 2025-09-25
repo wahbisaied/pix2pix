@@ -1641,3 +1641,107 @@ Optimal batch sizes for cloud GPUs:
 Copy
 bash
 Winner: Vast.ai RTX 4090 at $0.34/hour - you'll save 6+ days and spend less than $10!
+
+//////////////////////////
+D'après le README, le code supporte maintenant l'entraînement multi-GPU avec DDP (Distributed Data Parallel). Voici les solutions :
+
+Solution recommandée : DDP (Distributed Data Parallel)
+C'est la meilleure approche pour l'entraînement multi-GPU :
+
+# Au lieu de : python train.py ...
+torchrun --nproc_per_node=2 train.py --dataroot ./datasets/facades --name facades_pix2pix --model pix2pix --norm sync_batch
+
+Copy
+bash
+Important : Utilisez --norm sync_batch ou --norm sync_instance (pas --norm batch qui n'est pas compatible DDP).
+
+Pourquoi DDP plutôt que séparer Generator/Discriminator ?
+DDP : Réplique le modèle complet sur chaque GPU, synchronise les gradients
+
+✅ Efficace et stable
+
+✅ Scaling linéaire avec le nombre de GPUs
+
+✅ Supporté nativement par le code
+
+Generator sur GPU1, Discriminator sur GPU2 :
+
+❌ Transferts mémoire constants entre GPUs
+
+❌ Synchronisation complexe
+
+❌ Pas d'implémentation native dans ce code
+
+Vérification du setup multi-GPU
+1 file read
+train.py
+Le code supporte déjà DDP ! Voici comment l'utiliser :
+
+Commande pour multi-GPU
+# Pour 2 GPUs
+torchrun --nproc_per_node=2 train.py --dataroot ./datasets/facades --name facades_pix2pix --model pix2pix --norm sync_batch
+
+# Pour 4 GPUs  
+torchrun --nproc_per_node=4 train.py --dataroot ./datasets/facades --name facades_pix2pix --model pix2pix --norm sync_batch
+
+Copy
+bash
+Modifications nécessaires dans le code
+Si vous voulez forcer l'utilisation de GPUs spécifiques :
+
+1 file read
+base_options.py
+Pour spécifier les GPUs à utiliser, ajoutez cette option dans votre commande :
+
+# Utiliser les GPUs 0 et 1 spécifiquement
+CUDA_VISIBLE_DEVICES=0,1 torchrun --nproc_per_node=2 train.py --dataroot ./datasets/facades --name facades_pix2pix --model pix2pix --norm sync_batch
+
+Copy
+bash
+Résumé
+Utilisez DDP : torchrun --nproc_per_node=2 au lieu de python
+
+Changez la normalisation : --norm sync_batch ou --norm sync_instance
+
+Spécifiez les GPUs : CUDA_VISIBLE_DEVICES=0,1 si nécessaire
+
+Cette approche est plus efficace que séparer Generator/Discriminator sur différents GPUs.
+/////////////////////////////
+The issue is likely due to different logging configurations between your local version and the original GitHub repo. Let me check the differences:
+
+1 file read
+train.py
+Your local version has been heavily modified with custom logging. The original GitHub version is much simpler. The issue is that the loss printing logic is moved outside the training loop in your version.
+
+Here's the original GitHub train.py structure that shows losses during training:
+
+Creating the original train.py structure to show the correct loss printing logic
+
+train_original.py
++86
+-0
+
+Undo
+The Problem
+Your modified version has the loss printing outside the training loop. In the original version, losses are printed inside the loop every print_freq iterations.
+
+Quick Fix
+Replace your current train.py with the original structure, or fix the indentation:
+
+Moving the loss printing logic inside the training loop where it belongs
+
+train.py
++9
+-9
+
+Undo
+Summary
+The issue was indentation - the loss printing code was outside the training loop. Now it will show:
+
+Loss values every print_freq iterations (default: 400)
+
+Learning rate updates at end of each epoch
+
+Epoch completion messages
+
+The losses should now appear during training, not just at epoch end.
