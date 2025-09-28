@@ -1,0 +1,109 @@
+2025-09-22 16:52:47,864 - INFO - === TRAINING STARTED ===
+2025-09-22 16:52:47,864 - INFO - Command: python train.py --dataroot ./datasets/ct_phases_dataset --name ct_phase0_generator_optimized --model pix2pix --dataset_mode robust_nifti --skip_corrupted --preprocess none --input_nc 1 --output_nc 1 --axial_slice --norm instance --netG unet_512 --batch_size 4 --lambda_L1 50 --lr 0.0001 --resize_to 512 --display_freq 100 --save_epoch_freq 5
+2025-09-22 16:52:47,864 - INFO - Log file: logs/train_log_20250922_165247.txt
+2025-09-22 16:52:47,864 - INFO - Working directory: C:\Users\wahbi\OneDrive\Desktop\pytorch-CycleGAN-and-pix2pix
+2025-09-22 16:52:48,020 - INFO - Training options parsed successfully
+2025-09-22 16:52:48,039 - INFO - Device initialized: cuda:0
+2025-09-22 16:52:49,027 - INFO - Volume 0: 99/99 valid slices
+2025-09-22 16:52:50,311 - INFO - Volume 1: 128/128 valid slices
+2025-09-22 16:52:51,674 - INFO - Volume 2: 137/137 valid slices
+2025-09-22 16:52:52,876 - INFO - Volume 3: 123/123 valid slices
+2025-09-22 16:52:54,016 - INFO - Volume 4: 118/118 valid slices
+2025-09-22 16:52:55,100 - INFO - Volume 5: 110/110 valid slices
+2025-09-22 16:52:55,940 - INFO - Volume 6: 84/84 valid slices
+2025-09-22 16:52:57,288 - INFO - Volume 7: 142/142 valid slices
+2025-09-22 16:52:58,106 - INFO - Volume 8: 82/82 valid slices
+2025-09-22 16:52:59,378 - INFO - Volume 9: 132/132 valid slices
+2025-09-22 16:53:00,503 - INFO - Volume 10: 115/115 valid slices
+2025-09-22 16:53:01,663 - INFO - Volume 11: 121/121 valid slices
+2025-09-22 16:53:02,743 - INFO - Volume 12: 110/110 valid slices
+2025-09-22 16:53:03,943 - INFO - Volume 13: 119/119 valid slices
+2025-09-22 16:53:05,119 - INFO - Volume 14: 120/120 valid slices
+2025-09-22 16:53:06,269 - INFO - Volume 15: 117/117 valid slices
+2025-09-22 16:53:07,305 - INFO - Volume 16: 103/103 valid slices
+2025-09-22 16:53:08,388 - INFO - Volume 17: 109/109 valid slices
+2025-09-22 16:53:09,629 - INFO - Volume 18: 133/133 valid slices
+2025-09-22 16:53:10,720 - INFO - Volume 19: 113/113 valid slices
+2025-09-22 16:53:11,857 - INFO - Volume 20: 125/125 valid slices
+2025-09-22 16:53:13,242 - INFO - Volume 21: 142/142 valid slices
+2025-09-22 16:53:14,269 - INFO - Volume 22: 106/106 valid slices
+2025-09-22 16:53:15,172 - INFO - Volume 23: 94/94 valid slices
+2025-09-22 16:53:16,276 - INFO - Volume 24: 114/114 valid slices
+2025-09-22 16:53:17,339 - INFO - Volume 25: 111/111 valid slices
+2025-09-22 16:53:18,556 - INFO - Volume 26: 125/125 valid slices
+2025-09-22 16:53:19,560 - INFO - Volume 27: 103/103 valid slices
+2025-09-22 16:53:20,642 - INFO - Volume 28: 112/112 valid slices
+2025-09-22 16:53:21,671 - INFO - Volume 29: 103/103 valid slices
+2025-09-22 16:53:22,436 - INFO - Volume 30: 77/77 valid slices
+2025-09-22 16:53:23,529 - INFO - Volume 31: 113/113 valid slices
+2025-09-22 16:53:24,377 - INFO - Volume 32: 89/89 valid slices
+2025-09-22 16:53:25,489 - INFO - Volume 33: 115/115 valid slices
+2025-09-22 16:53:26,587 - INFO - Volume 34: 118/118 valid slices
+2025-09-22 16:53:28,005 - INFO - Volume 35: 149/149 valid slices
+2025-09-22 16:53:29,072 - INFO - Volume 36: 107/107 valid slices
+2025-09-22 16:53:30,571 - INFO - Volume 37: 147/147 valid slices
+2025-09-22 16:53:31,573 - INFO - Volume 38: 100/100 valid slices
+2025-09-22 16:53:32,718 - INFO - Volume 39: 117/117 valid slices
+2025-09-22 16:53:33,851 - INFO - Volume 40: 114/114 valid slices
+2025-09-22 16:53:35,284 - INFO - Volume 41: 151/151 valid slices
+2025-09-22 16:53:36,832 - INFO - Volume 42: 158/158 valid slices
+2025-09-22 16:53:38,017 - INFO - Volume 43: 117/117 valid slices
+2025-09-22 16:53:39,309 - INFO - Volume 44: 133/133 valid slices
+2025-09-22 16:53:40,052 - INFO - Volume 45: 76/76 valid slices
+2025-09-22 16:53:41,655 - INFO - Volume 46: 168/168 valid slices
+2025-09-22 16:53:42,522 - INFO - Volume 47: 88/88 valid slices
+2025-09-22 16:53:43,594 - INFO - Volume 48: 113/113 valid slices
+2025-09-22 16:53:44,596 - INFO - Volume 49: 104/104 valid slices
+2025-09-22 16:53:45,487 - INFO - Volume 50: 91/91 valid slices
+2025-09-22 16:53:46,292 - INFO - Volume 51: 84/84 valid slices
+2025-09-22 16:53:47,250 - INFO - Volume 52: 99/99 valid slices
+2025-09-22 16:53:48,212 - INFO - Volume 53: 104/104 valid slices
+2025-09-22 16:53:49,529 - INFO - Volume 54: 136/136 valid slices
+2025-09-22 16:53:50,850 - INFO - Volume 55: 131/131 valid slices
+2025-09-22 16:53:52,156 - INFO - Volume 56: 137/137 valid slices
+2025-09-22 16:53:53,170 - INFO - Volume 57: 105/105 valid slices
+2025-09-22 16:53:54,414 - INFO - Volume 58: 125/125 valid slices
+2025-09-22 16:53:55,233 - INFO - Volume 59: 85/85 valid slices
+2025-09-22 16:53:56,161 - INFO - Volume 60: 93/93 valid slices
+2025-09-22 16:53:57,142 - INFO - Volume 61: 101/101 valid slices
+2025-09-22 16:53:58,014 - INFO - Volume 62: 91/91 valid slices
+2025-09-22 16:53:58,898 - INFO - Volume 63: 90/90 valid slices
+2025-09-22 16:54:00,077 - INFO - Volume 64: 122/122 valid slices
+2025-09-22 16:54:00,930 - INFO - Volume 65: 88/88 valid slices
+2025-09-22 16:54:02,110 - INFO - Volume 66: 122/122 valid slices
+2025-09-22 16:54:03,018 - INFO - Volume 67: 92/92 valid slices
+2025-09-22 16:54:04,105 - INFO - Volume 68: 110/110 valid slices
+2025-09-22 16:54:04,982 - INFO - Volume 69: 94/94 valid slices
+2025-09-22 16:54:06,187 - INFO - Volume 70: 126/126 valid slices
+2025-09-22 16:54:07,274 - INFO - Volume 71: 114/114 valid slices
+2025-09-22 16:54:08,268 - INFO - Volume 72: 105/105 valid slices
+2025-09-22 16:54:09,243 - INFO - Volume 73: 102/102 valid slices
+2025-09-22 16:54:10,250 - INFO - Volume 74: 107/107 valid slices
+2025-09-22 16:54:11,519 - INFO - Volume 75: 132/132 valid slices
+2025-09-22 16:54:12,858 - INFO - Volume 76: 135/135 valid slices
+2025-09-22 16:54:13,964 - INFO - Volume 77: 115/115 valid slices
+2025-09-22 16:54:15,065 - INFO - Volume 78: 118/118 valid slices
+2025-09-22 16:54:16,055 - INFO - Volume 79: 104/104 valid slices
+2025-09-22 16:54:16,067 - INFO - Dataset initialized successfully:
+2025-09-22 16:54:16,067 - INFO -   - Total volume pairs: 80
+2025-09-22 16:54:16,067 - INFO -   - Total valid slices: 9062
+2025-09-22 16:54:16,068 - INFO -   - Corrupted files: 0
+2025-09-22 16:54:16,068 - INFO -   - Corrupted slices: 0
+2025-09-22 16:54:16,068 - INFO - Dataset created: robust_nifti, Size: 9062
+2025-09-22 16:54:16,377 - INFO - Model created: pix2pix
+2025-09-22 16:54:16,387 - INFO - Visualizer initialized
+2025-09-22 16:54:16,387 - INFO - Starting training: epochs 1 to 200
+2025-09-22 16:54:16,388 - INFO - === EPOCH 1 STARTED ===
+2025-09-22 16:54:58,644 - ERROR - === TRAINING FAILED ===
+2025-09-22 16:54:58,644 - ERROR - Error: 'Namespace' object has no attribute 'gpu_ids'
+2025-09-22 16:54:58,644 - ERROR - Error type: AttributeError
+2025-09-22 16:54:58,645 - ERROR - Traceback: Traceback (most recent call last):
+  File "C:\Users\wahbi\OneDrive\Desktop\pytorch-CycleGAN-and-pix2pix\train.py", line 126, in <module>
+    visualizer.print_current_losses(epoch, epoch_iter, losses, t_comp, t_data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wahbi\OneDrive\Desktop\pytorch-CycleGAN-and-pix2pix\train.py", line 71, in print_current_losses
+    logging.info(f"[Rank {self.opt.gpu_ids[0] if self.opt.gpu_ids else 0}] (epoch: {epoch}, iters: {iters}, time: {t_comp:.3f}, data: {t_data:.3f}) , {loss_str}")
+                                                 ^^^^^^^^^^^^^^^^
+AttributeError: 'Namespace' object has no attribute 'gpu_ids'
+
+2025-09-22 16:54:58,645 - INFO - === TRAINING SESSION ENDED ===

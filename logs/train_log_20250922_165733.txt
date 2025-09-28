@@ -1,0 +1,21 @@
+2025-09-22 16:57:33,430 - INFO - === TRAINING STARTED ===
+2025-09-22 16:57:33,430 - INFO - Command: python train.py --dataroot ./datasets/ct_phases_dataset --name ct_phase0_generator_optimized --model pix2pix --dataset_mode robust_nifti --skip_corrupted --preprocess none --input_nc 1 --output_nc 1 --axial_slice --norm instance --netG unet_512 --batch_size 4 --lambda_L1 50 --lr 0.0001 --resize_to 512 --display_freq 100 --save_epoch_freq 5
+2025-09-22 16:57:33,430 - INFO - Log file: logs/train_log_20250922_165733.txt
+2025-09-22 16:57:33,430 - INFO - Working directory: C:\Users\wahbi\OneDrive\Desktop\pytorch-CycleGAN-and-pix2pix
+2025-09-22 16:57:33,534 - INFO - Training options parsed successfully
+2025-09-22 16:57:33,558 - INFO - Device initialized: cuda:0
+2025-09-22 16:57:34,478 - INFO - Volume 0: 99/99 valid slices
+2025-09-22 16:57:35,687 - INFO - Volume 1: 128/128 valid slices
+2025-09-22 16:57:36,989 - INFO - Volume 2: 137/137 valid slices
+2025-09-22 16:57:38,150 - INFO - Volume 3: 123/123 valid slices
+2025-09-22 16:57:39,275 - INFO - Volume 4: 118/118 valid slices
+2025-09-22 16:57:40,337 - INFO - Volume 5: 110/110 valid slices
+2025-09-22 16:57:41,161 - INFO - Volume 6: 84/84 valid slices
+2025-09-22 16:57:42,495 - INFO - Volume 7: 142/142 valid slices
+2025-09-22 16:57:43,316 - INFO - Volume 8: 82/82 valid slices
+2025-09-22 16:57:44,570 - INFO - Volume 9: 132/132 valid slices
+2025-09-22 16:57:45,665 - INFO - Volume 10: 115/115 valid slices
+2025-09-22 16:57:46,825 - INFO - Volume 11: 121/121 valid slices
+2025-09-22 16:57:47,891 - INFO - Volume 12: 110/110 valid slices
+2025-09-22 16:57:49,040 - INFO - Volume 13: 119/119 valid slices
+2025-09-22 16:57:49,421 - INFO - === TRAINING SESSION ENDED ===
