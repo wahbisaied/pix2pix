@@ -22,17 +22,23 @@ from models import create_model
 from options.test_options import TestOptions
 from data.base_dataset import get_transform
 
-def load_model(model_name, epoch='latest'):
+def load_model(model_name, epoch='latest', checkpoints_dir=None):
     """Load the trained pix2pix model"""
     import sys
     
     # Temporarily modify sys.argv to pass arguments to TestOptions
     original_argv = sys.argv.copy()
-    sys.argv = ['use_model.py', '--dataroot', './dummy', '--name', model_name, 
+    argv_list = ['use_model.py', '--dataroot', './dummy', '--name', model_name, 
                 '--model', 'pix2pix', '--dataset_mode', 'robust_nifti',
                 '--preprocess', 'none', '--input_nc', '1', '--output_nc', '1',
                 '--netG', 'unet_256', '--crop_size', '512', '--load_size', '512',
                 '--no_flip', '--norm', 'instance', '--epoch', epoch]
+    
+    # Add custom checkpoints directory if provided
+    if checkpoints_dir:
+        argv_list.extend(['--checkpoints_dir', checkpoints_dir])
+    
+    sys.argv = argv_list
     
     try:
         # Set up options (mimicking training setup)
@@ -90,7 +96,7 @@ def preprocess_slice(slice_2d, opt):
     
     return tensor
 
-def generate_phase_ct(input_nifti_path, model_name='ct_phase0_generator_optimized', epoch='latest', output_dir='./results'):
+def generate_phase_ct(input_nifti_path, model_name='ct_phase0_generator_optimized', epoch='latest', output_dir='./results', checkpoints_dir=None):
     """
     Generate phase 0 CT from average CT
     
@@ -99,10 +105,11 @@ def generate_phase_ct(input_nifti_path, model_name='ct_phase0_generator_optimize
         model_name: Name of trained model
         epoch: Which epoch to use ('latest', '200', etc.)
         output_dir: Where to save results
+        checkpoints_dir: Custom checkpoints directory
     """
     
     print(f"Loading model: {model_name}, epoch: {epoch}")
-    model, opt = load_model(model_name, epoch)
+    model, opt = load_model(model_name, epoch, checkpoints_dir)
     
     print(f"Loading input NIfTI: {input_nifti_path}")
     # Normalize path for cross-platform compatibility
@@ -189,7 +196,8 @@ if __name__ == "__main__":
     parser.add_argument('--model_name', default='ct_phase0_generator_optimized', help='Name of trained model')
     parser.add_argument('--epoch', default='latest', help='Which epoch to use (latest, 200, etc.)')
     parser.add_argument('--output_dir', default='./results', help='Output directory')
+    parser.add_argument('--checkpoints_dir', help='Custom checkpoints directory')
     
     args = parser.parse_args()
     
-    generate_phase_ct(args.input_nifti, args.model_name, args.epoch, args.output_dir)
+    generate_phase_ct(args.input_nifti, args.model_name, args.epoch, args.output_dir, args.checkpoints_dir)

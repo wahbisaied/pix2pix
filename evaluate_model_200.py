@@ -64,8 +64,25 @@ def tensor_to_pil(tensor):
 
 print("=== Model 200 Evaluation Pipeline ===")
 
-# Step 1: Convert test data (use subset of trainB as reference)
-print("Step 1: Converting reference images...")
+# Step 1: Create test directory structure
+print("Step 1: Setting up test directory...")
+test_dir = os.path.join(DATASET_DIR, "test")
+os.makedirs(test_dir, exist_ok=True)
+
+# Copy some trainA files to test directory for evaluation
+train_a_dir = os.path.join(DATASET_DIR, "trainA")
+if os.path.exists(train_a_dir):
+    train_files = [f for f in os.listdir(train_a_dir) if f.endswith('.nii.gz')][:10]
+    for file in train_files:
+        src = os.path.join(train_a_dir, file)
+        dst = os.path.join(test_dir, file)
+        if not os.path.exists(dst):
+            import shutil
+            shutil.copy2(src, dst)
+    print(f"Copied {len(train_files)} files to test directory")
+
+# Step 2: Convert test data (use subset of trainB as reference)
+print("Step 2: Converting reference images...")
 trainB_files = [f for f in os.listdir(os.path.join(DATASET_DIR, "trainB")) if f.endswith('.nii.gz')][:5]
 
 for nifti_file in trainB_files:
@@ -75,8 +92,8 @@ for nifti_file in trainB_files:
 
 print(f"Converted {len(trainB_files)} reference files to PNG")
 
-# Step 2: Setup test options
-print("Step 2: Setting up model...")
+# Step 3: Setup test options
+print("Step 3: Setting up model...")
 # Create minimal args list to avoid command line parsing
 import sys
 original_argv = sys.argv
@@ -84,12 +101,13 @@ sys.argv = [
     'evaluate_model_200.py', 
     '--dataroot', DATASET_DIR,
     '--name', 'ct_phase0_generator_optimized',
-    '--model', 'cycle_gan',
-    '--dataset_mode', 'unaligned',
+    '--model', 'test',
+    '--dataset_mode', 'single',
     '--no_flip',
     '--preprocess', 'none',
     '--load_size', '512',
-    '--crop_size', '512'
+    '--crop_size', '512',
+    '--epoch', MODEL_EPOCH
 ]
 
 opt = TestOptions().parse()
@@ -99,10 +117,10 @@ opt.serial_batches = True
 opt.no_flip = True
 opt.display_id = -1
 opt.name = "ct_phase0_generator_optimized"
-opt.model = "cycle_gan"
-opt.dataset_mode = "unaligned"
+opt.model = "test"
+opt.dataset_mode = "single"
 opt.dataroot = DATASET_DIR
-opt.phase = "train"  # Use train data since no test split exists
+opt.phase = "test"
 opt.preprocess = "none"  # No preprocessing
 opt.load_size = 512
 opt.crop_size = 512
@@ -122,8 +140,8 @@ model.eval()
 
 print(f"Loaded model from epoch {MODEL_EPOCH}")
 
-# Step 3: Generate fake images
-print("Step 3: Generating fake images...")
+# Step 4: Generate fake images
+print("Step 4: Generating fake images...")
 fake_count = 0
 
 with torch.no_grad():
@@ -145,8 +163,8 @@ with torch.no_grad():
 
 print(f"Generated {fake_count} fake images")
 
-# Step 4: Calculate FID
-print("Step 4: Calculating FID score...")
+# Step 5: Calculate FID
+print("Step 5: Calculating FID score...")
 try:
     result = subprocess.run([
         "python", "-m", "pytorch_fid", 
