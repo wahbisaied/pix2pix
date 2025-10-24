@@ -77,30 +77,47 @@ if torch.cuda.is_available():
 
 ### For Medical Images (CT/MRI - NIfTI format)
 
-#### 1. Data Structure
+#### 1. Required Files
+The project uses these custom files for medical image processing:
+- `data/robust_nifti_dataset.py` - Robust NIfTI dataset loader with error handling
+- `train.py` - Modified training script with logging
+- `use_model.py` - Custom inference script for medical images
+
+#### 2. Data Structure
 Create your dataset folder:
 ```
 datasets/
-└── your_dataset_name/
-    ├── trainA/          # Input images (e.g., average CT)
+└── ct_phases_dataset/           # Your dataset name
+    ├── trainA/                  # Input images (e.g., average CT)
     │   ├── patient_1.nii.gz
     │   ├── patient_2.nii.gz
+    │   ├── patient_3.nii.gz
     │   └── ...
-    ├── trainB/          # Target images (e.g., phase 0 CT)
-    │   ├── patient_1.nii.gz
+    ├── trainB/                  # Target images (e.g., phase 0 CT)
+    │   ├── patient_1.nii.gz     # MUST match trainA names
     │   ├── patient_2.nii.gz
+    │   ├── patient_3.nii.gz
     │   └── ...
-    ├── testA/           # Test input images
+    ├── testA/                   # Test input images (optional)
     │   └── ...
-    └── testB/           # Test target images
+    └── testB/                   # Test target images (optional)
         └── ...
 ```
 
-#### 2. Data Preprocessing
-- **File format**: NIfTI (.nii.gz)
-- **Naming**: Corresponding files must have same names
-- **Size**: Images will be automatically resized during training
-- **Intensity**: Normalize to appropriate HU ranges for CT
+#### 3. Data Preprocessing (Automatic)
+The `robust_nifti_dataset.py` handles:
+- **File validation**: Checks for corrupted files
+- **Slice extraction**: Extracts 2D axial slices from 3D volumes
+- **Intensity normalization**: Normalizes to [0, 255] range
+- **Error handling**: Skips corrupted slices automatically
+- **Resizing**: Resizes to specified dimensions (512x512)
+
+#### 4. Data Requirements
+- **File format**: NIfTI (.nii.gz or .nii)
+- **Naming**: Corresponding files MUST have identical names
+- **Dimensions**: 3D volumes (any size, will be processed to 2D slices)
+- **Intensity**: Any range (automatically normalized)
+- **Minimum**: At least 10-20 patient pairs for meaningful training
 
 ### For Standard Images (PNG/JPG)
 
@@ -130,28 +147,27 @@ python datasets/combine_A_and_B.py --fold_A /path/to/A --fold_B /path/to/B --fol
 
 #### pix2pix (Paired Translation)
 ```bash
-# Medical images (CT phases)
+# Medical images (CT phases) - WORKING CONFIGURATION
 python train.py \
     --dataroot ./datasets/ct_phases_dataset \
-    --name ct_phase_generator \
+    --name ct_phase0_generator_optimized \
     --model pix2pix \
     --dataset_mode robust_nifti \
     --skip_corrupted \
-    --preprocess resize_and_crop \
-    --load_size 286 \
-    --crop_size 256 \
+    --preprocess none \
     --input_nc 1 \
     --output_nc 1 \
     --axial_slice \
     --norm instance \
-    --netG unet_256 \
-    --batch_size 8 \
+    --netG unet_512 \
+    --batch_size 4 \
     --lambda_L1 50 \
     --lr 0.0001 \
-    --n_epochs 100 \
-    --n_epochs_decay 100 \
+    --resize_to 512 \
     --display_freq 100 \
-    --save_epoch_freq 5
+    --save_epoch_freq 5 \
+    --n_epochs 100 \
+    --n_epochs_decay 100
 
 # Standard images (facades)
 python train.py \
@@ -177,18 +193,18 @@ python train.py \
 
 ### Training Parameters Explained
 
-| Parameter | Description | Recommended Values |
-|-----------|-------------|-------------------|
-| `--dataroot` | Path to dataset | `./datasets/your_data` |
-| `--name` | Experiment name | Descriptive name |
-| `--model` | Model type | `pix2pix`, `cycle_gan` |
-| `--batch_size` | Batch size | 1-8 (depends on GPU memory) |
-| `--load_size` | Image load size | 286 (for 256 crop) |
-| `--crop_size` | Training crop size | 256, 512 |
-| `--netG` | Generator architecture | `unet_256`, `resnet_9blocks` |
-| `--norm` | Normalization | `instance`, `batch` |
-| `--lr` | Learning rate | 0.0002, 0.0001 |
-| `--lambda_L1` | L1 loss weight | 100 (pix2pix), 50 (medical) |
+| Parameter | Description | Medical Images | Standard Images |
+|-----------|-------------|----------------|----------------|
+| `--dataroot` | Path to dataset | `./datasets/ct_phases_dataset` | `./datasets/facades` |
+| `--dataset_mode` | Dataset loader | `robust_nifti` | `aligned` |
+| `--preprocess` | Preprocessing | `none` | `resize_and_crop` |
+| `--resize_to` | Fixed resize | `512` | Not used |
+| `--netG` | Generator | `unet_512` | `unet_256` |
+| `--batch_size` | Batch size | `4` (512px) | `1-8` |
+| `--norm` | Normalization | `instance` | `batch` |
+| `--axial_slice` | Slice axis | Required | Not used |
+| `--skip_corrupted` | Error handling | `True` | Not used |
+| `--lambda_L1` | L1 loss weight | `50` | `100` |
 
 ### Multi-GPU Training
 ```bash
@@ -236,10 +252,17 @@ python test.py \
 ```bash
 # Use custom inference script (for medical images)
 python use_model.py \
-    --input_nifti "./datasets/test_data/patient_1.nii.gz" \
-    --model_name ct_phase_generator \
+    --input_nifti "./datasets/ct_phases_dataset/trainA/patient_1.nii.gz" \
+    --model_name ct_phase0_generator_optimized \
     --epoch latest \
     --output_dir ./results
+
+# The script will:
+# 1. Load the trained model
+# 2. Process each 2D slice from the 3D volume
+# 3. Generate corresponding output slices
+# 4. Save individual PNG images
+# 5. Reconstruct and save output NIfTI volume
 ```
 
 ### Pre-trained Models
@@ -381,14 +404,23 @@ python train.py --use_wandb [other parameters...]
 
 ## Quick Start Checklist
 
-- [ ] Install Python 3.8-3.11
-- [ ] Install PyTorch with CUDA
+### For Medical Images (CT/MRI)
+- [ ] Install Python 3.8-3.11 + PyTorch + CUDA
 - [ ] Clone repository
-- [ ] Prepare dataset in correct structure
-- [ ] Start with small test run (10 epochs)
-- [ ] Monitor training via Visdom/W&B
-- [ ] Test model on validation data
-- [ ] Scale up for full training
+- [ ] Install nibabel: `pip install nibabel`
+- [ ] Create dataset folder: `datasets/ct_phases_dataset/`
+- [ ] Add NIfTI files to `trainA/` and `trainB/` with matching names
+- [ ] Verify files: Check that `robust_nifti_dataset.py` exists
+- [ ] Test run: `--n_epochs 5` first
+- [ ] Full training: Use the working command above
+- [ ] Monitor: Check `logs/train_log_*.txt`
+- [ ] Inference: Use `use_model.py` for testing
+
+### Key Files for Medical Images
+- `data/robust_nifti_dataset.py` - Dataset loader
+- `train.py` - Training script (with logging)
+- `use_model.py` - Inference script
+- `logs/train_log_*.txt` - Training logs
 
 ## Support Resources
 
