@@ -1,0 +1,90 @@
+2025-11-12 19:07:47,894 - INFO - Dataset initialized successfully:
+2025-11-12 19:07:47,894 - INFO -   - Total volume pairs: 80
+2025-11-12 19:07:47,895 - INFO -   - Total valid slices: 8971
+2025-11-12 19:07:47,896 - INFO -   - Corrupted files: 1
+2025-11-12 19:07:47,896 - INFO -   - Corrupted slices: 0
+dataset [RobustNiftiDataset] was created
+The number of training images = 8971
+2025-11-12 19:07:47,897 - INFO - Dataset created: robust_nifti, Size: 8971
+model [Pix2PixModel] was created
+Initialized with device cuda:0
+initialize network with normal
+2025-11-12 19:07:48,549 - ERROR - === TRAINING FAILED ===
+2025-11-12 19:07:48,550 - ERROR - Error: CUDA error: no kernel image is available for execution on the device
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+2025-11-12 19:07:48,550 - ERROR - Error type: RuntimeError
+2025-11-12 19:07:48,555 - ERROR - Traceback: Traceback (most recent call last):
+  File "C:\Users\Wahbi Saied\OneDrive\Desktop\pytorch-CycleGAN-and-pix2pix\train.py", line 90, in <module>
+    model.setup(opt)  # regular setup: load and print networks; create schedulers
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\Wahbi Saied\OneDrive\Desktop\pytorch-CycleGAN-and-pix2pix\models\base_model.py", line 91, in setup
+    net = networks.init_net(net, opt.init_type, opt.init_gain)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Wahbi Saied\OneDrive\Desktop\pytorch-CycleGAN-and-pix2pix\models\networks.py", line 128, in init_net
+    init_weights(net, init_type, init_gain=init_gain)
+  File "C:\Users\Wahbi Saied\OneDrive\Desktop\pytorch-CycleGAN-and-pix2pix\models\networks.py", line 106, in init_weights
+    net.apply(init_func)  # apply the initialization function <init_func>
+    ^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\envs\pytorch-img2img\Lib\site-packages\torch\nn\modules\module.py", line 1032, in apply
+    module.apply(fn)
+  File "C:\ProgramData\anaconda3\envs\pytorch-img2img\Lib\site-packages\torch\nn\modules\module.py", line 1032, in apply
+    module.apply(fn)
+  File "C:\ProgramData\anaconda3\envs\pytorch-img2img\Lib\site-packages\torch\nn\modules\module.py", line 1032, in apply
+    module.apply(fn)
+  File "C:\ProgramData\anaconda3\envs\pytorch-img2img\Lib\site-packages\torch\nn\modules\module.py", line 1033, in apply
+    fn(self)
+  File "C:\Users\Wahbi Saied\OneDrive\Desktop\pytorch-CycleGAN-and-pix2pix\models\networks.py", line 90, in init_func
+    init.normal_(m.weight.data, 0.0, init_gain)
+  File "C:\ProgramData\anaconda3\envs\pytorch-img2img\Lib\site-packages\torch\nn\init.py", line 193, in normal_
+    return _no_grad_normal_(tensor, mean, std, generator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\envs\pytorch-img2img\Lib\site-packages\torch\nn\init.py", line 22, in _no_grad_normal_
+    return tensor.normal_(mean, std, generator=generator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: no kernel image is available for execution on the device
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+2025-11-12 19:07:48,555 - INFO - === TRAINING SESSION ENDED ===
+Traceback (most recent call last):
+  File "C:\Users\Wahbi Saied\OneDrive\Desktop\pytorch-CycleGAN-and-pix2pix\train.py", line 164, in <module>
+    raise e
+  File "C:\Users\Wahbi Saied\OneDrive\Desktop\pytorch-CycleGAN-and-pix2pix\train.py", line 90, in <module>
+    model.setup(opt)  # regular setup: load and print networks; create schedulers
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\Wahbi Saied\OneDrive\Desktop\pytorch-CycleGAN-and-pix2pix\models\base_model.py", line 91, in setup
+    net = networks.init_net(net, opt.init_type, opt.init_gain)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Wahbi Saied\OneDrive\Desktop\pytorch-CycleGAN-and-pix2pix\models\networks.py", line 128, in init_net
+    init_weights(net, init_type, init_gain=init_gain)
+  File "C:\Users\Wahbi Saied\OneDrive\Desktop\pytorch-CycleGAN-and-pix2pix\models\networks.py", line 106, in init_weights
+    net.apply(init_func)  # apply the initialization function <init_func>
+    ^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\envs\pytorch-img2img\Lib\site-packages\torch\nn\modules\module.py", line 1032, in apply
+    module.apply(fn)
+  File "C:\ProgramData\anaconda3\envs\pytorch-img2img\Lib\site-packages\torch\nn\modules\module.py", line 1032, in apply
+    module.apply(fn)
+  File "C:\ProgramData\anaconda3\envs\pytorch-img2img\Lib\site-packages\torch\nn\modules\module.py", line 1032, in apply
+    module.apply(fn)
+  File "C:\ProgramData\anaconda3\envs\pytorch-img2img\Lib\site-packages\torch\nn\modules\module.py", line 1033, in apply
+    fn(self)
+  File "C:\Users\Wahbi Saied\OneDrive\Desktop\pytorch-CycleGAN-and-pix2pix\models\networks.py", line 90, in init_func
+    init.normal_(m.weight.data, 0.0, init_gain)
+  File "C:\ProgramData\anaconda3\envs\pytorch-img2img\Lib\site-packages\torch\nn\init.py", line 193, in normal_
+    return _no_grad_normal_(tensor, mean, std, generator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\envs\pytorch-img2img\Lib\site-packages\torch\nn\init.py", line 22, in _no_grad_normal_
+    return tensor.normal_(mean, std, generator=generator)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: no kernel image is available for execution on the device
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+(pytorch-img2img) C:\Users\Wahbi Saied\OneDrive\Desktop\pytorch-CycleGAN-and-pix2pix>^X
