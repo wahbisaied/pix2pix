@@ -1,0 +1,97 @@
+2025-11-15 01:24:56,852 - INFO - === TRAINING STARTED ===
+2025-11-15 01:24:56,853 - INFO - Command: python train.py --dataroot D:\ct_phases_datasets\ct_phase0_dataset --name ct_phase0_generator_5090 --model pix2pix --dataset_mode robust_nifti --skip_corrupted --preprocess none --input_nc 1 --output_nc 1 --axial_slice --norm instance --netG unet_512 --batch_size 32 --lambda_L1 50 --lr 0.0002 --resize_to 512 --display_freq 50 --save_epoch_freq 5 --num_threads 32 --n_epochs 100 --n_epochs_decay 0
+2025-11-15 01:24:56,853 - INFO - Log file: logs/train_log_20251115_012456.txt
+2025-11-15 01:24:56,853 - INFO - Working directory: c:\Users\Wahbi Saied\Documents\GitHub\pix2pix
+2025-11-15 01:24:56,956 - INFO - Training options parsed successfully
+2025-11-15 01:24:57,357 - INFO - Device initialized: cuda:0
+2025-11-15 01:24:58,090 - INFO - Volume 0: 99/99 valid slices
+2025-11-15 01:24:59,027 - INFO - Volume 1: 128/128 valid slices
+2025-11-15 01:25:00,030 - INFO - Volume 2: 137/137 valid slices
+2025-11-15 01:25:00,893 - INFO - Volume 3: 123/123 valid slices
+2025-11-15 01:25:01,706 - INFO - Volume 4: 118/118 valid slices
+2025-11-15 01:25:02,467 - INFO - Volume 5: 110/110 valid slices
+2025-11-15 01:25:03,078 - INFO - Volume 6: 84/84 valid slices
+2025-11-15 01:25:04,082 - INFO - Volume 7: 142/142 valid slices
+2025-11-15 01:25:04,699 - INFO - Volume 8: 82/82 valid slices
+2025-11-15 01:25:05,608 - INFO - Volume 9: 132/132 valid slices
+2025-11-15 01:25:06,419 - INFO - Volume 10: 115/115 valid slices
+2025-11-15 01:25:07,206 - INFO - Volume 11: 121/121 valid slices
+2025-11-15 01:25:07,971 - INFO - Volume 12: 110/110 valid slices
+2025-11-15 01:25:08,810 - INFO - Volume 13: 119/119 valid slices
+2025-11-15 01:25:09,646 - INFO - Volume 14: 120/120 valid slices
+2025-11-15 01:25:10,472 - INFO - Volume 15: 117/117 valid slices
+2025-11-15 01:25:11,215 - INFO - Volume 16: 103/103 valid slices
+2025-11-15 01:25:11,970 - INFO - Volume 17: 109/109 valid slices
+2025-11-15 01:25:12,829 - INFO - Volume 18: 133/133 valid slices
+2025-11-15 01:25:13,620 - INFO - Volume 19: 113/113 valid slices
+2025-11-15 01:25:14,436 - INFO - Volume 20: 125/125 valid slices
+2025-11-15 01:25:15,464 - INFO - Volume 21: 142/142 valid slices
+2025-11-15 01:25:16,203 - INFO - Volume 22: 106/106 valid slices
+2025-11-15 01:25:16,853 - INFO - Volume 23: 94/94 valid slices
+2025-11-15 01:25:17,646 - INFO - Volume 24: 114/114 valid slices
+2025-11-15 01:25:18,410 - INFO - Volume 25: 111/111 valid slices
+2025-11-15 01:25:19,276 - INFO - Volume 26: 125/125 valid slices
+2025-11-15 01:25:20,004 - INFO - Volume 27: 103/103 valid slices
+2025-11-15 01:25:20,781 - INFO - Volume 28: 112/112 valid slices
+2025-11-15 01:25:21,518 - INFO - Volume 29: 103/103 valid slices
+2025-11-15 01:25:22,084 - INFO - Volume 30: 77/77 valid slices
+2025-11-15 01:25:22,838 - INFO - Volume 31: 113/113 valid slices
+2025-11-15 01:25:23,428 - INFO - Volume 32: 89/89 valid slices
+2025-11-15 01:25:24,165 - INFO - Volume 33: 115/115 valid slices
+2025-11-15 01:25:24,936 - INFO - Volume 34: 118/118 valid slices
+2025-11-15 01:25:25,951 - INFO - Volume 35: 149/149 valid slices
+2025-11-15 01:25:26,725 - INFO - Volume 36: 107/107 valid slices
+2025-11-15 01:25:27,781 - INFO - Volume 37: 147/147 valid slices
+2025-11-15 01:25:28,523 - INFO - Volume 38: 100/100 valid slices
+2025-11-15 01:25:29,317 - INFO - Volume 39: 117/117 valid slices
+2025-11-15 01:25:30,083 - INFO - Volume 40: 114/114 valid slices
+2025-11-15 01:25:31,109 - INFO - Volume 41: 151/151 valid slices
+2025-11-15 01:25:32,252 - INFO - Volume 42: 158/158 valid slices
+2025-11-15 01:25:33,106 - INFO - Volume 43: 117/117 valid slices
+2025-11-15 01:25:33,995 - INFO - Volume 44: 133/133 valid slices
+2025-11-15 01:25:34,549 - INFO - Volume 45: 76/76 valid slices
+2025-11-15 01:25:35,691 - INFO - Volume 46: 168/168 valid slices
+2025-11-15 01:25:36,346 - INFO - Volume 47: 88/88 valid slices
+2025-11-15 01:25:37,106 - INFO - Volume 48: 113/113 valid slices
+2025-11-15 01:25:37,840 - INFO - Volume 49: 104/104 valid slices
+2025-11-15 01:25:38,501 - INFO - Volume 50: 91/91 valid slices
+2025-11-15 01:25:39,090 - INFO - Volume 51: 84/84 valid slices
+2025-11-15 01:25:39,794 - INFO - Volume 52: 99/99 valid slices
+2025-11-15 01:25:40,464 - INFO - Volume 53: 104/104 valid slices
+2025-11-15 01:25:41,375 - INFO - Volume 54: 136/136 valid slices
+2025-11-15 01:25:42,341 - INFO - Volume 55: 131/131 valid slices
+2025-11-15 01:25:43,269 - INFO - Volume 56: 137/137 valid slices
+2025-11-15 01:25:44,013 - INFO - Volume 57: 105/105 valid slices
+2025-11-15 01:25:44,877 - INFO - Volume 58: 125/125 valid slices
+2025-11-15 01:25:45,473 - INFO - Volume 59: 85/85 valid slices
+2025-11-15 01:25:46,110 - INFO - Volume 60: 93/93 valid slices
+2025-11-15 01:25:46,812 - INFO - Volume 61: 101/101 valid slices
+2025-11-15 01:25:47,442 - INFO - Volume 62: 91/91 valid slices
+2025-11-15 01:25:48,097 - INFO - Volume 63: 90/90 valid slices
+2025-11-15 01:25:48,917 - INFO - Volume 64: 122/122 valid slices
+2025-11-15 01:25:49,535 - INFO - Volume 65: 88/88 valid slices
+2025-11-15 01:25:50,372 - INFO - Volume 66: 122/122 valid slices
+2025-11-15 01:25:51,016 - INFO - Volume 67: 92/92 valid slices
+2025-11-15 01:25:51,606 - INFO - Volume 68: 94/94 valid slices
+2025-11-15 01:25:52,441 - INFO - Volume 69: 126/126 valid slices
+2025-11-15 01:25:53,026 - INFO - Volume 70: 98/98 valid slices
+2025-11-15 01:25:53,812 - INFO - Volume 71: 114/114 valid slices
+2025-11-15 01:25:54,537 - INFO - Volume 72: 105/105 valid slices
+2025-11-15 01:25:55,238 - INFO - Volume 73: 102/102 valid slices
+2025-11-15 01:25:55,983 - INFO - Volume 74: 107/107 valid slices
+2025-11-15 01:25:56,884 - INFO - Volume 75: 132/132 valid slices
+2025-11-15 01:25:57,668 - INFO - Volume 76: 115/115 valid slices
+2025-11-15 01:25:58,588 - INFO - Volume 77: 135/135 valid slices
+2025-11-15 01:25:59,372 - INFO - Volume 78: 118/118 valid slices
+2025-11-15 01:26:00,133 - INFO - Volume 79: 118/118 valid slices
+2025-11-15 01:26:00,842 - INFO - Volume 80: 104/104 valid slices
+2025-11-15 01:26:00,862 - INFO - Dataset initialized successfully:
+2025-11-15 01:26:00,862 - INFO -   - Total volume pairs: 81
+2025-11-15 01:26:00,862 - INFO -   - Total valid slices: 9168
+2025-11-15 01:26:00,862 - INFO -   - Corrupted files: 0
+2025-11-15 01:26:00,862 - INFO -   - Corrupted slices: 0
+2025-11-15 01:26:00,863 - INFO - Dataset created: robust_nifti, Size: 9168
+2025-11-15 01:26:01,445 - INFO - Model created: pix2pix
+2025-11-15 01:26:01,447 - INFO - Visualizer initialized
+2025-11-15 01:26:01,447 - INFO - Starting training: epochs 1 to 100
+2025-11-15 01:26:01,447 - INFO - === EPOCH 1 STARTED ===

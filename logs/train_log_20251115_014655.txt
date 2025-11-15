@@ -1,0 +1,22 @@
+2025-11-15 01:46:55,444 - INFO - === TRAINING STARTED ===
+2025-11-15 01:46:55,445 - INFO - Command: python train.py --dataroot D:\ct_phases_datasets\ct_phase0_dataset --name ct_phase0_generator_5090 --model pix2pix --dataset_mode robust_nifti --skip_corrupted --preprocess none --input_nc 1 --output_nc 1 --axial_slice --norm instance --netG unet_512 --batch_size 32 --lambda_L1 50 --lr 0.0002 --resize_to 512 --display_freq 50 --save_epoch_freq 5 --num_threads 32 --n_epochs 100 --n_epochs_decay 0
+2025-11-15 01:46:55,445 - INFO - Log file: logs/train_log_20251115_014655.txt
+2025-11-15 01:46:55,445 - INFO - Working directory: c:\Users\Wahbi Saied\Documents\GitHub\pix2pix
+2025-11-15 01:46:55,481 - INFO - Training options parsed successfully
+2025-11-15 01:46:55,587 - INFO - Device initialized: cuda:0
+2025-11-15 01:46:56,331 - INFO - Volume 0: 99/99 valid slices
+2025-11-15 01:46:57,244 - INFO - Volume 1: 128/128 valid slices
+2025-11-15 01:46:58,270 - INFO - Volume 2: 137/137 valid slices
+2025-11-15 01:46:59,098 - INFO - Volume 3: 110/110 valid slices
+2025-11-15 01:46:59,739 - INFO - Volume 4: 84/84 valid slices
+2025-11-15 01:47:00,774 - INFO - Volume 5: 142/142 valid slices
+2025-11-15 01:47:01,433 - INFO - Volume 6: 82/82 valid slices
+2025-11-15 01:47:02,411 - INFO - Volume 7: 132/132 valid slices
+2025-11-15 01:47:03,280 - INFO - Volume 8: 115/115 valid slices
+2025-11-15 01:47:04,113 - INFO - Volume 9: 110/110 valid slices
+2025-11-15 01:47:05,016 - INFO - Volume 10: 117/117 valid slices
+2025-11-15 01:47:05,816 - INFO - Volume 11: 103/103 valid slices
+2025-11-15 01:47:06,739 - INFO - Volume 12: 133/133 valid slices
+2025-11-15 01:47:07,591 - INFO - Volume 13: 113/113 valid slices
+2025-11-15 01:47:08,503 - INFO - Volume 14: 125/125 valid slices
+2025-11-15 01:47:09,597 - INFO - Volume 15: 142/142 valid slices
