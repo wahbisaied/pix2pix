@@ -1,0 +1,9 @@
+CBCT DETECTION REPORT
+========================================
+
+SUMMARY:
+Total files: 136
+Likely CBCT: 0 (0.0%)
+Possible CBCT: 0 (0.0%)
+Likely CT: 136 (100.0%)
+

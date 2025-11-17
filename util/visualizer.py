@@ -22,7 +22,14 @@ def save_images(webpage, visuals, image_path, aspect_ratio=1.0, width=256):
     This function will save images stored in 'visuals' to the HTML file specified by 'webpage'.
     """
     image_dir = webpage.get_image_dir()
-    name = Path(image_path[0]).stem
+    original_name = Path(image_path[0]).stem
+    
+    # Convert filename from format like "1_slice000" to "patient_12.nii_slice000"
+    if original_name.count('_') == 1 and original_name.split('_')[0].isdigit():
+        patient_num, slice_part = original_name.split('_', 1)
+        name = f"patient_{patient_num}.nii_{slice_part}"
+    else:
+        name = original_name
 
     webpage.add_header(name)
     ims, txts, links = [], [], []

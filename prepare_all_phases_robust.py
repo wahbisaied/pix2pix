@@ -13,7 +13,7 @@ def prepare_phase_dataset_robust(phase_num, base_output_dir):
     excluded_patients = {
         "08-10-1998-NA-NA-85576",
         "06-09-1998-NA-NA-78411", 
-        "12-10-1999-NA-p4-47741"
+        "12-13-2000-NA-p4-01861"  # CBCT-like, affects training quality
     }
     
     # Output directories

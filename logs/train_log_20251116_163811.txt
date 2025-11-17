@@ -1,0 +1,1233 @@
+2025-11-16 16:38:11,877 - INFO - === TRAINING STARTED ===
+2025-11-16 16:38:11,877 - INFO - Command: python train.py --dataroot D:\ct_phases_datasets\ct_phase0_dataset --name ct_phase0_generator_5090 --model pix2pix --dataset_mode robust_nifti --skip_corrupted --preprocess none --input_nc 1 --output_nc 1 --axial_slice --norm instance --netG unet_512 --batch_size 16 --lambda_L1 50 --lr 0.0002 --resize_to 512 --display_freq 50 --save_epoch_freq 5 --num_threads 16 --continue_train --epoch_count 151 --n_epochs 150 --n_epochs_decay 50
+2025-11-16 16:38:11,878 - INFO - Log file: logs/train_log_20251116_163811.txt
+2025-11-16 16:38:11,878 - INFO - Working directory: C:\Users\Wahbi Saied\Documents\GitHub\pix2pix
+2025-11-16 16:38:11,918 - INFO - Training options parsed successfully
+2025-11-16 16:38:12,034 - INFO - Device initialized: cuda:0
+2025-11-16 16:38:12,654 - INFO - Volume 0: 99/99 valid slices
+2025-11-16 16:38:13,527 - INFO - Volume 1: 128/128 valid slices
+2025-11-16 16:38:14,449 - INFO - Volume 2: 137/137 valid slices
+2025-11-16 16:38:15,198 - INFO - Volume 3: 110/110 valid slices
+2025-11-16 16:38:15,769 - INFO - Volume 4: 84/84 valid slices
+2025-11-16 16:38:16,686 - INFO - Volume 5: 142/142 valid slices
+2025-11-16 16:38:17,253 - INFO - Volume 6: 82/82 valid slices
+2025-11-16 16:38:18,104 - INFO - Volume 7: 132/132 valid slices
+2025-11-16 16:38:18,849 - INFO - Volume 8: 115/115 valid slices
+2025-11-16 16:38:19,568 - INFO - Volume 9: 110/110 valid slices
+2025-11-16 16:38:20,338 - INFO - Volume 10: 117/117 valid slices
+2025-11-16 16:38:21,005 - INFO - Volume 11: 103/103 valid slices
+2025-11-16 16:38:21,789 - INFO - Volume 12: 133/133 valid slices
+2025-11-16 16:38:22,484 - INFO - Volume 13: 113/113 valid slices
+2025-11-16 16:38:23,209 - INFO - Volume 14: 125/125 valid slices
+2025-11-16 16:38:24,088 - INFO - Volume 15: 142/142 valid slices
+2025-11-16 16:38:24,744 - INFO - Volume 16: 106/106 valid slices
+2025-11-16 16:38:25,324 - INFO - Volume 17: 94/94 valid slices
+2025-11-16 16:38:26,024 - INFO - Volume 18: 114/114 valid slices
+2025-11-16 16:38:26,705 - INFO - Volume 19: 111/111 valid slices
+2025-11-16 16:38:27,474 - INFO - Volume 20: 125/125 valid slices
+2025-11-16 16:38:28,124 - INFO - Volume 21: 103/103 valid slices
+2025-11-16 16:38:28,772 - INFO - Volume 22: 103/103 valid slices
+2025-11-16 16:38:29,263 - INFO - Volume 23: 77/77 valid slices
+2025-11-16 16:38:29,810 - INFO - Volume 24: 89/89 valid slices
+2025-11-16 16:38:30,512 - INFO - Volume 25: 115/115 valid slices
+2025-11-16 16:38:31,211 - INFO - Volume 26: 118/118 valid slices
+2025-11-16 16:38:31,897 - INFO - Volume 27: 107/107 valid slices
+2025-11-16 16:38:32,837 - INFO - Volume 28: 147/147 valid slices
+2025-11-16 16:38:33,478 - INFO - Volume 29: 100/100 valid slices
+2025-11-16 16:38:34,205 - INFO - Volume 30: 117/117 valid slices
+2025-11-16 16:38:34,915 - INFO - Volume 31: 114/114 valid slices
+2025-11-16 16:38:35,826 - INFO - Volume 32: 151/151 valid slices
+2025-11-16 16:38:36,833 - INFO - Volume 33: 158/158 valid slices
+2025-11-16 16:38:37,592 - INFO - Volume 34: 117/117 valid slices
+2025-11-16 16:38:38,397 - INFO - Volume 35: 133/133 valid slices
+2025-11-16 16:38:38,877 - INFO - Volume 36: 76/76 valid slices
+2025-11-16 16:38:39,891 - INFO - Volume 37: 168/168 valid slices
+2025-11-16 16:38:40,460 - INFO - Volume 38: 88/88 valid slices
+2025-11-16 16:38:41,131 - INFO - Volume 39: 113/113 valid slices
+2025-11-16 16:38:41,778 - INFO - Volume 40: 104/104 valid slices
+2025-11-16 16:38:42,361 - INFO - Volume 41: 91/91 valid slices
+2025-11-16 16:38:42,886 - INFO - Volume 42: 84/84 valid slices
+2025-11-16 16:38:43,505 - INFO - Volume 43: 99/99 valid slices
+2025-11-16 16:38:44,108 - INFO - Volume 44: 104/104 valid slices
+2025-11-16 16:38:44,952 - INFO - Volume 45: 131/131 valid slices
+2025-11-16 16:38:45,779 - INFO - Volume 46: 137/137 valid slices
+2025-11-16 16:38:46,440 - INFO - Volume 47: 105/105 valid slices
+2025-11-16 16:38:47,221 - INFO - Volume 48: 125/125 valid slices
+2025-11-16 16:38:47,753 - INFO - Volume 49: 85/85 valid slices
+2025-11-16 16:38:48,344 - INFO - Volume 50: 93/93 valid slices
+2025-11-16 16:38:48,970 - INFO - Volume 51: 101/101 valid slices
+2025-11-16 16:38:49,532 - INFO - Volume 52: 91/91 valid slices
+2025-11-16 16:38:50,106 - INFO - Volume 53: 90/90 valid slices
+2025-11-16 16:38:50,842 - INFO - Volume 54: 122/122 valid slices
+2025-11-16 16:38:51,392 - INFO - Volume 55: 88/88 valid slices
+2025-11-16 16:38:52,144 - INFO - Volume 56: 122/122 valid slices
+2025-11-16 16:38:52,730 - INFO - Volume 57: 92/92 valid slices
+2025-11-16 16:38:53,300 - INFO - Volume 58: 94/94 valid slices
+2025-11-16 16:38:53,821 - INFO - Volume 59: 98/98 valid slices
+2025-11-16 16:38:54,541 - INFO - Volume 60: 114/114 valid slices
+2025-11-16 16:38:55,174 - INFO - Volume 61: 102/102 valid slices
+2025-11-16 16:38:55,829 - INFO - Volume 62: 107/107 valid slices
+2025-11-16 16:38:56,656 - INFO - Volume 63: 132/132 valid slices
+2025-11-16 16:38:57,361 - INFO - Volume 64: 115/115 valid slices
+2025-11-16 16:38:58,207 - INFO - Volume 65: 135/135 valid slices
+2025-11-16 16:38:58,932 - INFO - Volume 66: 118/118 valid slices
+2025-11-16 16:38:59,580 - INFO - Volume 67: 104/104 valid slices
+2025-11-16 16:38:59,595 - INFO - Dataset initialized successfully:
+2025-11-16 16:38:59,595 - INFO -   - Total volume pairs: 68
+2025-11-16 16:38:59,595 - INFO -   - Total valid slices: 7599
+2025-11-16 16:38:59,596 - INFO -   - Corrupted files: 0
+2025-11-16 16:38:59,596 - INFO -   - Corrupted slices: 0
+2025-11-16 16:38:59,597 - INFO - Dataset created: robust_nifti, Size: 7599
+2025-11-16 16:39:00,088 - INFO - Model created: pix2pix
+2025-11-16 16:39:00,089 - INFO - Visualizer initialized
+2025-11-16 16:39:00,090 - INFO - Starting training: epochs 151 to 200
+2025-11-16 16:39:00,090 - INFO - === EPOCH 151 STARTED ===
+2025-11-16 16:40:29,887 - INFO - [Rank 0] (epoch: 151, iters: 400, time: 0.029, data: 62.532) , G_GAN: 0.873, G_L1: 3.295, D_real: 0.988, D_fake: 0.338
+2025-11-16 16:41:19,188 - INFO - [Rank 0] (epoch: 151, iters: 800, time: 0.012, data: 0.015) , G_GAN: 1.021, G_L1: 4.430, D_real: 0.487, D_fake: 0.476
+2025-11-16 16:41:45,958 - INFO - [Rank 0] (epoch: 151, iters: 1200, time: 0.014, data: 0.010) , G_GAN: 1.013, G_L1: 3.221, D_real: 0.823, D_fake: 0.344
+2025-11-16 16:42:35,139 - INFO - [Rank 0] (epoch: 151, iters: 1600, time: 0.015, data: 0.011) , G_GAN: 1.183, G_L1: 7.634, D_real: 0.358, D_fake: 0.501
+2025-11-16 16:43:01,169 - INFO - [Rank 0] (epoch: 151, iters: 2000, time: 0.051, data: 0.012) , G_GAN: 1.180, G_L1: 4.511, D_real: 0.443, D_fake: 0.675
+2025-11-16 16:43:50,909 - INFO - [Rank 0] (epoch: 151, iters: 2400, time: 0.014, data: 0.012) , G_GAN: 0.974, G_L1: 3.827, D_real: 0.604, D_fake: 0.508
+2025-11-16 16:44:17,613 - INFO - [Rank 0] (epoch: 151, iters: 2800, time: 0.013, data: 0.014) , G_GAN: 1.089, G_L1: 4.131, D_real: 0.595, D_fake: 0.472
+2025-11-16 16:45:07,970 - INFO - [Rank 0] (epoch: 151, iters: 3200, time: 0.014, data: 0.010) , G_GAN: 1.501, G_L1: 7.226, D_real: 0.304, D_fake: 0.358
+2025-11-16 16:45:44,771 - INFO - [Rank 0] (epoch: 151, iters: 3600, time: 0.019, data: 0.011) , G_GAN: 1.369, G_L1: 6.960, D_real: 0.378, D_fake: 0.401
+2025-11-16 16:46:18,500 - INFO - [Rank 0] (epoch: 151, iters: 4000, time: 0.027, data: 1.268) , G_GAN: 0.953, G_L1: 3.986, D_real: 0.742, D_fake: 0.364
+2025-11-16 16:47:01,654 - INFO - [Rank 0] (epoch: 151, iters: 4400, time: 0.013, data: 0.010) , G_GAN: 1.069, G_L1: 5.776, D_real: 0.498, D_fake: 0.492
+2025-11-16 16:47:32,659 - INFO - [Rank 0] (epoch: 151, iters: 4800, time: 0.013, data: 4.381) , G_GAN: 1.109, G_L1: 5.785, D_real: 0.505, D_fake: 0.439
+2025-11-16 16:48:21,729 - INFO - [Rank 0] (epoch: 151, iters: 5200, time: 0.027, data: 0.010) , G_GAN: 1.436, G_L1: 4.210, D_real: 1.110, D_fake: 0.308
+2025-11-16 16:48:47,053 - INFO - [Rank 0] (epoch: 151, iters: 5600, time: 0.010, data: 0.008) , G_GAN: 1.116, G_L1: 6.042, D_real: 0.499, D_fake: 0.478
+2025-11-16 16:49:34,575 - INFO - [Rank 0] (epoch: 151, iters: 6000, time: 0.025, data: 0.011) , G_GAN: 1.231, G_L1: 6.047, D_real: 0.454, D_fake: 0.420
+2025-11-16 16:50:00,950 - INFO - [Rank 0] (epoch: 151, iters: 6400, time: 0.014, data: 0.012) , G_GAN: 1.063, G_L1: 3.911, D_real: 0.584, D_fake: 0.455
+2025-11-16 16:50:47,898 - INFO - [Rank 0] (epoch: 151, iters: 6800, time: 0.014, data: 12.547) , G_GAN: 0.767, G_L1: 1.561, D_real: 0.832, D_fake: 0.434
+2025-11-16 16:51:31,028 - INFO - [Rank 0] (epoch: 151, iters: 7200, time: 0.012, data: 0.869) , G_GAN: 1.013, G_L1: 2.845, D_real: 0.708, D_fake: 0.430
+2025-11-16 16:51:54,265 - INFO - [Rank 0] (epoch: 151, iters: 7600, time: 0.190, data: 0.011) , G_GAN: 1.017, G_L1: 2.402, D_real: 0.659, D_fake: 0.459
+2025-11-16 16:51:55,275 - INFO - Learning rate updated to: 0.000192
+2025-11-16 16:51:55,276 - INFO - === EPOCH 151 COMPLETED === Time: 775s
+2025-11-16 16:51:55,277 - INFO - === EPOCH 152 STARTED ===
+2025-11-16 16:53:25,138 - INFO - [Rank 0] (epoch: 152, iters: 400, time: 0.023, data: 61.510) , G_GAN: 0.873, G_L1: 2.737, D_real: 0.783, D_fake: 0.407
+2025-11-16 16:54:11,059 - INFO - [Rank 0] (epoch: 152, iters: 800, time: 0.012, data: 0.011) , G_GAN: 1.215, G_L1: 4.983, D_real: 0.658, D_fake: 0.325
+2025-11-16 16:54:38,802 - INFO - [Rank 0] (epoch: 152, iters: 1200, time: 0.014, data: 0.009) , G_GAN: 1.058, G_L1: 4.299, D_real: 0.645, D_fake: 0.371
+2025-11-16 16:55:23,210 - INFO - [Rank 0] (epoch: 152, iters: 1600, time: 0.009, data: 0.009) , G_GAN: 1.435, G_L1: 7.043, D_real: 0.373, D_fake: 0.342
+2025-11-16 16:55:53,354 - INFO - [Rank 0] (epoch: 152, iters: 2000, time: 0.013, data: 0.008) , G_GAN: 1.084, G_L1: 4.666, D_real: 0.537, D_fake: 0.404
+2025-11-16 16:56:38,837 - INFO - [Rank 0] (epoch: 152, iters: 2400, time: 0.061, data: 0.011) , G_GAN: 1.050, G_L1: 5.588, D_real: 0.445, D_fake: 0.459
+2025-11-16 16:56:38,839 - INFO - Saving latest model (epoch 152, total_iters 10000)
+2025-11-16 16:57:09,430 - INFO - [Rank 0] (epoch: 152, iters: 2800, time: 0.013, data: 0.010) , G_GAN: 1.382, G_L1: 4.944, D_real: 0.712, D_fake: 0.279
+2025-11-16 16:57:52,228 - INFO - [Rank 0] (epoch: 152, iters: 3200, time: 0.013, data: 0.012) , G_GAN: 1.174, G_L1: 8.404, D_real: 0.233, D_fake: 0.550
+2025-11-16 16:58:35,773 - INFO - [Rank 0] (epoch: 152, iters: 3600, time: 0.016, data: 3.322) , G_GAN: 1.088, G_L1: 5.550, D_real: 0.551, D_fake: 0.407
+2025-11-16 16:59:08,388 - INFO - [Rank 0] (epoch: 152, iters: 4000, time: 0.012, data: 5.433) , G_GAN: 1.052, G_L1: 4.367, D_real: 0.424, D_fake: 0.521
+2025-11-16 16:59:54,414 - INFO - [Rank 0] (epoch: 152, iters: 4400, time: 0.025, data: 0.013) , G_GAN: 0.938, G_L1: 2.229, D_real: 0.805, D_fake: 0.387
+2025-11-16 17:00:24,271 - INFO - [Rank 0] (epoch: 152, iters: 4800, time: 0.016, data: 0.009) , G_GAN: 1.427, G_L1: 8.328, D_real: 0.249, D_fake: 0.410
+2025-11-16 17:01:09,398 - INFO - [Rank 0] (epoch: 152, iters: 5200, time: 0.014, data: 0.010) , G_GAN: 1.143, G_L1: 5.361, D_real: 0.707, D_fake: 0.322
+2025-11-16 17:01:36,124 - INFO - [Rank 0] (epoch: 152, iters: 5600, time: 0.014, data: 0.009) , G_GAN: 1.018, G_L1: 4.446, D_real: 0.763, D_fake: 0.322
+2025-11-16 17:02:26,378 - INFO - [Rank 0] (epoch: 152, iters: 6000, time: 0.014, data: 1.060) , G_GAN: 1.534, G_L1: 8.204, D_real: 0.209, D_fake: 0.488
+2025-11-16 17:02:51,006 - INFO - [Rank 0] (epoch: 152, iters: 6400, time: 0.027, data: 0.011) , G_GAN: 1.052, G_L1: 3.226, D_real: 0.866, D_fake: 0.327
+2025-11-16 17:03:39,191 - INFO - [Rank 0] (epoch: 152, iters: 6800, time: 0.015, data: 14.825) , G_GAN: 1.144, G_L1: 6.356, D_real: 0.348, D_fake: 0.487
+2025-11-16 17:04:24,769 - INFO - [Rank 0] (epoch: 152, iters: 7200, time: 0.012, data: 0.013) , G_GAN: 1.544, G_L1: 5.281, D_real: 0.653, D_fake: 0.497
+2025-11-16 17:04:43,119 - INFO - [Rank 0] (epoch: 152, iters: 7600, time: 0.014, data: 0.010) , G_GAN: 1.116, G_L1: 5.117, D_real: 0.745, D_fake: 0.349
+2025-11-16 17:04:44,153 - INFO - Learning rate updated to: 0.000188
+2025-11-16 17:04:44,153 - INFO - === EPOCH 152 COMPLETED === Time: 769s
+2025-11-16 17:04:44,154 - INFO - === EPOCH 153 STARTED ===
+2025-11-16 17:06:12,956 - INFO - [Rank 0] (epoch: 153, iters: 400, time: 0.025, data: 60.004) , G_GAN: 0.970, G_L1: 4.970, D_real: 0.674, D_fake: 0.402
+2025-11-16 17:06:58,285 - INFO - [Rank 0] (epoch: 153, iters: 800, time: 0.023, data: 0.010) , G_GAN: 1.028, G_L1: 6.645, D_real: 0.512, D_fake: 0.466
+2025-11-16 17:07:28,257 - INFO - [Rank 0] (epoch: 153, iters: 1200, time: 0.015, data: 1.144) , G_GAN: 1.175, G_L1: 4.140, D_real: 0.695, D_fake: 0.340
+2025-11-16 17:08:16,209 - INFO - [Rank 0] (epoch: 153, iters: 1600, time: 0.014, data: 0.011) , G_GAN: 1.233, G_L1: 4.349, D_real: 0.735, D_fake: 0.287
+2025-11-16 17:08:48,299 - INFO - [Rank 0] (epoch: 153, iters: 2000, time: 0.014, data: 0.010) , G_GAN: 1.060, G_L1: 6.765, D_real: 0.477, D_fake: 0.452
+2025-11-16 17:09:29,811 - INFO - [Rank 0] (epoch: 153, iters: 2400, time: 0.013, data: 0.017) , G_GAN: 1.069, G_L1: 4.472, D_real: 0.601, D_fake: 0.389
+2025-11-16 17:10:00,398 - INFO - [Rank 0] (epoch: 153, iters: 2800, time: 0.059, data: 0.014) , G_GAN: 1.090, G_L1: 5.619, D_real: 0.427, D_fake: 0.489
+2025-11-16 17:10:47,708 - INFO - [Rank 0] (epoch: 153, iters: 3200, time: 0.011, data: 0.012) , G_GAN: 1.177, G_L1: 7.018, D_real: 0.190, D_fake: 0.625
+2025-11-16 17:11:23,219 - INFO - [Rank 0] (epoch: 153, iters: 3600, time: 0.019, data: 0.010) , G_GAN: 1.239, G_L1: 5.146, D_real: 0.599, D_fake: 0.348
+2025-11-16 17:11:58,985 - INFO - [Rank 0] (epoch: 153, iters: 4000, time: 0.014, data: 3.820) , G_GAN: 1.164, G_L1: 6.382, D_real: 0.640, D_fake: 0.310
+2025-11-16 17:12:41,724 - INFO - [Rank 0] (epoch: 153, iters: 4400, time: 0.009, data: 1.340) , G_GAN: 1.051, G_L1: 4.091, D_real: 0.607, D_fake: 0.409
+2025-11-16 17:13:14,801 - INFO - [Rank 0] (epoch: 153, iters: 4800, time: 0.028, data: 0.008) , G_GAN: 1.107, G_L1: 3.656, D_real: 0.564, D_fake: 0.468
+2025-11-16 17:13:14,802 - INFO - Saving latest model (epoch 153, total_iters 20000)
+2025-11-16 17:14:01,051 - INFO - [Rank 0] (epoch: 153, iters: 5200, time: 0.012, data: 0.016) , G_GAN: 1.756, G_L1: 7.386, D_real: 0.476, D_fake: 0.229
+2025-11-16 17:14:30,146 - INFO - [Rank 0] (epoch: 153, iters: 5600, time: 0.015, data: 0.009) , G_GAN: 1.236, G_L1: 4.600, D_real: 0.701, D_fake: 0.302
+2025-11-16 17:15:14,686 - INFO - [Rank 0] (epoch: 153, iters: 6000, time: 0.015, data: 0.012) , G_GAN: 0.959, G_L1: 3.830, D_real: 0.689, D_fake: 0.438
+2025-11-16 17:15:41,034 - INFO - [Rank 0] (epoch: 153, iters: 6400, time: 0.014, data: 0.016) , G_GAN: 0.998, G_L1: 5.671, D_real: 0.376, D_fake: 0.584
+2025-11-16 17:16:27,713 - INFO - [Rank 0] (epoch: 153, iters: 6800, time: 0.028, data: 16.492) , G_GAN: 1.004, G_L1: 4.206, D_real: 0.451, D_fake: 0.523
+2025-11-16 17:17:11,182 - INFO - [Rank 0] (epoch: 153, iters: 7200, time: 0.023, data: 0.020) , G_GAN: 1.023, G_L1: 4.485, D_real: 0.754, D_fake: 0.337
+2025-11-16 17:17:31,121 - INFO - [Rank 0] (epoch: 153, iters: 7600, time: 0.014, data: 0.010) , G_GAN: 1.246, G_L1: 6.406, D_real: 0.429, D_fake: 0.401
+2025-11-16 17:17:32,096 - INFO - Learning rate updated to: 0.000184
+2025-11-16 17:17:32,097 - INFO - === EPOCH 153 COMPLETED === Time: 768s
+2025-11-16 17:17:32,097 - INFO - === EPOCH 154 STARTED ===
+2025-11-16 17:19:02,067 - INFO - [Rank 0] (epoch: 154, iters: 400, time: 0.024, data: 61.164) , G_GAN: 1.013, G_L1: 6.308, D_real: 0.472, D_fake: 0.429
+2025-11-16 17:19:45,722 - INFO - [Rank 0] (epoch: 154, iters: 800, time: 0.025, data: 0.012) , G_GAN: 1.081, G_L1: 2.605, D_real: 0.716, D_fake: 0.365
+2025-11-16 17:20:13,908 - INFO - [Rank 0] (epoch: 154, iters: 1200, time: 0.049, data: 1.423) , G_GAN: 1.057, G_L1: 3.920, D_real: 0.621, D_fake: 0.457
+2025-11-16 17:20:59,313 - INFO - [Rank 0] (epoch: 154, iters: 1600, time: 0.017, data: 0.013) , G_GAN: 1.438, G_L1: 7.185, D_real: 0.331, D_fake: 0.335
+2025-11-16 17:21:30,342 - INFO - [Rank 0] (epoch: 154, iters: 2000, time: 0.013, data: 0.010) , G_GAN: 0.997, G_L1: 5.730, D_real: 0.551, D_fake: 0.463
+2025-11-16 17:22:12,113 - INFO - [Rank 0] (epoch: 154, iters: 2400, time: 0.014, data: 0.010) , G_GAN: 1.345, G_L1: 6.354, D_real: 0.596, D_fake: 0.305
+2025-11-16 17:22:46,614 - INFO - [Rank 0] (epoch: 154, iters: 2800, time: 0.014, data: 6.243) , G_GAN: 0.925, G_L1: 4.615, D_real: 0.524, D_fake: 0.483
+2025-11-16 17:23:31,150 - INFO - [Rank 0] (epoch: 154, iters: 3200, time: 0.026, data: 0.015) , G_GAN: 1.122, G_L1: 5.067, D_real: 0.579, D_fake: 0.420
+2025-11-16 17:24:15,583 - INFO - [Rank 0] (epoch: 154, iters: 3600, time: 0.015, data: 0.744) , G_GAN: 1.297, G_L1: 7.497, D_real: 0.395, D_fake: 0.413
+2025-11-16 17:24:47,009 - INFO - [Rank 0] (epoch: 154, iters: 4000, time: 0.014, data: 0.013) , G_GAN: 0.760, G_L1: 2.579, D_real: 0.665, D_fake: 0.526
+2025-11-16 17:25:30,692 - INFO - [Rank 0] (epoch: 154, iters: 4400, time: 0.014, data: 0.009) , G_GAN: 1.086, G_L1: 4.870, D_real: 0.651, D_fake: 0.376
+2025-11-16 17:26:00,626 - INFO - [Rank 0] (epoch: 154, iters: 4800, time: 0.016, data: 0.013) , G_GAN: 0.998, G_L1: 5.694, D_real: 0.463, D_fake: 0.551
+2025-11-16 17:26:44,635 - INFO - [Rank 0] (epoch: 154, iters: 5200, time: 0.020, data: 0.008) , G_GAN: 1.314, G_L1: 7.662, D_real: 0.340, D_fake: 0.402
+2025-11-16 17:27:14,489 - INFO - [Rank 0] (epoch: 154, iters: 5600, time: 0.014, data: 0.014) , G_GAN: 1.089, G_L1: 3.905, D_real: 0.512, D_fake: 0.561
+2025-11-16 17:28:03,106 - INFO - [Rank 0] (epoch: 154, iters: 6000, time: 0.011, data: 0.010) , G_GAN: 1.310, G_L1: 7.355, D_real: 0.401, D_fake: 0.439
+2025-11-16 17:28:29,524 - INFO - [Rank 0] (epoch: 154, iters: 6400, time: 0.015, data: 0.016) , G_GAN: 1.203, G_L1: 6.880, D_real: 0.603, D_fake: 0.343
+2025-11-16 17:29:15,013 - INFO - [Rank 0] (epoch: 154, iters: 6800, time: 0.016, data: 15.233) , G_GAN: 1.306, G_L1: 3.418, D_real: 0.821, D_fake: 0.263
+2025-11-16 17:29:59,054 - INFO - [Rank 0] (epoch: 154, iters: 7200, time: 0.034, data: 3.605) , G_GAN: 1.072, G_L1: 3.030, D_real: 0.867, D_fake: 0.334
+2025-11-16 17:29:59,056 - INFO - Saving latest model (epoch 154, total_iters 30000)
+2025-11-16 17:30:20,782 - INFO - [Rank 0] (epoch: 154, iters: 7600, time: 0.014, data: 0.011) , G_GAN: 1.181, G_L1: 8.523, D_real: 0.375, D_fake: 0.482
+2025-11-16 17:30:21,840 - INFO - Learning rate updated to: 0.000180
+2025-11-16 17:30:21,841 - INFO - === EPOCH 154 COMPLETED === Time: 770s
+2025-11-16 17:30:21,841 - INFO - === EPOCH 155 STARTED ===
+2025-11-16 17:31:51,066 - INFO - [Rank 0] (epoch: 155, iters: 400, time: 0.061, data: 61.461) , G_GAN: 1.234, G_L1: 4.906, D_real: 0.593, D_fake: 0.335
+2025-11-16 17:32:38,961 - INFO - [Rank 0] (epoch: 155, iters: 800, time: 0.023, data: 0.010) , G_GAN: 1.396, G_L1: 6.783, D_real: 0.380, D_fake: 0.352
+2025-11-16 17:33:05,935 - INFO - [Rank 0] (epoch: 155, iters: 1200, time: 0.009, data: 0.408) , G_GAN: 1.142, G_L1: 4.829, D_real: 0.739, D_fake: 0.386
+2025-11-16 17:33:55,810 - INFO - [Rank 0] (epoch: 155, iters: 1600, time: 0.027, data: 0.014) , G_GAN: 1.089, G_L1: 5.155, D_real: 0.432, D_fake: 0.503
+2025-11-16 17:34:24,529 - INFO - [Rank 0] (epoch: 155, iters: 2000, time: 0.014, data: 0.014) , G_GAN: 1.267, G_L1: 6.652, D_real: 0.457, D_fake: 0.347
+2025-11-16 17:35:14,686 - INFO - [Rank 0] (epoch: 155, iters: 2400, time: 0.014, data: 0.009) , G_GAN: 0.980, G_L1: 5.547, D_real: 0.344, D_fake: 0.603
+2025-11-16 17:35:39,034 - INFO - [Rank 0] (epoch: 155, iters: 2800, time: 0.014, data: 0.014) , G_GAN: 1.326, G_L1: 6.735, D_real: 0.428, D_fake: 0.387
+2025-11-16 17:36:27,838 - INFO - [Rank 0] (epoch: 155, iters: 3200, time: 0.014, data: 0.010) , G_GAN: 1.143, G_L1: 7.374, D_real: 0.341, D_fake: 0.498
+2025-11-16 17:37:17,939 - INFO - [Rank 0] (epoch: 155, iters: 3600, time: 0.027, data: 0.011) , G_GAN: 1.275, G_L1: 6.014, D_real: 0.396, D_fake: 0.452
+2025-11-16 17:37:42,954 - INFO - [Rank 0] (epoch: 155, iters: 4000, time: 0.014, data: 0.011) , G_GAN: 0.943, G_L1: 3.535, D_real: 0.703, D_fake: 0.396
+2025-11-16 17:38:29,860 - INFO - [Rank 0] (epoch: 155, iters: 4400, time: 0.014, data: 0.012) , G_GAN: 1.127, G_L1: 5.877, D_real: 0.386, D_fake: 0.531
+2025-11-16 17:38:55,570 - INFO - [Rank 0] (epoch: 155, iters: 4800, time: 0.014, data: 0.011) , G_GAN: 1.073, G_L1: 4.718, D_real: 0.603, D_fake: 0.381
+2025-11-16 17:39:43,582 - INFO - [Rank 0] (epoch: 155, iters: 5200, time: 0.014, data: 0.009) , G_GAN: 1.143, G_L1: 5.940, D_real: 0.211, D_fake: 0.714
+2025-11-16 17:40:10,261 - INFO - [Rank 0] (epoch: 155, iters: 5600, time: 0.024, data: 0.014) , G_GAN: 1.095, G_L1: 4.255, D_real: 0.474, D_fake: 0.505
+2025-11-16 17:40:55,651 - INFO - [Rank 0] (epoch: 155, iters: 6000, time: 0.014, data: 0.014) , G_GAN: 1.034, G_L1: 3.607, D_real: 0.757, D_fake: 0.377
+2025-11-16 17:41:23,340 - INFO - [Rank 0] (epoch: 155, iters: 6400, time: 0.014, data: 0.013) , G_GAN: 1.287, G_L1: 5.200, D_real: 0.447, D_fake: 0.367
+2025-11-16 17:42:13,528 - INFO - [Rank 0] (epoch: 155, iters: 6800, time: 0.014, data: 22.611) , G_GAN: 1.094, G_L1: 5.010, D_real: 0.365, D_fake: 0.567
+2025-11-16 17:43:00,773 - INFO - [Rank 0] (epoch: 155, iters: 7200, time: 0.018, data: 0.010) , G_GAN: 1.275, G_L1: 4.550, D_real: 0.533, D_fake: 0.351
+2025-11-16 17:43:13,809 - INFO - [Rank 0] (epoch: 155, iters: 7600, time: 0.019, data: 0.008) , G_GAN: 1.139, G_L1: 5.050, D_real: 0.490, D_fake: 0.439
+2025-11-16 17:43:14,856 - INFO - Learning rate updated to: 0.000176
+2025-11-16 17:43:14,857 - INFO - Saving model at end of epoch 155, iters 38000
+2025-11-16 17:43:15,237 - INFO - === EPOCH 155 COMPLETED === Time: 773s
+2025-11-16 17:43:15,237 - INFO - === EPOCH 156 STARTED ===
+2025-11-16 17:44:45,418 - INFO - [Rank 0] (epoch: 156, iters: 400, time: 0.063, data: 61.306) , G_GAN: 1.236, G_L1: 7.609, D_real: 0.475, D_fake: 0.360
+2025-11-16 17:45:28,996 - INFO - [Rank 0] (epoch: 156, iters: 800, time: 0.009, data: 0.012) , G_GAN: 0.993, G_L1: 4.578, D_real: 0.573, D_fake: 0.465
+2025-11-16 17:45:58,024 - INFO - [Rank 0] (epoch: 156, iters: 1200, time: 0.014, data: 1.056) , G_GAN: 1.242, G_L1: 5.248, D_real: 0.455, D_fake: 0.411
+2025-11-16 17:46:46,005 - INFO - [Rank 0] (epoch: 156, iters: 1600, time: 0.009, data: 0.012) , G_GAN: 1.138, G_L1: 6.169, D_real: 0.479, D_fake: 0.429
+2025-11-16 17:47:14,422 - INFO - [Rank 0] (epoch: 156, iters: 2000, time: 0.026, data: 0.010) , G_GAN: 1.071, G_L1: 7.569, D_real: 0.212, D_fake: 0.570
+2025-11-16 17:47:14,424 - INFO - Saving latest model (epoch 156, total_iters 40000)
+2025-11-16 17:48:02,137 - INFO - [Rank 0] (epoch: 156, iters: 2400, time: 0.009, data: 0.012) , G_GAN: 1.200, G_L1: 5.376, D_real: 0.376, D_fake: 0.440
+2025-11-16 17:48:29,998 - INFO - [Rank 0] (epoch: 156, iters: 2800, time: 0.014, data: 0.009) , G_GAN: 1.239, G_L1: 4.680, D_real: 0.629, D_fake: 0.324
+2025-11-16 17:49:21,011 - INFO - [Rank 0] (epoch: 156, iters: 3200, time: 0.014, data: 0.010) , G_GAN: 1.492, G_L1: 5.523, D_real: 0.960, D_fake: 0.326
+2025-11-16 17:49:56,174 - INFO - [Rank 0] (epoch: 156, iters: 3600, time: 0.016, data: 0.013) , G_GAN: 0.907, G_L1: 4.096, D_real: 0.705, D_fake: 0.416
+2025-11-16 17:50:35,833 - INFO - [Rank 0] (epoch: 156, iters: 4000, time: 0.027, data: 3.099) , G_GAN: 1.278, G_L1: 7.826, D_real: 0.169, D_fake: 0.485
+2025-11-16 17:51:15,888 - INFO - [Rank 0] (epoch: 156, iters: 4400, time: 0.012, data: 0.009) , G_GAN: 0.896, G_L1: 5.244, D_real: 0.539, D_fake: 0.500
+2025-11-16 17:51:49,727 - INFO - [Rank 0] (epoch: 156, iters: 4800, time: 0.013, data: 6.661) , G_GAN: 1.236, G_L1: 4.448, D_real: 0.789, D_fake: 0.292
+2025-11-16 17:52:35,947 - INFO - [Rank 0] (epoch: 156, iters: 5200, time: 0.018, data: 0.010) , G_GAN: 1.408, G_L1: 5.664, D_real: 0.530, D_fake: 0.304
+2025-11-16 17:53:01,977 - INFO - [Rank 0] (epoch: 156, iters: 5600, time: 0.014, data: 0.011) , G_GAN: 0.913, G_L1: 3.460, D_real: 0.586, D_fake: 0.519
+2025-11-16 17:53:50,318 - INFO - [Rank 0] (epoch: 156, iters: 6000, time: 0.022, data: 0.020) , G_GAN: 1.190, G_L1: 6.289, D_real: 0.500, D_fake: 0.388
+2025-11-16 17:54:14,913 - INFO - [Rank 0] (epoch: 156, iters: 6400, time: 0.014, data: 0.011) , G_GAN: 1.195, G_L1: 6.099, D_real: 0.379, D_fake: 0.419
+2025-11-16 17:55:01,117 - INFO - [Rank 0] (epoch: 156, iters: 6800, time: 0.012, data: 8.544) , G_GAN: 1.064, G_L1: 3.006, D_real: 0.840, D_fake: 0.328
+2025-11-16 17:55:40,836 - INFO - [Rank 0] (epoch: 156, iters: 7200, time: 0.012, data: 0.009) , G_GAN: 1.170, G_L1: 5.927, D_real: 0.269, D_fake: 0.499
+2025-11-16 17:56:03,912 - INFO - [Rank 0] (epoch: 156, iters: 7600, time: 0.014, data: 0.011) , G_GAN: 1.013, G_L1: 4.719, D_real: 0.567, D_fake: 0.531
+2025-11-16 17:56:04,905 - INFO - Learning rate updated to: 0.000173
+2025-11-16 17:56:04,905 - INFO - === EPOCH 156 COMPLETED === Time: 770s
+2025-11-16 17:56:04,906 - INFO - === EPOCH 157 STARTED ===
+2025-11-16 17:57:33,698 - INFO - [Rank 0] (epoch: 157, iters: 400, time: 0.058, data: 60.395) , G_GAN: 0.946, G_L1: 3.827, D_real: 0.733, D_fake: 0.402
+2025-11-16 17:58:18,974 - INFO - [Rank 0] (epoch: 157, iters: 800, time: 0.019, data: 0.010) , G_GAN: 1.079, G_L1: 6.617, D_real: 0.421, D_fake: 0.473
+2025-11-16 17:58:48,662 - INFO - [Rank 0] (epoch: 157, iters: 1200, time: 0.014, data: 0.797) , G_GAN: 1.200, G_L1: 6.446, D_real: 0.318, D_fake: 0.440
+2025-11-16 17:59:38,142 - INFO - [Rank 0] (epoch: 157, iters: 1600, time: 0.012, data: 0.013) , G_GAN: 1.045, G_L1: 4.190, D_real: 0.471, D_fake: 0.496
+2025-11-16 18:00:03,111 - INFO - [Rank 0] (epoch: 157, iters: 2000, time: 0.014, data: 0.010) , G_GAN: 1.142, G_L1: 3.710, D_real: 1.030, D_fake: 0.255
+2025-11-16 18:00:49,964 - INFO - [Rank 0] (epoch: 157, iters: 2400, time: 0.025, data: 0.012) , G_GAN: 1.106, G_L1: 5.169, D_real: 0.551, D_fake: 0.379
+2025-11-16 18:01:18,304 - INFO - [Rank 0] (epoch: 157, iters: 2800, time: 0.013, data: 0.013) , G_GAN: 1.210, G_L1: 7.305, D_real: 0.495, D_fake: 0.389
+2025-11-16 18:02:03,667 - INFO - [Rank 0] (epoch: 157, iters: 3200, time: 0.014, data: 0.010) , G_GAN: 1.590, G_L1: 5.278, D_real: 0.550, D_fake: 0.213
+2025-11-16 18:02:47,787 - INFO - [Rank 0] (epoch: 157, iters: 3600, time: 0.022, data: 0.011) , G_GAN: 0.926, G_L1: 3.914, D_real: 0.720, D_fake: 0.421
+2025-11-16 18:03:20,450 - INFO - [Rank 0] (epoch: 157, iters: 4000, time: 0.014, data: 6.145) , G_GAN: 1.040, G_L1: 5.667, D_real: 0.531, D_fake: 0.400
+2025-11-16 18:04:08,360 - INFO - [Rank 0] (epoch: 157, iters: 4400, time: 0.034, data: 2.866) , G_GAN: 1.324, G_L1: 8.407, D_real: 0.476, D_fake: 0.351
+2025-11-16 18:04:08,361 - INFO - Saving latest model (epoch 157, total_iters 50000)
+2025-11-16 18:04:35,773 - INFO - [Rank 0] (epoch: 157, iters: 4800, time: 0.014, data: 0.011) , G_GAN: 0.950, G_L1: 3.548, D_real: 0.470, D_fake: 0.551
+2025-11-16 18:05:26,910 - INFO - [Rank 0] (epoch: 157, iters: 5200, time: 0.029, data: 0.010) , G_GAN: 0.976, G_L1: 3.601, D_real: 0.718, D_fake: 0.416
+2025-11-16 18:05:53,841 - INFO - [Rank 0] (epoch: 157, iters: 5600, time: 0.015, data: 0.008) , G_GAN: 1.056, G_L1: 4.855, D_real: 0.461, D_fake: 0.556
+2025-11-16 18:06:42,216 - INFO - [Rank 0] (epoch: 157, iters: 6000, time: 0.013, data: 0.011) , G_GAN: 1.349, G_L1: 6.530, D_real: 0.581, D_fake: 0.294
+2025-11-16 18:07:07,721 - INFO - [Rank 0] (epoch: 157, iters: 6400, time: 0.025, data: 0.010) , G_GAN: 1.161, G_L1: 5.152, D_real: 0.893, D_fake: 0.262
+2025-11-16 18:07:56,709 - INFO - [Rank 0] (epoch: 157, iters: 6800, time: 0.014, data: 2.983) , G_GAN: 1.239, G_L1: 5.140, D_real: 0.811, D_fake: 0.300
+2025-11-16 18:08:35,167 - INFO - [Rank 0] (epoch: 157, iters: 7200, time: 0.024, data: 0.009) , G_GAN: 1.177, G_L1: 5.034, D_real: 0.643, D_fake: 0.354
+2025-11-16 18:08:56,139 - INFO - [Rank 0] (epoch: 157, iters: 7600, time: 0.014, data: 0.016) , G_GAN: 1.395, G_L1: 6.130, D_real: 0.464, D_fake: 0.313
+2025-11-16 18:08:57,163 - INFO - Learning rate updated to: 0.000169
+2025-11-16 18:08:57,164 - INFO - === EPOCH 157 COMPLETED === Time: 772s
+2025-11-16 18:08:57,164 - INFO - === EPOCH 158 STARTED ===
+2025-11-16 18:10:27,566 - INFO - [Rank 0] (epoch: 158, iters: 400, time: 0.021, data: 61.839) , G_GAN: 1.608, G_L1: 4.082, D_real: 0.474, D_fake: 0.511
+2025-11-16 18:11:15,890 - INFO - [Rank 0] (epoch: 158, iters: 800, time: 0.022, data: 0.012) , G_GAN: 1.529, G_L1: 6.572, D_real: 0.550, D_fake: 0.253
+2025-11-16 18:11:41,656 - INFO - [Rank 0] (epoch: 158, iters: 1200, time: 0.014, data: 0.009) , G_GAN: 1.261, G_L1: 6.968, D_real: 0.455, D_fake: 0.356
+2025-11-16 18:12:30,465 - INFO - [Rank 0] (epoch: 158, iters: 1600, time: 0.014, data: 0.008) , G_GAN: 0.970, G_L1: 3.299, D_real: 0.708, D_fake: 0.394
+2025-11-16 18:12:59,241 - INFO - [Rank 0] (epoch: 158, iters: 2000, time: 0.014, data: 0.011) , G_GAN: 1.183, G_L1: 4.791, D_real: 0.669, D_fake: 0.324
+2025-11-16 18:13:49,312 - INFO - [Rank 0] (epoch: 158, iters: 2400, time: 0.011, data: 1.320) , G_GAN: 1.369, G_L1: 6.087, D_real: 0.581, D_fake: 0.339
+2025-11-16 18:14:17,323 - INFO - [Rank 0] (epoch: 158, iters: 2800, time: 0.027, data: 0.009) , G_GAN: 1.211, G_L1: 4.321, D_real: 0.604, D_fake: 0.334
+2025-11-16 18:15:02,321 - INFO - [Rank 0] (epoch: 158, iters: 3200, time: 0.014, data: 0.009) , G_GAN: 1.219, G_L1: 6.396, D_real: 0.491, D_fake: 0.432
+2025-11-16 18:15:49,001 - INFO - [Rank 0] (epoch: 158, iters: 3600, time: 0.020, data: 0.010) , G_GAN: 1.129, G_L1: 5.511, D_real: 0.667, D_fake: 0.378
+2025-11-16 18:16:15,128 - INFO - [Rank 0] (epoch: 158, iters: 4000, time: 0.014, data: 0.011) , G_GAN: 0.925, G_L1: 5.319, D_real: 0.581, D_fake: 0.537
+2025-11-16 18:17:03,714 - INFO - [Rank 0] (epoch: 158, iters: 4400, time: 0.015, data: 0.008) , G_GAN: 1.139, G_L1: 2.318, D_real: 0.831, D_fake: 0.341
+2025-11-16 18:17:28,587 - INFO - [Rank 0] (epoch: 158, iters: 4800, time: 0.024, data: 0.015) , G_GAN: 1.220, G_L1: 4.500, D_real: 0.566, D_fake: 0.371
+2025-11-16 18:18:18,180 - INFO - [Rank 0] (epoch: 158, iters: 5200, time: 0.014, data: 0.009) , G_GAN: 1.214, G_L1: 6.228, D_real: 0.468, D_fake: 0.400
+2025-11-16 18:18:48,421 - INFO - [Rank 0] (epoch: 158, iters: 5600, time: 0.012, data: 0.013) , G_GAN: 0.999, G_L1: 3.805, D_real: 0.733, D_fake: 0.417
+2025-11-16 18:19:31,060 - INFO - [Rank 0] (epoch: 158, iters: 6000, time: 0.015, data: 0.015) , G_GAN: 1.103, G_L1: 3.526, D_real: 0.625, D_fake: 0.411
+2025-11-16 18:20:01,589 - INFO - [Rank 0] (epoch: 158, iters: 6400, time: 0.014, data: 0.010) , G_GAN: 1.169, G_L1: 5.942, D_real: 0.658, D_fake: 0.350
+2025-11-16 18:20:42,782 - INFO - [Rank 0] (epoch: 158, iters: 6800, time: 0.026, data: 16.707) , G_GAN: 1.263, G_L1: 6.803, D_real: 0.463, D_fake: 0.350
+2025-11-16 18:20:42,783 - INFO - Saving latest model (epoch 158, total_iters 60000)
+2025-11-16 18:21:27,958 - INFO - [Rank 0] (epoch: 158, iters: 7200, time: 0.024, data: 0.008) , G_GAN: 1.073, G_L1: 3.288, D_real: 0.751, D_fake: 0.370
+2025-11-16 18:21:45,509 - INFO - [Rank 0] (epoch: 158, iters: 7600, time: 0.014, data: 0.017) , G_GAN: 1.066, G_L1: 4.227, D_real: 0.595, D_fake: 0.442
+2025-11-16 18:21:46,566 - INFO - Learning rate updated to: 0.000165
+2025-11-16 18:21:46,567 - INFO - === EPOCH 158 COMPLETED === Time: 769s
+2025-11-16 18:21:46,567 - INFO - === EPOCH 159 STARTED ===
+2025-11-16 18:23:17,505 - INFO - [Rank 0] (epoch: 159, iters: 400, time: 0.064, data: 62.083) , G_GAN: 0.890, G_L1: 3.805, D_real: 0.629, D_fake: 0.458
+2025-11-16 18:24:00,852 - INFO - [Rank 0] (epoch: 159, iters: 800, time: 0.012, data: 0.011) , G_GAN: 1.209, G_L1: 4.851, D_real: 0.611, D_fake: 0.333
+2025-11-16 18:24:31,832 - INFO - [Rank 0] (epoch: 159, iters: 1200, time: 0.029, data: 0.012) , G_GAN: 1.166, G_L1: 4.846, D_real: 0.615, D_fake: 0.366
+2025-11-16 18:25:18,062 - INFO - [Rank 0] (epoch: 159, iters: 1600, time: 0.014, data: 0.013) , G_GAN: 0.950, G_L1: 4.753, D_real: 0.541, D_fake: 0.483
+2025-11-16 18:25:46,591 - INFO - [Rank 0] (epoch: 159, iters: 2000, time: 0.015, data: 0.014) , G_GAN: 1.081, G_L1: 5.752, D_real: 0.498, D_fake: 0.467
+2025-11-16 18:26:32,458 - INFO - [Rank 0] (epoch: 159, iters: 2400, time: 0.012, data: 0.013) , G_GAN: 0.905, G_L1: 2.715, D_real: 0.672, D_fake: 0.499
+2025-11-16 18:27:00,601 - INFO - [Rank 0] (epoch: 159, iters: 2800, time: 0.009, data: 0.009) , G_GAN: 1.080, G_L1: 5.103, D_real: 0.613, D_fake: 0.404
+2025-11-16 18:27:48,146 - INFO - [Rank 0] (epoch: 159, iters: 3200, time: 0.026, data: 0.010) , G_GAN: 1.214, G_L1: 6.660, D_real: 0.196, D_fake: 0.586
+2025-11-16 18:28:23,377 - INFO - [Rank 0] (epoch: 159, iters: 3600, time: 0.017, data: 0.011) , G_GAN: 1.340, G_L1: 7.002, D_real: 0.380, D_fake: 0.403
+2025-11-16 18:29:02,250 - INFO - [Rank 0] (epoch: 159, iters: 4000, time: 0.014, data: 8.340) , G_GAN: 1.050, G_L1: 6.172, D_real: 0.412, D_fake: 0.497
+2025-11-16 18:29:46,203 - INFO - [Rank 0] (epoch: 159, iters: 4400, time: 0.009, data: 0.014) , G_GAN: 1.091, G_L1: 4.739, D_real: 0.554, D_fake: 0.401
+2025-11-16 18:30:14,744 - INFO - [Rank 0] (epoch: 159, iters: 4800, time: 0.014, data: 3.433) , G_GAN: 1.069, G_L1: 4.746, D_real: 0.509, D_fake: 0.475
+2025-11-16 18:31:02,835 - INFO - [Rank 0] (epoch: 159, iters: 5200, time: 0.027, data: 0.011) , G_GAN: 1.018, G_L1: 5.483, D_real: 0.350, D_fake: 0.574
+2025-11-16 18:31:30,456 - INFO - [Rank 0] (epoch: 159, iters: 5600, time: 0.014, data: 1.589) , G_GAN: 1.207, G_L1: 7.284, D_real: 0.560, D_fake: 0.376
+2025-11-16 18:32:20,594 - INFO - [Rank 0] (epoch: 159, iters: 6000, time: 0.013, data: 0.015) , G_GAN: 1.035, G_L1: 3.917, D_real: 0.764, D_fake: 0.392
+2025-11-16 18:32:45,328 - INFO - [Rank 0] (epoch: 159, iters: 6400, time: 0.014, data: 0.013) , G_GAN: 1.166, G_L1: 4.900, D_real: 0.421, D_fake: 0.462
+2025-11-16 18:33:34,457 - INFO - [Rank 0] (epoch: 159, iters: 6800, time: 0.014, data: 8.055) , G_GAN: 1.104, G_L1: 4.825, D_real: 0.679, D_fake: 0.352
+2025-11-16 18:34:12,602 - INFO - [Rank 0] (epoch: 159, iters: 7200, time: 0.061, data: 0.010) , G_GAN: 1.220, G_L1: 7.774, D_real: 0.503, D_fake: 0.390
+2025-11-16 18:34:35,257 - INFO - [Rank 0] (epoch: 159, iters: 7600, time: 0.014, data: 0.012) , G_GAN: 1.127, G_L1: 5.022, D_real: 0.592, D_fake: 0.391
+2025-11-16 18:34:36,269 - INFO - Learning rate updated to: 0.000161
+2025-11-16 18:34:36,270 - INFO - === EPOCH 159 COMPLETED === Time: 770s
+2025-11-16 18:34:36,271 - INFO - === EPOCH 160 STARTED ===
+2025-11-16 18:36:04,247 - INFO - [Rank 0] (epoch: 160, iters: 400, time: 0.026, data: 60.594) , G_GAN: 1.081, G_L1: 4.976, D_real: 0.512, D_fake: 0.421
+2025-11-16 18:36:52,153 - INFO - [Rank 0] (epoch: 160, iters: 800, time: 0.012, data: 0.011) , G_GAN: 1.043, G_L1: 3.961, D_real: 0.539, D_fake: 0.460
+2025-11-16 18:37:19,071 - INFO - [Rank 0] (epoch: 160, iters: 1200, time: 0.014, data: 0.012) , G_GAN: 1.235, G_L1: 5.627, D_real: 0.417, D_fake: 0.370
+2025-11-16 18:38:06,840 - INFO - [Rank 0] (epoch: 160, iters: 1600, time: 0.024, data: 0.011) , G_GAN: 1.259, G_L1: 7.825, D_real: 0.244, D_fake: 0.477
+2025-11-16 18:38:06,842 - INFO - Saving latest model (epoch 160, total_iters 70000)
+2025-11-16 18:38:33,273 - INFO - [Rank 0] (epoch: 160, iters: 2000, time: 0.014, data: 0.009) , G_GAN: 1.264, G_L1: 6.830, D_real: 0.658, D_fake: 0.298
+2025-11-16 18:39:22,762 - INFO - [Rank 0] (epoch: 160, iters: 2400, time: 0.014, data: 0.011) , G_GAN: 1.238, G_L1: 6.919, D_real: 0.498, D_fake: 0.351
+2025-11-16 18:39:51,459 - INFO - [Rank 0] (epoch: 160, iters: 2800, time: 0.014, data: 0.010) , G_GAN: 0.887, G_L1: 3.075, D_real: 0.695, D_fake: 0.465
+2025-11-16 18:40:39,249 - INFO - [Rank 0] (epoch: 160, iters: 3200, time: 0.014, data: 0.013) , G_GAN: 1.027, G_L1: 4.795, D_real: 0.681, D_fake: 0.408
+2025-11-16 18:41:12,729 - INFO - [Rank 0] (epoch: 160, iters: 3600, time: 0.026, data: 0.013) , G_GAN: 0.984, G_L1: 4.475, D_real: 0.520, D_fake: 0.523
+2025-11-16 18:41:54,217 - INFO - [Rank 0] (epoch: 160, iters: 4000, time: 0.013, data: 16.477) , G_GAN: 1.167, G_L1: 5.338, D_real: 0.574, D_fake: 0.355
+2025-11-16 18:42:43,388 - INFO - [Rank 0] (epoch: 160, iters: 4400, time: 0.016, data: 0.010) , G_GAN: 1.168, G_L1: 4.952, D_real: 0.703, D_fake: 0.318
+2025-11-16 18:43:09,617 - INFO - [Rank 0] (epoch: 160, iters: 4800, time: 0.014, data: 0.012) , G_GAN: 1.239, G_L1: 6.414, D_real: 0.360, D_fake: 0.420
+2025-11-16 18:43:55,511 - INFO - [Rank 0] (epoch: 160, iters: 5200, time: 0.015, data: 0.010) , G_GAN: 0.916, G_L1: 4.482, D_real: 0.725, D_fake: 0.423
+2025-11-16 18:44:22,700 - INFO - [Rank 0] (epoch: 160, iters: 5600, time: 0.071, data: 0.012) , G_GAN: 1.144, G_L1: 5.681, D_real: 0.520, D_fake: 0.404
+2025-11-16 18:45:11,017 - INFO - [Rank 0] (epoch: 160, iters: 6000, time: 0.016, data: 0.012) , G_GAN: 1.163, G_L1: 4.668, D_real: 0.526, D_fake: 0.437
+2025-11-16 18:45:35,703 - INFO - [Rank 0] (epoch: 160, iters: 6400, time: 0.014, data: 0.009) , G_GAN: 1.255, G_L1: 5.581, D_real: 0.540, D_fake: 0.384
+2025-11-16 18:46:22,035 - INFO - [Rank 0] (epoch: 160, iters: 6800, time: 0.014, data: 4.916) , G_GAN: 0.938, G_L1: 4.902, D_real: 0.644, D_fake: 0.430
+2025-11-16 18:47:08,771 - INFO - [Rank 0] (epoch: 160, iters: 7200, time: 0.024, data: 0.011) , G_GAN: 1.123, G_L1: 2.848, D_real: 0.889, D_fake: 0.319
+2025-11-16 18:47:24,380 - INFO - [Rank 0] (epoch: 160, iters: 7600, time: 0.020, data: 0.010) , G_GAN: 1.161, G_L1: 4.986, D_real: 0.559, D_fake: 0.363
+2025-11-16 18:47:25,365 - INFO - Learning rate updated to: 0.000157
+2025-11-16 18:47:25,366 - INFO - Saving model at end of epoch 160, iters 76000
+2025-11-16 18:47:25,730 - INFO - === EPOCH 160 COMPLETED === Time: 769s
+2025-11-16 18:47:25,731 - INFO - === EPOCH 161 STARTED ===
+2025-11-16 18:48:55,035 - INFO - [Rank 0] (epoch: 161, iters: 400, time: 0.022, data: 61.383) , G_GAN: 0.943, G_L1: 3.469, D_real: 0.830, D_fake: 0.353
+2025-11-16 18:49:41,748 - INFO - [Rank 0] (epoch: 161, iters: 800, time: 0.024, data: 0.010) , G_GAN: 1.500, G_L1: 10.203, D_real: 0.067, D_fake: 0.436
+2025-11-16 18:50:09,855 - INFO - [Rank 0] (epoch: 161, iters: 1200, time: 0.014, data: 1.301) , G_GAN: 1.231, G_L1: 6.364, D_real: 0.601, D_fake: 0.313
+2025-11-16 18:50:58,063 - INFO - [Rank 0] (epoch: 161, iters: 1600, time: 0.014, data: 0.012) , G_GAN: 0.991, G_L1: 3.296, D_real: 0.740, D_fake: 0.473
+2025-11-16 18:51:25,130 - INFO - [Rank 0] (epoch: 161, iters: 2000, time: 0.023, data: 0.012) , G_GAN: 1.028, G_L1: 4.574, D_real: 0.536, D_fake: 0.490
+2025-11-16 18:52:13,917 - INFO - [Rank 0] (epoch: 161, iters: 2400, time: 0.014, data: 0.012) , G_GAN: 1.189, G_L1: 2.622, D_real: 0.801, D_fake: 0.308
+2025-11-16 18:52:41,080 - INFO - [Rank 0] (epoch: 161, iters: 2800, time: 0.014, data: 0.011) , G_GAN: 0.862, G_L1: 4.336, D_real: 0.498, D_fake: 0.602
+2025-11-16 18:53:29,868 - INFO - [Rank 0] (epoch: 161, iters: 3200, time: 0.014, data: 0.012) , G_GAN: 1.216, G_L1: 7.369, D_real: 0.413, D_fake: 0.404
+2025-11-16 18:54:19,972 - INFO - [Rank 0] (epoch: 161, iters: 3600, time: 0.025, data: 0.012) , G_GAN: 1.191, G_L1: 8.821, D_real: 0.198, D_fake: 0.502
+2025-11-16 18:54:47,131 - INFO - [Rank 0] (epoch: 161, iters: 4000, time: 0.028, data: 0.009) , G_GAN: 1.112, G_L1: 4.244, D_real: 0.651, D_fake: 0.360
+2025-11-16 18:54:47,133 - INFO - Saving latest model (epoch 161, total_iters 80000)
+2025-11-16 18:55:35,473 - INFO - [Rank 0] (epoch: 161, iters: 4400, time: 0.014, data: 0.019) , G_GAN: 1.102, G_L1: 5.011, D_real: 0.555, D_fake: 0.403
+2025-11-16 18:56:02,590 - INFO - [Rank 0] (epoch: 161, iters: 4800, time: 0.014, data: 0.013) , G_GAN: 1.144, G_L1: 4.811, D_real: 0.528, D_fake: 0.403
+2025-11-16 18:56:51,753 - INFO - [Rank 0] (epoch: 161, iters: 5200, time: 0.014, data: 0.013) , G_GAN: 1.125, G_L1: 7.531, D_real: 0.340, D_fake: 0.480
+2025-11-16 18:57:17,660 - INFO - [Rank 0] (epoch: 161, iters: 5600, time: 0.013, data: 0.011) , G_GAN: 1.285, G_L1: 6.383, D_real: 0.326, D_fake: 0.438
+2025-11-16 18:58:07,060 - INFO - [Rank 0] (epoch: 161, iters: 6000, time: 0.065, data: 0.011) , G_GAN: 1.074, G_L1: 6.211, D_real: 0.340, D_fake: 0.521
+2025-11-16 18:58:32,227 - INFO - [Rank 0] (epoch: 161, iters: 6400, time: 0.014, data: 0.011) , G_GAN: 1.278, G_L1: 5.831, D_real: 0.457, D_fake: 0.334
+2025-11-16 18:59:20,339 - INFO - [Rank 0] (epoch: 161, iters: 6800, time: 0.014, data: 21.973) , G_GAN: 1.532, G_L1: 7.007, D_real: 0.386, D_fake: 0.326
+2025-11-16 19:00:04,918 - INFO - [Rank 0] (epoch: 161, iters: 7200, time: 0.024, data: 0.013) , G_GAN: 0.995, G_L1: 3.415, D_real: 0.716, D_fake: 0.380
+2025-11-16 19:00:19,433 - INFO - [Rank 0] (epoch: 161, iters: 7600, time: 0.014, data: 0.010) , G_GAN: 1.058, G_L1: 4.389, D_real: 0.778, D_fake: 0.355
+2025-11-16 19:00:20,421 - INFO - Learning rate updated to: 0.000153
+2025-11-16 19:00:20,422 - INFO - === EPOCH 161 COMPLETED === Time: 775s
+2025-11-16 19:00:20,422 - INFO - === EPOCH 162 STARTED ===
+2025-11-16 19:01:52,027 - INFO - [Rank 0] (epoch: 162, iters: 400, time: 0.029, data: 62.367) , G_GAN: 0.984, G_L1: 4.173, D_real: 0.711, D_fake: 0.467
+2025-11-16 19:02:37,958 - INFO - [Rank 0] (epoch: 162, iters: 800, time: 0.024, data: 0.010) , G_GAN: 1.398, G_L1: 7.812, D_real: 0.275, D_fake: 0.400
+2025-11-16 19:03:06,464 - INFO - [Rank 0] (epoch: 162, iters: 1200, time: 0.014, data: 2.481) , G_GAN: 1.252, G_L1: 4.123, D_real: 0.698, D_fake: 0.319
+2025-11-16 19:03:55,771 - INFO - [Rank 0] (epoch: 162, iters: 1600, time: 0.017, data: 0.013) , G_GAN: 1.038, G_L1: 7.129, D_real: 0.358, D_fake: 0.480
+2025-11-16 19:04:21,642 - INFO - [Rank 0] (epoch: 162, iters: 2000, time: 0.014, data: 0.013) , G_GAN: 1.230, G_L1: 8.013, D_real: 0.476, D_fake: 0.355
+2025-11-16 19:05:11,016 - INFO - [Rank 0] (epoch: 162, iters: 2400, time: 0.024, data: 0.012) , G_GAN: 1.126, G_L1: 3.250, D_real: 0.931, D_fake: 0.325
+2025-11-16 19:05:37,233 - INFO - [Rank 0] (epoch: 162, iters: 2800, time: 0.014, data: 0.010) , G_GAN: 0.870, G_L1: 5.354, D_real: 0.323, D_fake: 0.650
+2025-11-16 19:06:24,156 - INFO - [Rank 0] (epoch: 162, iters: 3200, time: 0.014, data: 0.011) , G_GAN: 1.344, G_L1: 6.679, D_real: 0.528, D_fake: 0.299
+2025-11-16 19:07:08,601 - INFO - [Rank 0] (epoch: 162, iters: 3600, time: 0.020, data: 0.010) , G_GAN: 1.006, G_L1: 4.045, D_real: 0.637, D_fake: 0.445
+2025-11-16 19:07:42,690 - INFO - [Rank 0] (epoch: 162, iters: 4000, time: 0.012, data: 2.529) , G_GAN: 1.534, G_L1: 8.132, D_real: 0.270, D_fake: 0.561
+2025-11-16 19:08:26,778 - INFO - [Rank 0] (epoch: 162, iters: 4400, time: 0.026, data: 0.009) , G_GAN: 1.279, G_L1: 6.668, D_real: 0.389, D_fake: 0.356
+2025-11-16 19:08:53,559 - INFO - [Rank 0] (epoch: 162, iters: 4800, time: 0.015, data: 0.010) , G_GAN: 1.143, G_L1: 4.826, D_real: 0.567, D_fake: 0.363
+2025-11-16 19:09:40,038 - INFO - [Rank 0] (epoch: 162, iters: 5200, time: 0.014, data: 0.010) , G_GAN: 1.085, G_L1: 3.410, D_real: 0.620, D_fake: 0.400
+2025-11-16 19:10:06,344 - INFO - [Rank 0] (epoch: 162, iters: 5600, time: 0.013, data: 0.016) , G_GAN: 1.188, G_L1: 5.783, D_real: 0.564, D_fake: 0.391
+2025-11-16 19:10:52,846 - INFO - [Rank 0] (epoch: 162, iters: 6000, time: 0.014, data: 0.008) , G_GAN: 1.081, G_L1: 3.912, D_real: 0.740, D_fake: 0.404
+2025-11-16 19:11:23,528 - INFO - [Rank 0] (epoch: 162, iters: 6400, time: 0.063, data: 0.012) , G_GAN: 1.307, G_L1: 6.480, D_real: 0.556, D_fake: 0.326
+2025-11-16 19:11:23,530 - INFO - Saving latest model (epoch 162, total_iters 90000)
+2025-11-16 19:12:06,762 - INFO - [Rank 0] (epoch: 162, iters: 6800, time: 0.014, data: 14.248) , G_GAN: 0.946, G_L1: 2.992, D_real: 0.855, D_fake: 0.400
+2025-11-16 19:12:50,974 - INFO - [Rank 0] (epoch: 162, iters: 7200, time: 0.024, data: 5.033) , G_GAN: 1.124, G_L1: 6.552, D_real: 0.418, D_fake: 0.481
+2025-11-16 19:13:12,510 - INFO - [Rank 0] (epoch: 162, iters: 7600, time: 0.014, data: 0.661) , G_GAN: 1.236, G_L1: 8.269, D_real: 0.412, D_fake: 0.396
+2025-11-16 19:13:13,496 - INFO - Learning rate updated to: 0.000149
+2025-11-16 19:13:13,497 - INFO - === EPOCH 162 COMPLETED === Time: 773s
+2025-11-16 19:13:13,497 - INFO - === EPOCH 163 STARTED ===
+2025-11-16 19:14:42,894 - INFO - [Rank 0] (epoch: 163, iters: 400, time: 0.025, data: 62.805) , G_GAN: 1.367, G_L1: 7.920, D_real: 0.351, D_fake: 0.385
+2025-11-16 19:15:31,517 - INFO - [Rank 0] (epoch: 163, iters: 800, time: 0.035, data: 0.010) , G_GAN: 1.271, G_L1: 6.156, D_real: 0.466, D_fake: 0.398
+2025-11-16 19:15:57,301 - INFO - [Rank 0] (epoch: 163, iters: 1200, time: 0.015, data: 0.011) , G_GAN: 1.158, G_L1: 5.261, D_real: 0.570, D_fake: 0.409
+2025-11-16 19:16:44,068 - INFO - [Rank 0] (epoch: 163, iters: 1600, time: 0.014, data: 0.010) , G_GAN: 0.998, G_L1: 4.989, D_real: 0.663, D_fake: 0.426
+2025-11-16 19:17:15,127 - INFO - [Rank 0] (epoch: 163, iters: 2000, time: 0.015, data: 0.008) , G_GAN: 1.061, G_L1: 4.433, D_real: 0.718, D_fake: 0.366
+2025-11-16 19:17:58,969 - INFO - [Rank 0] (epoch: 163, iters: 2400, time: 0.010, data: 0.012) , G_GAN: 1.160, G_L1: 3.834, D_real: 0.609, D_fake: 0.374
+2025-11-16 19:18:28,211 - INFO - [Rank 0] (epoch: 163, iters: 2800, time: 0.023, data: 0.010) , G_GAN: 1.010, G_L1: 4.830, D_real: 0.712, D_fake: 0.395
+2025-11-16 19:19:16,859 - INFO - [Rank 0] (epoch: 163, iters: 3200, time: 0.013, data: 0.014) , G_GAN: 1.343, G_L1: 5.568, D_real: 0.491, D_fake: 0.342
+2025-11-16 19:19:55,422 - INFO - [Rank 0] (epoch: 163, iters: 3600, time: 0.025, data: 0.012) , G_GAN: 1.730, G_L1: 6.754, D_real: 0.513, D_fake: 0.316
+2025-11-16 19:20:28,694 - INFO - [Rank 0] (epoch: 163, iters: 4000, time: 0.014, data: 1.840) , G_GAN: 1.375, G_L1: 7.064, D_real: 0.456, D_fake: 0.342
+2025-11-16 19:21:12,761 - INFO - [Rank 0] (epoch: 163, iters: 4400, time: 0.022, data: 0.009) , G_GAN: 1.140, G_L1: 4.320, D_real: 0.793, D_fake: 0.374
+2025-11-16 19:21:43,777 - INFO - [Rank 0] (epoch: 163, iters: 4800, time: 0.059, data: 0.011) , G_GAN: 1.095, G_L1: 7.422, D_real: 0.569, D_fake: 0.402
+2025-11-16 19:22:29,023 - INFO - [Rank 0] (epoch: 163, iters: 5200, time: 0.014, data: 0.010) , G_GAN: 1.299, G_L1: 5.261, D_real: 0.781, D_fake: 0.292
+2025-11-16 19:22:56,837 - INFO - [Rank 0] (epoch: 163, iters: 5600, time: 0.014, data: 0.010) , G_GAN: 1.032, G_L1: 6.784, D_real: 0.473, D_fake: 0.514
+2025-11-16 19:23:42,277 - INFO - [Rank 0] (epoch: 163, iters: 6000, time: 0.014, data: 2.671) , G_GAN: 1.094, G_L1: 5.360, D_real: 0.618, D_fake: 0.404
+2025-11-16 19:24:13,614 - INFO - [Rank 0] (epoch: 163, iters: 6400, time: 0.017, data: 0.015) , G_GAN: 1.264, G_L1: 5.440, D_real: 0.380, D_fake: 0.421
+2025-11-16 19:24:56,986 - INFO - [Rank 0] (epoch: 163, iters: 6800, time: 0.022, data: 3.497) , G_GAN: 1.121, G_L1: 4.152, D_real: 0.717, D_fake: 0.355
+2025-11-16 19:25:42,188 - INFO - [Rank 0] (epoch: 163, iters: 7200, time: 0.023, data: 0.014) , G_GAN: 1.151, G_L1: 5.110, D_real: 0.562, D_fake: 0.406
+2025-11-16 19:26:02,146 - INFO - [Rank 0] (epoch: 163, iters: 7600, time: 0.014, data: 0.012) , G_GAN: 0.999, G_L1: 3.379, D_real: 0.744, D_fake: 0.403
+2025-11-16 19:26:03,224 - INFO - Learning rate updated to: 0.000145
+2025-11-16 19:26:03,225 - INFO - === EPOCH 163 COMPLETED === Time: 770s
+2025-11-16 19:26:03,225 - INFO - === EPOCH 164 STARTED ===
+2025-11-16 19:27:32,841 - INFO - [Rank 0] (epoch: 164, iters: 400, time: 0.027, data: 63.194) , G_GAN: 1.235, G_L1: 6.370, D_real: 0.403, D_fake: 0.388
+2025-11-16 19:28:22,012 - INFO - [Rank 0] (epoch: 164, iters: 800, time: 0.012, data: 0.011) , G_GAN: 1.173, G_L1: 5.027, D_real: 0.543, D_fake: 0.394
+2025-11-16 19:28:46,566 - INFO - [Rank 0] (epoch: 164, iters: 1200, time: 0.023, data: 0.016) , G_GAN: 1.155, G_L1: 6.975, D_real: 0.334, D_fake: 0.507
+2025-11-16 19:28:46,568 - INFO - Saving latest model (epoch 164, total_iters 100000)
+2025-11-16 19:29:32,766 - INFO - [Rank 0] (epoch: 164, iters: 1600, time: 0.014, data: 0.010) , G_GAN: 1.228, G_L1: 5.053, D_real: 0.609, D_fake: 0.359
+2025-11-16 19:30:01,651 - INFO - [Rank 0] (epoch: 164, iters: 2000, time: 0.014, data: 0.013) , G_GAN: 1.224, G_L1: 5.254, D_real: 0.615, D_fake: 0.345
+2025-11-16 19:30:48,964 - INFO - [Rank 0] (epoch: 164, iters: 2400, time: 0.009, data: 0.010) , G_GAN: 1.086, G_L1: 5.347, D_real: 0.488, D_fake: 0.464
+2025-11-16 19:31:17,183 - INFO - [Rank 0] (epoch: 164, iters: 2800, time: 0.014, data: 0.013) , G_GAN: 1.321, G_L1: 5.658, D_real: 0.415, D_fake: 0.422
+2025-11-16 19:32:03,863 - INFO - [Rank 0] (epoch: 164, iters: 3200, time: 0.056, data: 0.010) , G_GAN: 1.062, G_L1: 6.238, D_real: 0.312, D_fake: 0.554
+2025-11-16 19:32:52,598 - INFO - [Rank 0] (epoch: 164, iters: 3600, time: 0.023, data: 0.037) , G_GAN: 1.081, G_L1: 5.028, D_real: 0.725, D_fake: 0.372
+2025-11-16 19:33:20,154 - INFO - [Rank 0] (epoch: 164, iters: 4000, time: 0.015, data: 0.018) , G_GAN: 1.275, G_L1: 6.789, D_real: 0.297, D_fake: 0.453
+2025-11-16 19:34:08,092 - INFO - [Rank 0] (epoch: 164, iters: 4400, time: 0.014, data: 0.008) , G_GAN: 1.058, G_L1: 5.470, D_real: 0.543, D_fake: 0.389
+2025-11-16 19:34:33,567 - INFO - [Rank 0] (epoch: 164, iters: 4800, time: 0.014, data: 0.014) , G_GAN: 1.230, G_L1: 3.652, D_real: 0.694, D_fake: 0.329
+2025-11-16 19:35:23,115 - INFO - [Rank 0] (epoch: 164, iters: 5200, time: 0.024, data: 0.012) , G_GAN: 1.515, G_L1: 5.020, D_real: 0.568, D_fake: 0.278
+2025-11-16 19:35:48,331 - INFO - [Rank 0] (epoch: 164, iters: 5600, time: 0.014, data: 0.010) , G_GAN: 1.298, G_L1: 6.815, D_real: 0.466, D_fake: 0.340
+2025-11-16 19:36:35,701 - INFO - [Rank 0] (epoch: 164, iters: 6000, time: 0.014, data: 0.011) , G_GAN: 1.039, G_L1: 4.795, D_real: 0.583, D_fake: 0.426
+2025-11-16 19:37:03,764 - INFO - [Rank 0] (epoch: 164, iters: 6400, time: 0.014, data: 0.012) , G_GAN: 1.128, G_L1: 4.341, D_real: 0.660, D_fake: 0.349
+2025-11-16 19:37:52,765 - INFO - [Rank 0] (epoch: 164, iters: 6800, time: 0.014, data: 22.029) , G_GAN: 1.348, G_L1: 7.003, D_real: 0.424, D_fake: 0.352
+2025-11-16 19:38:39,477 - INFO - [Rank 0] (epoch: 164, iters: 7200, time: 0.031, data: 0.009) , G_GAN: 0.951, G_L1: 5.413, D_real: 0.493, D_fake: 0.501
+2025-11-16 19:38:54,424 - INFO - [Rank 0] (epoch: 164, iters: 7600, time: 0.014, data: 0.013) , G_GAN: 1.104, G_L1: 6.194, D_real: 0.606, D_fake: 0.379
+2025-11-16 19:38:55,414 - INFO - Learning rate updated to: 0.000141
+2025-11-16 19:38:55,415 - INFO - === EPOCH 164 COMPLETED === Time: 772s
+2025-11-16 19:38:55,415 - INFO - === EPOCH 165 STARTED ===
+2025-11-16 19:40:25,079 - INFO - [Rank 0] (epoch: 165, iters: 400, time: 0.031, data: 60.842) , G_GAN: 1.218, G_L1: 5.921, D_real: 0.494, D_fake: 0.401
+2025-11-16 19:41:11,403 - INFO - [Rank 0] (epoch: 165, iters: 800, time: 0.013, data: 0.010) , G_GAN: 1.182, G_L1: 5.691, D_real: 0.466, D_fake: 0.410
+2025-11-16 19:41:39,013 - INFO - [Rank 0] (epoch: 165, iters: 1200, time: 0.013, data: 2.149) , G_GAN: 1.300, G_L1: 7.607, D_real: 0.439, D_fake: 0.354
+2025-11-16 19:42:30,083 - INFO - [Rank 0] (epoch: 165, iters: 1600, time: 0.067, data: 0.019) , G_GAN: 1.157, G_L1: 6.049, D_real: 0.542, D_fake: 0.384
+2025-11-16 19:42:54,898 - INFO - [Rank 0] (epoch: 165, iters: 2000, time: 0.013, data: 0.011) , G_GAN: 1.404, G_L1: 5.656, D_real: 0.719, D_fake: 0.259
+2025-11-16 19:43:42,268 - INFO - [Rank 0] (epoch: 165, iters: 2400, time: 0.014, data: 0.010) , G_GAN: 1.140, G_L1: 5.063, D_real: 0.564, D_fake: 0.374
+2025-11-16 19:44:07,974 - INFO - [Rank 0] (epoch: 165, iters: 2800, time: 0.014, data: 0.011) , G_GAN: 1.258, G_L1: 7.354, D_real: 0.416, D_fake: 0.396
+2025-11-16 19:44:56,434 - INFO - [Rank 0] (epoch: 165, iters: 3200, time: 0.014, data: 0.010) , G_GAN: 1.408, G_L1: 6.626, D_real: 0.481, D_fake: 0.315
+2025-11-16 19:45:38,611 - INFO - [Rank 0] (epoch: 165, iters: 3600, time: 0.039, data: 0.012) , G_GAN: 1.241, G_L1: 4.981, D_real: 0.630, D_fake: 0.336
+2025-11-16 19:45:38,612 - INFO - Saving latest model (epoch 165, total_iters 110000)
+2025-11-16 19:46:10,060 - INFO - [Rank 0] (epoch: 165, iters: 4000, time: 0.014, data: 3.618) , G_GAN: 1.044, G_L1: 5.239, D_real: 0.517, D_fake: 0.445
+2025-11-16 19:46:58,082 - INFO - [Rank 0] (epoch: 165, iters: 4400, time: 0.012, data: 0.404) , G_GAN: 0.980, G_L1: 3.420, D_real: 0.667, D_fake: 0.451
+2025-11-16 19:47:27,591 - INFO - [Rank 0] (epoch: 165, iters: 4800, time: 0.012, data: 0.010) , G_GAN: 1.346, G_L1: 7.430, D_real: 0.262, D_fake: 0.499
+2025-11-16 19:48:11,704 - INFO - [Rank 0] (epoch: 165, iters: 5200, time: 0.015, data: 0.012) , G_GAN: 1.090, G_L1: 5.797, D_real: 0.389, D_fake: 0.536
+2025-11-16 19:48:41,294 - INFO - [Rank 0] (epoch: 165, iters: 5600, time: 0.029, data: 0.013) , G_GAN: 1.730, G_L1: 5.848, D_real: 0.229, D_fake: 0.343
+2025-11-16 19:49:27,290 - INFO - [Rank 0] (epoch: 165, iters: 6000, time: 0.014, data: 0.010) , G_GAN: 1.006, G_L1: 5.286, D_real: 0.567, D_fake: 0.445
+2025-11-16 19:49:56,578 - INFO - [Rank 0] (epoch: 165, iters: 6400, time: 0.014, data: 0.016) , G_GAN: 0.976, G_L1: 1.770, D_real: 1.051, D_fake: 0.338
+2025-11-16 19:50:40,356 - INFO - [Rank 0] (epoch: 165, iters: 6800, time: 0.014, data: 13.278) , G_GAN: 1.208, G_L1: 6.128, D_real: 0.562, D_fake: 0.360
+2025-11-16 19:51:25,911 - INFO - [Rank 0] (epoch: 165, iters: 7200, time: 0.009, data: 5.261) , G_GAN: 1.151, G_L1: 6.429, D_real: 0.463, D_fake: 0.405
+2025-11-16 19:51:46,209 - INFO - [Rank 0] (epoch: 165, iters: 7600, time: 0.020, data: 0.009) , G_GAN: 1.569, G_L1: 6.878, D_real: 0.395, D_fake: 0.321
+2025-11-16 19:51:47,249 - INFO - Learning rate updated to: 0.000137
+2025-11-16 19:51:47,251 - INFO - Saving model at end of epoch 165, iters 114000
+2025-11-16 19:51:47,648 - INFO - === EPOCH 165 COMPLETED === Time: 772s
+2025-11-16 19:51:47,648 - INFO - === EPOCH 166 STARTED ===
+2025-11-16 19:53:20,893 - INFO - [Rank 0] (epoch: 166, iters: 400, time: 0.062, data: 62.430) , G_GAN: 1.161, G_L1: 3.809, D_real: 0.766, D_fake: 0.338
+2025-11-16 19:54:01,469 - INFO - [Rank 0] (epoch: 166, iters: 800, time: 0.009, data: 0.012) , G_GAN: 1.149, G_L1: 3.661, D_real: 0.887, D_fake: 0.367
+2025-11-16 19:54:36,413 - INFO - [Rank 0] (epoch: 166, iters: 1200, time: 0.014, data: 0.020) , G_GAN: 1.130, G_L1: 5.348, D_real: 0.472, D_fake: 0.454
+2025-11-16 19:55:24,019 - INFO - [Rank 0] (epoch: 166, iters: 1600, time: 0.024, data: 0.010) , G_GAN: 1.032, G_L1: 4.874, D_real: 0.650, D_fake: 0.411
+2025-11-16 19:55:51,558 - INFO - [Rank 0] (epoch: 166, iters: 2000, time: 0.030, data: 0.017) , G_GAN: 1.173, G_L1: 6.595, D_real: 0.378, D_fake: 0.419
+2025-11-16 19:56:37,712 - INFO - [Rank 0] (epoch: 166, iters: 2400, time: 0.015, data: 0.012) , G_GAN: 1.129, G_L1: 4.999, D_real: 0.613, D_fake: 0.349
+2025-11-16 19:57:02,952 - INFO - [Rank 0] (epoch: 166, iters: 2800, time: 0.014, data: 0.010) , G_GAN: 1.089, G_L1: 6.599, D_real: 0.431, D_fake: 0.465
+2025-11-16 19:57:49,543 - INFO - [Rank 0] (epoch: 166, iters: 3200, time: 0.014, data: 0.008) , G_GAN: 1.178, G_L1: 7.114, D_real: 0.351, D_fake: 0.481
+2025-11-16 19:58:31,241 - INFO - [Rank 0] (epoch: 166, iters: 3600, time: 0.017, data: 0.014) , G_GAN: 1.144, G_L1: 6.398, D_real: 0.332, D_fake: 0.432
+2025-11-16 19:59:03,189 - INFO - [Rank 0] (epoch: 166, iters: 4000, time: 0.029, data: 0.011) , G_GAN: 1.150, G_L1: 4.012, D_real: 0.463, D_fake: 0.420
+2025-11-16 19:59:43,467 - INFO - [Rank 0] (epoch: 166, iters: 4400, time: 0.014, data: 0.011) , G_GAN: 1.099, G_L1: 4.611, D_real: 0.616, D_fake: 0.390
+2025-11-16 20:00:17,543 - INFO - [Rank 0] (epoch: 166, iters: 4800, time: 0.009, data: 6.734) , G_GAN: 1.011, G_L1: 4.303, D_real: 0.584, D_fake: 0.464
+2025-11-16 20:01:03,071 - INFO - [Rank 0] (epoch: 166, iters: 5200, time: 0.009, data: 0.013) , G_GAN: 1.106, G_L1: 3.857, D_real: 0.607, D_fake: 0.434
+2025-11-16 20:01:33,104 - INFO - [Rank 0] (epoch: 166, iters: 5600, time: 0.015, data: 0.290) , G_GAN: 1.372, G_L1: 5.275, D_real: 0.489, D_fake: 0.433
+2025-11-16 20:02:16,795 - INFO - [Rank 0] (epoch: 166, iters: 6000, time: 0.018, data: 0.559) , G_GAN: 1.191, G_L1: 4.073, D_real: 0.571, D_fake: 0.411
+2025-11-16 20:02:16,797 - INFO - Saving latest model (epoch 166, total_iters 120000)
+2025-11-16 20:02:47,552 - INFO - [Rank 0] (epoch: 166, iters: 6400, time: 0.014, data: 0.012) , G_GAN: 1.057, G_L1: 4.018, D_real: 0.677, D_fake: 0.405
+2025-11-16 20:03:32,626 - INFO - [Rank 0] (epoch: 166, iters: 6800, time: 0.017, data: 13.026) , G_GAN: 1.163, G_L1: 3.656, D_real: 1.001, D_fake: 0.297
+2025-11-16 20:04:18,589 - INFO - [Rank 0] (epoch: 166, iters: 7200, time: 0.012, data: 0.009) , G_GAN: 1.327, G_L1: 5.483, D_real: 0.594, D_fake: 0.298
+2025-11-16 20:04:36,528 - INFO - [Rank 0] (epoch: 166, iters: 7600, time: 0.014, data: 0.009) , G_GAN: 1.357, G_L1: 5.801, D_real: 0.318, D_fake: 0.506
+2025-11-16 20:04:37,546 - INFO - Learning rate updated to: 0.000133
+2025-11-16 20:04:37,547 - INFO - === EPOCH 166 COMPLETED === Time: 770s
+2025-11-16 20:04:37,547 - INFO - === EPOCH 167 STARTED ===
+2025-11-16 20:06:06,813 - INFO - [Rank 0] (epoch: 167, iters: 400, time: 0.025, data: 61.566) , G_GAN: 1.478, G_L1: 3.532, D_real: 0.941, D_fake: 0.280
+2025-11-16 20:06:54,587 - INFO - [Rank 0] (epoch: 167, iters: 800, time: 0.025, data: 0.012) , G_GAN: 1.220, G_L1: 4.848, D_real: 0.704, D_fake: 0.295
+2025-11-16 20:07:21,961 - INFO - [Rank 0] (epoch: 167, iters: 1200, time: 0.014, data: 0.009) , G_GAN: 1.251, G_L1: 5.379, D_real: 0.557, D_fake: 0.372
+2025-11-16 20:08:06,660 - INFO - [Rank 0] (epoch: 167, iters: 1600, time: 0.010, data: 0.822) , G_GAN: 1.047, G_L1: 5.764, D_real: 0.587, D_fake: 0.431
+2025-11-16 20:08:38,811 - INFO - [Rank 0] (epoch: 167, iters: 2000, time: 0.015, data: 0.193) , G_GAN: 1.059, G_L1: 5.065, D_real: 0.554, D_fake: 0.466
+2025-11-16 20:09:24,696 - INFO - [Rank 0] (epoch: 167, iters: 2400, time: 0.065, data: 0.010) , G_GAN: 1.561, G_L1: 6.808, D_real: 0.445, D_fake: 0.284
+2025-11-16 20:09:54,308 - INFO - [Rank 0] (epoch: 167, iters: 2800, time: 0.015, data: 0.010) , G_GAN: 0.952, G_L1: 2.846, D_real: 0.649, D_fake: 0.461
+2025-11-16 20:10:42,310 - INFO - [Rank 0] (epoch: 167, iters: 3200, time: 0.011, data: 0.016) , G_GAN: 0.981, G_L1: 4.757, D_real: 0.658, D_fake: 0.403
+2025-11-16 20:11:21,449 - INFO - [Rank 0] (epoch: 167, iters: 3600, time: 0.020, data: 0.010) , G_GAN: 1.370, G_L1: 6.585, D_real: 0.547, D_fake: 0.305
+2025-11-16 20:12:00,290 - INFO - [Rank 0] (epoch: 167, iters: 4000, time: 0.013, data: 2.652) , G_GAN: 1.267, G_L1: 6.069, D_real: 0.441, D_fake: 0.345
+2025-11-16 20:12:38,034 - INFO - [Rank 0] (epoch: 167, iters: 4400, time: 0.037, data: 0.009) , G_GAN: 1.174, G_L1: 7.774, D_real: 0.443, D_fake: 0.465
+2025-11-16 20:13:14,191 - INFO - [Rank 0] (epoch: 167, iters: 4800, time: 0.014, data: 0.010) , G_GAN: 1.129, G_L1: 4.824, D_real: 0.617, D_fake: 0.365
+2025-11-16 20:13:52,088 - INFO - [Rank 0] (epoch: 167, iters: 5200, time: 0.014, data: 0.009) , G_GAN: 1.257, G_L1: 6.170, D_real: 0.438, D_fake: 0.359
+2025-11-16 20:14:26,198 - INFO - [Rank 0] (epoch: 167, iters: 5600, time: 0.014, data: 0.015) , G_GAN: 1.254, G_L1: 6.202, D_real: 0.543, D_fake: 0.335
+2025-11-16 20:15:07,949 - INFO - [Rank 0] (epoch: 167, iters: 6000, time: 0.014, data: 0.010) , G_GAN: 1.130, G_L1: 6.643, D_real: 0.290, D_fake: 0.479
+2025-11-16 20:15:40,865 - INFO - [Rank 0] (epoch: 167, iters: 6400, time: 0.028, data: 6.995) , G_GAN: 1.091, G_L1: 4.100, D_real: 0.689, D_fake: 0.364
+2025-11-16 20:16:29,597 - INFO - [Rank 0] (epoch: 167, iters: 6800, time: 0.018, data: 5.326) , G_GAN: 1.103, G_L1: 7.188, D_real: 0.401, D_fake: 0.419
+2025-11-16 20:17:07,434 - INFO - [Rank 0] (epoch: 167, iters: 7200, time: 0.017, data: 0.009) , G_GAN: 1.140, G_L1: 5.371, D_real: 0.661, D_fake: 0.354
+2025-11-16 20:17:27,921 - INFO - [Rank 0] (epoch: 167, iters: 7600, time: 0.014, data: 3.523) , G_GAN: 1.025, G_L1: 3.127, D_real: 0.840, D_fake: 0.369
+2025-11-16 20:17:29,008 - INFO - Learning rate updated to: 0.000129
+2025-11-16 20:17:29,008 - INFO - === EPOCH 167 COMPLETED === Time: 771s
+2025-11-16 20:17:29,009 - INFO - === EPOCH 168 STARTED ===
+2025-11-16 20:18:59,218 - INFO - [Rank 0] (epoch: 168, iters: 400, time: 0.028, data: 63.413) , G_GAN: 1.234, G_L1: 5.774, D_real: 0.497, D_fake: 0.379
+2025-11-16 20:19:51,432 - INFO - [Rank 0] (epoch: 168, iters: 800, time: 0.082, data: 0.012) , G_GAN: 1.349, G_L1: 5.605, D_real: 0.459, D_fake: 0.326
+2025-11-16 20:19:51,434 - INFO - Saving latest model (epoch 168, total_iters 130000)
+2025-11-16 20:20:15,907 - INFO - [Rank 0] (epoch: 168, iters: 1200, time: 0.015, data: 0.011) , G_GAN: 1.182, G_L1: 6.946, D_real: 0.298, D_fake: 0.468
+2025-11-16 20:21:02,118 - INFO - [Rank 0] (epoch: 168, iters: 1600, time: 0.013, data: 0.009) , G_GAN: 1.158, G_L1: 3.193, D_real: 0.662, D_fake: 0.395
+2025-11-16 20:21:30,195 - INFO - [Rank 0] (epoch: 168, iters: 2000, time: 0.014, data: 0.009) , G_GAN: 1.071, G_L1: 4.252, D_real: 0.828, D_fake: 0.361
+2025-11-16 20:22:18,567 - INFO - [Rank 0] (epoch: 168, iters: 2400, time: 0.015, data: 0.008) , G_GAN: 1.278, G_L1: 5.143, D_real: 0.611, D_fake: 0.333
+2025-11-16 20:22:43,136 - INFO - [Rank 0] (epoch: 168, iters: 2800, time: 0.024, data: 0.013) , G_GAN: 1.088, G_L1: 5.061, D_real: 0.617, D_fake: 0.442
+2025-11-16 20:23:30,616 - INFO - [Rank 0] (epoch: 168, iters: 3200, time: 0.013, data: 0.009) , G_GAN: 1.401, G_L1: 7.738, D_real: 0.272, D_fake: 0.387
+2025-11-16 20:24:18,433 - INFO - [Rank 0] (epoch: 168, iters: 3600, time: 0.018, data: 0.012) , G_GAN: 1.242, G_L1: 7.702, D_real: 0.403, D_fake: 0.400
+2025-11-16 20:24:45,468 - INFO - [Rank 0] (epoch: 168, iters: 4000, time: 0.014, data: 0.009) , G_GAN: 1.226, G_L1: 5.105, D_real: 0.712, D_fake: 0.326
+2025-11-16 20:25:34,275 - INFO - [Rank 0] (epoch: 168, iters: 4400, time: 0.012, data: 0.013) , G_GAN: 1.147, G_L1: 6.308, D_real: 0.399, D_fake: 0.419
+2025-11-16 20:25:59,647 - INFO - [Rank 0] (epoch: 168, iters: 4800, time: 0.028, data: 0.011) , G_GAN: 0.989, G_L1: 6.283, D_real: 0.423, D_fake: 0.541
+2025-11-16 20:26:48,350 - INFO - [Rank 0] (epoch: 168, iters: 5200, time: 0.014, data: 0.016) , G_GAN: 1.415, G_L1: 6.406, D_real: 0.395, D_fake: 0.318
+2025-11-16 20:27:14,700 - INFO - [Rank 0] (epoch: 168, iters: 5600, time: 0.014, data: 0.011) , G_GAN: 1.172, G_L1: 7.139, D_real: 0.350, D_fake: 0.453
+2025-11-16 20:28:03,340 - INFO - [Rank 0] (epoch: 168, iters: 6000, time: 0.013, data: 0.017) , G_GAN: 0.971, G_L1: 4.051, D_real: 0.638, D_fake: 0.431
+2025-11-16 20:28:30,319 - INFO - [Rank 0] (epoch: 168, iters: 6400, time: 0.014, data: 0.012) , G_GAN: 1.246, G_L1: 5.542, D_real: 0.357, D_fake: 0.392
+2025-11-16 20:29:18,930 - INFO - [Rank 0] (epoch: 168, iters: 6800, time: 0.030, data: 19.163) , G_GAN: 0.967, G_L1: 3.904, D_real: 0.499, D_fake: 0.532
+2025-11-16 20:30:06,149 - INFO - [Rank 0] (epoch: 168, iters: 7200, time: 0.009, data: 0.013) , G_GAN: 1.014, G_L1: 4.080, D_real: 0.528, D_fake: 0.446
+2025-11-16 20:30:25,195 - INFO - [Rank 0] (epoch: 168, iters: 7600, time: 0.014, data: 0.693) , G_GAN: 1.025, G_L1: 4.895, D_real: 0.628, D_fake: 0.431
+2025-11-16 20:30:26,267 - INFO - Learning rate updated to: 0.000125
+2025-11-16 20:30:26,268 - INFO - === EPOCH 168 COMPLETED === Time: 777s
+2025-11-16 20:30:26,268 - INFO - === EPOCH 169 STARTED ===
+2025-11-16 20:31:59,468 - INFO - [Rank 0] (epoch: 169, iters: 400, time: 0.063, data: 62.958) , G_GAN: 1.195, G_L1: 3.538, D_real: 0.641, D_fake: 0.371
+2025-11-16 20:32:48,746 - INFO - [Rank 0] (epoch: 169, iters: 800, time: 0.021, data: 0.008) , G_GAN: 1.232, G_L1: 3.718, D_real: 0.597, D_fake: 0.347
+2025-11-16 20:33:16,477 - INFO - [Rank 0] (epoch: 169, iters: 1200, time: 0.028, data: 0.010) , G_GAN: 1.119, G_L1: 6.465, D_real: 0.580, D_fake: 0.367
+2025-11-16 20:34:03,686 - INFO - [Rank 0] (epoch: 169, iters: 1600, time: 0.013, data: 0.011) , G_GAN: 1.175, G_L1: 6.514, D_real: 0.599, D_fake: 0.364
+2025-11-16 20:34:32,488 - INFO - [Rank 0] (epoch: 169, iters: 2000, time: 0.014, data: 0.861) , G_GAN: 1.270, G_L1: 6.478, D_real: 0.487, D_fake: 0.399
+2025-11-16 20:35:19,069 - INFO - [Rank 0] (epoch: 169, iters: 2400, time: 0.013, data: 0.009) , G_GAN: 0.863, G_L1: 3.413, D_real: 0.518, D_fake: 0.540
+2025-11-16 20:35:46,675 - INFO - [Rank 0] (epoch: 169, iters: 2800, time: 0.013, data: 0.011) , G_GAN: 1.410, G_L1: 6.172, D_real: 0.570, D_fake: 0.300
+2025-11-16 20:36:38,857 - INFO - [Rank 0] (epoch: 169, iters: 3200, time: 0.028, data: 0.014) , G_GAN: 1.039, G_L1: 5.034, D_real: 0.522, D_fake: 0.439
+2025-11-16 20:36:38,858 - INFO - Saving latest model (epoch 169, total_iters 140000)
+2025-11-16 20:37:21,795 - INFO - [Rank 0] (epoch: 169, iters: 3600, time: 0.020, data: 0.008) , G_GAN: 1.331, G_L1: 5.696, D_real: 0.522, D_fake: 0.324
+2025-11-16 20:37:56,010 - INFO - [Rank 0] (epoch: 169, iters: 4000, time: 0.014, data: 0.010) , G_GAN: 1.402, G_L1: 6.549, D_real: 0.380, D_fake: 0.355
+2025-11-16 20:38:41,489 - INFO - [Rank 0] (epoch: 169, iters: 4400, time: 0.013, data: 0.014) , G_GAN: 1.070, G_L1: 5.706, D_real: 0.632, D_fake: 0.389
+2025-11-16 20:39:10,331 - INFO - [Rank 0] (epoch: 169, iters: 4800, time: 0.014, data: 0.013) , G_GAN: 1.142, G_L1: 5.340, D_real: 0.396, D_fake: 0.467
+2025-11-16 20:40:00,285 - INFO - [Rank 0] (epoch: 169, iters: 5200, time: 0.039, data: 0.009) , G_GAN: 1.172, G_L1: 5.476, D_real: 0.461, D_fake: 0.410
+2025-11-16 20:40:28,866 - INFO - [Rank 0] (epoch: 169, iters: 5600, time: 0.014, data: 0.018) , G_GAN: 0.933, G_L1: 5.590, D_real: 0.570, D_fake: 0.479
+2025-11-16 20:41:16,683 - INFO - [Rank 0] (epoch: 169, iters: 6000, time: 0.014, data: 0.012) , G_GAN: 0.927, G_L1: 4.519, D_real: 0.661, D_fake: 0.446
+2025-11-16 20:41:45,778 - INFO - [Rank 0] (epoch: 169, iters: 6400, time: 0.014, data: 0.013) , G_GAN: 1.361, G_L1: 5.064, D_real: 0.675, D_fake: 0.298
+2025-11-16 20:42:35,529 - INFO - [Rank 0] (epoch: 169, iters: 6800, time: 0.014, data: 22.381) , G_GAN: 1.328, G_L1: 7.232, D_real: 0.283, D_fake: 0.374
+2025-11-16 20:43:21,370 - INFO - [Rank 0] (epoch: 169, iters: 7200, time: 0.066, data: 0.010) , G_GAN: 0.999, G_L1: 3.372, D_real: 0.723, D_fake: 0.375
+2025-11-16 20:43:36,490 - INFO - [Rank 0] (epoch: 169, iters: 7600, time: 0.014, data: 0.012) , G_GAN: 1.054, G_L1: 3.072, D_real: 0.737, D_fake: 0.372
+2025-11-16 20:43:37,510 - INFO - Learning rate updated to: 0.000122
+2025-11-16 20:43:37,511 - INFO - === EPOCH 169 COMPLETED === Time: 791s
+2025-11-16 20:43:37,511 - INFO - === EPOCH 170 STARTED ===
+2025-11-16 20:45:09,104 - INFO - [Rank 0] (epoch: 170, iters: 400, time: 0.028, data: 62.537) , G_GAN: 1.143, G_L1: 4.506, D_real: 0.622, D_fake: 0.402
+2025-11-16 20:45:58,214 - INFO - [Rank 0] (epoch: 170, iters: 800, time: 0.012, data: 0.011) , G_GAN: 1.148, G_L1: 6.369, D_real: 0.471, D_fake: 0.416
+2025-11-16 20:46:25,798 - INFO - [Rank 0] (epoch: 170, iters: 1200, time: 0.014, data: 0.011) , G_GAN: 1.513, G_L1: 5.922, D_real: 0.350, D_fake: 0.303
+2025-11-16 20:47:16,349 - INFO - [Rank 0] (epoch: 170, iters: 1600, time: 0.029, data: 0.011) , G_GAN: 1.421, G_L1: 4.648, D_real: 0.791, D_fake: 0.455
+2025-11-16 20:47:41,746 - INFO - [Rank 0] (epoch: 170, iters: 2000, time: 0.013, data: 0.013) , G_GAN: 1.177, G_L1: 4.178, D_real: 0.734, D_fake: 0.355
+2025-11-16 20:48:34,594 - INFO - [Rank 0] (epoch: 170, iters: 2400, time: 0.014, data: 0.010) , G_GAN: 1.056, G_L1: 5.042, D_real: 0.563, D_fake: 0.438
+2025-11-16 20:49:01,118 - INFO - [Rank 0] (epoch: 170, iters: 2800, time: 0.014, data: 0.013) , G_GAN: 1.085, G_L1: 4.217, D_real: 0.523, D_fake: 0.420
+2025-11-16 20:49:49,696 - INFO - [Rank 0] (epoch: 170, iters: 3200, time: 0.015, data: 0.008) , G_GAN: 1.278, G_L1: 5.717, D_real: 0.518, D_fake: 0.335
+2025-11-16 20:50:28,686 - INFO - [Rank 0] (epoch: 170, iters: 3600, time: 0.032, data: 0.011) , G_GAN: 1.131, G_L1: 4.812, D_real: 0.479, D_fake: 0.426
+2025-11-16 20:51:05,622 - INFO - [Rank 0] (epoch: 170, iters: 4000, time: 0.014, data: 7.049) , G_GAN: 1.149, G_L1: 7.516, D_real: 0.456, D_fake: 0.462
+2025-11-16 20:51:55,377 - INFO - [Rank 0] (epoch: 170, iters: 4400, time: 0.026, data: 0.010) , G_GAN: 1.173, G_L1: 6.810, D_real: 0.485, D_fake: 0.379
+2025-11-16 20:52:22,676 - INFO - [Rank 0] (epoch: 170, iters: 4800, time: 0.015, data: 0.009) , G_GAN: 1.039, G_L1: 5.118, D_real: 0.501, D_fake: 0.473
+2025-11-16 20:53:10,777 - INFO - [Rank 0] (epoch: 170, iters: 5200, time: 0.014, data: 0.012) , G_GAN: 1.274, G_L1: 6.722, D_real: 0.343, D_fake: 0.423
+2025-11-16 20:53:39,488 - INFO - [Rank 0] (epoch: 170, iters: 5600, time: 0.067, data: 0.009) , G_GAN: 1.183, G_L1: 5.447, D_real: 0.392, D_fake: 0.440
+2025-11-16 20:53:39,489 - INFO - Saving latest model (epoch 170, total_iters 150000)
+2025-11-16 20:54:27,596 - INFO - [Rank 0] (epoch: 170, iters: 6000, time: 0.013, data: 0.013) , G_GAN: 0.982, G_L1: 4.622, D_real: 0.722, D_fake: 0.423
+2025-11-16 20:54:53,673 - INFO - [Rank 0] (epoch: 170, iters: 6400, time: 0.014, data: 0.012) , G_GAN: 1.156, G_L1: 5.400, D_real: 0.518, D_fake: 0.424
+2025-11-16 20:55:41,144 - INFO - [Rank 0] (epoch: 170, iters: 6800, time: 0.013, data: 12.465) , G_GAN: 1.085, G_L1: 4.969, D_real: 0.809, D_fake: 0.364
+2025-11-16 20:56:28,406 - INFO - [Rank 0] (epoch: 170, iters: 7200, time: 0.019, data: 0.012) , G_GAN: 1.168, G_L1: 6.041, D_real: 0.557, D_fake: 0.367
+2025-11-16 20:56:44,894 - INFO - [Rank 0] (epoch: 170, iters: 7600, time: 0.020, data: 0.013) , G_GAN: 1.387, G_L1: 6.720, D_real: 0.557, D_fake: 0.326
+2025-11-16 20:56:45,952 - INFO - Learning rate updated to: 0.000118
+2025-11-16 20:56:45,953 - INFO - Saving model at end of epoch 170, iters 152000
+2025-11-16 20:56:46,323 - INFO - === EPOCH 170 COMPLETED === Time: 789s
+2025-11-16 20:56:46,324 - INFO - === EPOCH 171 STARTED ===
+2025-11-16 20:58:18,649 - INFO - [Rank 0] (epoch: 171, iters: 400, time: 0.029, data: 66.071) , G_GAN: 1.265, G_L1: 6.288, D_real: 0.490, D_fake: 0.386
+2025-11-16 20:59:09,358 - INFO - [Rank 0] (epoch: 171, iters: 800, time: 0.026, data: 0.011) , G_GAN: 1.027, G_L1: 4.894, D_real: 0.421, D_fake: 0.472
+2025-11-16 20:59:34,885 - INFO - [Rank 0] (epoch: 171, iters: 1200, time: 0.014, data: 0.012) , G_GAN: 1.319, G_L1: 8.031, D_real: 0.372, D_fake: 0.370
+2025-11-16 21:00:22,868 - INFO - [Rank 0] (epoch: 171, iters: 1600, time: 0.012, data: 0.009) , G_GAN: 1.114, G_L1: 4.737, D_real: 0.795, D_fake: 0.338
+2025-11-16 21:00:49,790 - INFO - [Rank 0] (epoch: 171, iters: 2000, time: 0.024, data: 0.009) , G_GAN: 1.181, G_L1: 6.894, D_real: 0.465, D_fake: 0.426
+2025-11-16 21:01:38,005 - INFO - [Rank 0] (epoch: 171, iters: 2400, time: 0.014, data: 0.011) , G_GAN: 1.372, G_L1: 4.153, D_real: 0.513, D_fake: 0.317
+2025-11-16 21:02:06,947 - INFO - [Rank 0] (epoch: 171, iters: 2800, time: 0.014, data: 0.014) , G_GAN: 1.073, G_L1: 6.503, D_real: 0.452, D_fake: 0.435
+2025-11-16 21:02:54,208 - INFO - [Rank 0] (epoch: 171, iters: 3200, time: 0.013, data: 0.008) , G_GAN: 1.107, G_L1: 6.362, D_real: 0.407, D_fake: 0.434
+2025-11-16 21:03:41,006 - INFO - [Rank 0] (epoch: 171, iters: 3600, time: 0.025, data: 0.010) , G_GAN: 1.153, G_L1: 4.742, D_real: 0.603, D_fake: 0.366
+2025-11-16 21:04:09,618 - INFO - [Rank 0] (epoch: 171, iters: 4000, time: 0.064, data: 0.031) , G_GAN: 1.216, G_L1: 5.737, D_real: 0.612, D_fake: 0.353
+2025-11-16 21:04:57,139 - INFO - [Rank 0] (epoch: 171, iters: 4400, time: 0.011, data: 0.011) , G_GAN: 1.153, G_L1: 6.116, D_real: 0.429, D_fake: 0.462
+2025-11-16 21:05:26,339 - INFO - [Rank 0] (epoch: 171, iters: 4800, time: 0.014, data: 0.011) , G_GAN: 1.063, G_L1: 3.619, D_real: 0.710, D_fake: 0.451
+2025-11-16 21:06:14,097 - INFO - [Rank 0] (epoch: 171, iters: 5200, time: 0.012, data: 0.010) , G_GAN: 1.176, G_L1: 6.230, D_real: 0.470, D_fake: 0.397
+2025-11-16 21:06:43,778 - INFO - [Rank 0] (epoch: 171, iters: 5600, time: 0.018, data: 0.011) , G_GAN: 1.234, G_L1: 5.874, D_real: 0.498, D_fake: 0.374
+2025-11-16 21:07:29,705 - INFO - [Rank 0] (epoch: 171, iters: 6000, time: 0.025, data: 0.009) , G_GAN: 1.234, G_L1: 5.269, D_real: 0.559, D_fake: 0.367
+2025-11-16 21:07:58,893 - INFO - [Rank 0] (epoch: 171, iters: 6400, time: 0.014, data: 0.014) , G_GAN: 1.282, G_L1: 5.476, D_real: 0.531, D_fake: 0.343
+2025-11-16 21:08:45,167 - INFO - [Rank 0] (epoch: 171, iters: 6800, time: 0.014, data: 11.864) , G_GAN: 1.049, G_L1: 3.618, D_real: 0.810, D_fake: 0.356
+2025-11-16 21:09:29,592 - INFO - [Rank 0] (epoch: 171, iters: 7200, time: 0.022, data: 0.016) , G_GAN: 1.158, G_L1: 4.943, D_real: 0.559, D_fake: 0.366
+2025-11-16 21:09:47,878 - INFO - [Rank 0] (epoch: 171, iters: 7600, time: 0.014, data: 0.011) , G_GAN: 1.046, G_L1: 3.585, D_real: 0.529, D_fake: 0.450
+2025-11-16 21:09:48,962 - INFO - Learning rate updated to: 0.000114
+2025-11-16 21:09:48,962 - INFO - === EPOCH 171 COMPLETED === Time: 783s
+2025-11-16 21:09:48,963 - INFO - === EPOCH 172 STARTED ===
+2025-11-16 21:11:20,951 - INFO - [Rank 0] (epoch: 172, iters: 400, time: 0.029, data: 62.113) , G_GAN: 1.261, G_L1: 4.665, D_real: 0.523, D_fake: 0.355
+2025-11-16 21:11:20,952 - INFO - Saving latest model (epoch 172, total_iters 160000)
+2025-11-16 21:12:09,569 - INFO - [Rank 0] (epoch: 172, iters: 800, time: 0.026, data: 0.011) , G_GAN: 0.979, G_L1: 3.526, D_real: 0.459, D_fake: 0.511
+2025-11-16 21:12:36,671 - INFO - [Rank 0] (epoch: 172, iters: 1200, time: 0.014, data: 0.009) , G_GAN: 1.249, G_L1: 6.882, D_real: 0.533, D_fake: 0.357
+2025-11-16 21:13:25,317 - INFO - [Rank 0] (epoch: 172, iters: 1600, time: 0.014, data: 0.010) , G_GAN: 1.294, G_L1: 7.584, D_real: 0.278, D_fake: 0.376
+2025-11-16 21:13:51,467 - INFO - [Rank 0] (epoch: 172, iters: 2000, time: 0.014, data: 0.015) , G_GAN: 1.232, G_L1: 5.007, D_real: 0.420, D_fake: 0.415
+2025-11-16 21:14:39,402 - INFO - [Rank 0] (epoch: 172, iters: 2400, time: 0.025, data: 0.013) , G_GAN: 1.815, G_L1: 5.028, D_real: 0.662, D_fake: 0.135
+2025-11-16 21:15:07,172 - INFO - [Rank 0] (epoch: 172, iters: 2800, time: 0.014, data: 0.012) , G_GAN: 1.736, G_L1: 5.050, D_real: 0.524, D_fake: 0.185
+2025-11-16 21:15:57,559 - INFO - [Rank 0] (epoch: 172, iters: 3200, time: 0.013, data: 0.012) , G_GAN: 1.202, G_L1: 4.609, D_real: 0.697, D_fake: 0.377
+2025-11-16 21:16:43,992 - INFO - [Rank 0] (epoch: 172, iters: 3600, time: 0.025, data: 0.010) , G_GAN: 1.036, G_L1: 6.666, D_real: 0.582, D_fake: 0.369
+2025-11-16 21:17:16,371 - INFO - [Rank 0] (epoch: 172, iters: 4000, time: 0.015, data: 0.010) , G_GAN: 1.242, G_L1: 5.398, D_real: 0.535, D_fake: 0.335
+2025-11-16 21:18:00,769 - INFO - [Rank 0] (epoch: 172, iters: 4400, time: 0.069, data: 0.014) , G_GAN: 1.229, G_L1: 7.733, D_real: 0.270, D_fake: 0.395
+2025-11-16 21:18:34,623 - INFO - [Rank 0] (epoch: 172, iters: 4800, time: 0.014, data: 0.011) , G_GAN: 1.173, G_L1: 5.301, D_real: 0.398, D_fake: 0.411
+2025-11-16 21:19:24,023 - INFO - [Rank 0] (epoch: 172, iters: 5200, time: 0.024, data: 0.015) , G_GAN: 1.044, G_L1: 4.390, D_real: 0.687, D_fake: 0.384
+2025-11-16 21:19:50,932 - INFO - [Rank 0] (epoch: 172, iters: 5600, time: 0.013, data: 0.012) , G_GAN: 1.143, G_L1: 4.905, D_real: 0.483, D_fake: 0.438
+2025-11-16 21:20:42,494 - INFO - [Rank 0] (epoch: 172, iters: 6000, time: 0.014, data: 0.011) , G_GAN: 1.334, G_L1: 5.432, D_real: 0.501, D_fake: 0.344
+2025-11-16 21:21:07,413 - INFO - [Rank 0] (epoch: 172, iters: 6400, time: 0.027, data: 0.013) , G_GAN: 1.412, G_L1: 6.087, D_real: 0.382, D_fake: 0.368
+2025-11-16 21:21:54,632 - INFO - [Rank 0] (epoch: 172, iters: 6800, time: 0.014, data: 11.324) , G_GAN: 1.256, G_L1: 6.387, D_real: 0.536, D_fake: 0.343
+2025-11-16 21:22:32,339 - INFO - [Rank 0] (epoch: 172, iters: 7200, time: 0.029, data: 0.013) , G_GAN: 1.037, G_L1: 5.507, D_real: 0.454, D_fake: 0.432
+2025-11-16 21:22:51,832 - INFO - [Rank 0] (epoch: 172, iters: 7600, time: 0.014, data: 0.011) , G_GAN: 1.137, G_L1: 7.536, D_real: 0.440, D_fake: 0.394
+2025-11-16 21:22:52,856 - INFO - Learning rate updated to: 0.000110
+2025-11-16 21:22:52,856 - INFO - === EPOCH 172 COMPLETED === Time: 784s
+2025-11-16 21:22:52,857 - INFO - === EPOCH 173 STARTED ===
+2025-11-16 21:24:23,137 - INFO - [Rank 0] (epoch: 173, iters: 400, time: 0.029, data: 63.476) , G_GAN: 1.154, G_L1: 7.554, D_real: 0.362, D_fake: 0.481
+2025-11-16 21:25:14,913 - INFO - [Rank 0] (epoch: 173, iters: 800, time: 0.042, data: 0.944) , G_GAN: 1.193, G_L1: 5.206, D_real: 0.535, D_fake: 0.360
+2025-11-16 21:25:40,060 - INFO - [Rank 0] (epoch: 173, iters: 1200, time: 0.014, data: 0.014) , G_GAN: 1.069, G_L1: 4.544, D_real: 0.601, D_fake: 0.394
+2025-11-16 21:26:27,754 - INFO - [Rank 0] (epoch: 173, iters: 1600, time: 0.013, data: 0.010) , G_GAN: 1.000, G_L1: 4.432, D_real: 0.701, D_fake: 0.435
+2025-11-16 21:26:54,528 - INFO - [Rank 0] (epoch: 173, iters: 2000, time: 0.013, data: 0.011) , G_GAN: 1.280, G_L1: 7.367, D_real: 0.292, D_fake: 0.405
+2025-11-16 21:27:42,779 - INFO - [Rank 0] (epoch: 173, iters: 2400, time: 0.014, data: 0.012) , G_GAN: 1.018, G_L1: 4.803, D_real: 0.555, D_fake: 0.448
+2025-11-16 21:28:10,402 - INFO - [Rank 0] (epoch: 173, iters: 2800, time: 0.059, data: 1.028) , G_GAN: 0.955, G_L1: 3.350, D_real: 0.617, D_fake: 0.444
+2025-11-16 21:28:10,404 - INFO - Saving latest model (epoch 173, total_iters 170000)
+2025-11-16 21:28:57,582 - INFO - [Rank 0] (epoch: 173, iters: 3200, time: 0.014, data: 0.010) , G_GAN: 1.234, G_L1: 3.841, D_real: 0.779, D_fake: 0.324
+2025-11-16 21:29:45,658 - INFO - [Rank 0] (epoch: 173, iters: 3600, time: 0.018, data: 0.008) , G_GAN: 1.122, G_L1: 4.200, D_real: 0.449, D_fake: 0.421
+2025-11-16 21:30:14,687 - INFO - [Rank 0] (epoch: 173, iters: 4000, time: 0.015, data: 0.009) , G_GAN: 1.270, G_L1: 5.997, D_real: 0.600, D_fake: 0.307
+2025-11-16 21:30:59,746 - INFO - [Rank 0] (epoch: 173, iters: 4400, time: 0.011, data: 0.010) , G_GAN: 1.098, G_L1: 5.275, D_real: 0.575, D_fake: 0.449
+2025-11-16 21:31:30,932 - INFO - [Rank 0] (epoch: 173, iters: 4800, time: 0.022, data: 0.020) , G_GAN: 1.125, G_L1: 5.193, D_real: 0.456, D_fake: 0.413
+2025-11-16 21:32:16,529 - INFO - [Rank 0] (epoch: 173, iters: 5200, time: 0.014, data: 0.008) , G_GAN: 1.044, G_L1: 4.452, D_real: 0.577, D_fake: 0.434
+2025-11-16 21:32:45,990 - INFO - [Rank 0] (epoch: 173, iters: 5600, time: 0.009, data: 0.010) , G_GAN: 1.557, G_L1: 7.105, D_real: 0.595, D_fake: 0.236
+2025-11-16 21:33:31,536 - INFO - [Rank 0] (epoch: 173, iters: 6000, time: 0.009, data: 0.011) , G_GAN: 1.045, G_L1: 5.686, D_real: 0.472, D_fake: 0.469
+2025-11-16 21:34:03,389 - INFO - [Rank 0] (epoch: 173, iters: 6400, time: 0.009, data: 0.013) , G_GAN: 1.303, G_L1: 5.871, D_real: 0.522, D_fake: 0.346
+2025-11-16 21:34:45,041 - INFO - [Rank 0] (epoch: 173, iters: 6800, time: 0.027, data: 12.004) , G_GAN: 0.982, G_L1: 4.362, D_real: 0.640, D_fake: 0.447
+2025-11-16 21:35:28,787 - INFO - [Rank 0] (epoch: 173, iters: 7200, time: 0.023, data: 0.010) , G_GAN: 1.040, G_L1: 5.172, D_real: 0.505, D_fake: 0.428
+2025-11-16 21:35:49,954 - INFO - [Rank 0] (epoch: 173, iters: 7600, time: 0.014, data: 0.086) , G_GAN: 1.337, G_L1: 4.876, D_real: 0.778, D_fake: 0.258
+2025-11-16 21:35:51,060 - INFO - Learning rate updated to: 0.000106
+2025-11-16 21:35:51,060 - INFO - === EPOCH 173 COMPLETED === Time: 778s
+2025-11-16 21:35:51,060 - INFO - === EPOCH 174 STARTED ===
+2025-11-16 21:37:21,003 - INFO - [Rank 0] (epoch: 174, iters: 400, time: 0.027, data: 62.730) , G_GAN: 1.261, G_L1: 4.954, D_real: 0.712, D_fake: 0.319
+2025-11-16 21:38:10,370 - INFO - [Rank 0] (epoch: 174, iters: 800, time: 0.030, data: 0.010) , G_GAN: 1.255, G_L1: 7.135, D_real: 0.346, D_fake: 0.399
+2025-11-16 21:38:36,338 - INFO - [Rank 0] (epoch: 174, iters: 1200, time: 0.057, data: 0.012) , G_GAN: 1.266, G_L1: 7.410, D_real: 0.419, D_fake: 0.382
+2025-11-16 21:39:25,830 - INFO - [Rank 0] (epoch: 174, iters: 1600, time: 0.015, data: 0.014) , G_GAN: 1.161, G_L1: 6.914, D_real: 0.550, D_fake: 0.378
+2025-11-16 21:39:51,015 - INFO - [Rank 0] (epoch: 174, iters: 2000, time: 0.014, data: 0.012) , G_GAN: 1.101, G_L1: 5.070, D_real: 0.638, D_fake: 0.392
+2025-11-16 21:40:41,149 - INFO - [Rank 0] (epoch: 174, iters: 2400, time: 0.014, data: 0.010) , G_GAN: 1.265, G_L1: 7.257, D_real: 0.336, D_fake: 0.409
+2025-11-16 21:41:08,787 - INFO - [Rank 0] (epoch: 174, iters: 2800, time: 0.009, data: 0.010) , G_GAN: 1.212, G_L1: 5.283, D_real: 0.486, D_fake: 0.392
+2025-11-16 21:41:57,112 - INFO - [Rank 0] (epoch: 174, iters: 3200, time: 0.029, data: 0.009) , G_GAN: 1.272, G_L1: 5.032, D_real: 0.541, D_fake: 0.367
+2025-11-16 21:42:35,811 - INFO - [Rank 0] (epoch: 174, iters: 3600, time: 0.020, data: 0.010) , G_GAN: 1.316, G_L1: 7.168, D_real: 0.385, D_fake: 0.355
+2025-11-16 21:43:12,973 - INFO - [Rank 0] (epoch: 174, iters: 4000, time: 0.014, data: 0.009) , G_GAN: 1.061, G_L1: 4.440, D_real: 0.653, D_fake: 0.411
+2025-11-16 21:43:58,998 - INFO - [Rank 0] (epoch: 174, iters: 4400, time: 0.022, data: 0.010) , G_GAN: 1.270, G_L1: 6.073, D_real: 0.535, D_fake: 0.353
+2025-11-16 21:44:29,870 - INFO - [Rank 0] (epoch: 174, iters: 4800, time: 0.013, data: 0.010) , G_GAN: 1.069, G_L1: 4.241, D_real: 0.842, D_fake: 0.331
+2025-11-16 21:45:16,352 - INFO - [Rank 0] (epoch: 174, iters: 5200, time: 0.023, data: 0.009) , G_GAN: 1.174, G_L1: 4.055, D_real: 0.621, D_fake: 0.388
+2025-11-16 21:45:16,353 - INFO - Saving latest model (epoch 174, total_iters 180000)
+2025-11-16 21:45:49,235 - INFO - [Rank 0] (epoch: 174, iters: 5600, time: 0.014, data: 0.017) , G_GAN: 1.137, G_L1: 6.105, D_real: 0.478, D_fake: 0.445
+2025-11-16 21:46:39,801 - INFO - [Rank 0] (epoch: 174, iters: 6000, time: 0.020, data: 0.010) , G_GAN: 0.985, G_L1: 5.096, D_real: 0.547, D_fake: 0.491
+2025-11-16 21:47:06,362 - INFO - [Rank 0] (epoch: 174, iters: 6400, time: 0.014, data: 0.009) , G_GAN: 1.088, G_L1: 5.552, D_real: 0.443, D_fake: 0.449
+2025-11-16 21:47:57,893 - INFO - [Rank 0] (epoch: 174, iters: 6800, time: 0.014, data: 2.191) , G_GAN: 1.170, G_L1: 7.011, D_real: 0.464, D_fake: 0.412
+2025-11-16 21:48:26,115 - INFO - [Rank 0] (epoch: 174, iters: 7200, time: 0.028, data: 0.013) , G_GAN: 1.173, G_L1: 6.807, D_real: 0.510, D_fake: 0.375
+2025-11-16 21:48:51,715 - INFO - [Rank 0] (epoch: 174, iters: 7600, time: 0.014, data: 7.584) , G_GAN: 1.249, G_L1: 7.614, D_real: 0.463, D_fake: 0.353
+2025-11-16 21:48:52,773 - INFO - Learning rate updated to: 0.000102
+2025-11-16 21:48:52,773 - INFO - === EPOCH 174 COMPLETED === Time: 782s
+2025-11-16 21:48:52,774 - INFO - === EPOCH 175 STARTED ===
+2025-11-16 21:50:23,226 - INFO - [Rank 0] (epoch: 175, iters: 400, time: 0.063, data: 61.770) , G_GAN: 1.093, G_L1: 5.795, D_real: 0.655, D_fake: 0.380
+2025-11-16 21:51:12,356 - INFO - [Rank 0] (epoch: 175, iters: 800, time: 0.028, data: 0.012) , G_GAN: 1.196, G_L1: 4.766, D_real: 0.474, D_fake: 0.439
+2025-11-16 21:51:40,595 - INFO - [Rank 0] (epoch: 175, iters: 1200, time: 0.013, data: 0.011) , G_GAN: 1.064, G_L1: 5.816, D_real: 0.466, D_fake: 0.433
+2025-11-16 21:52:26,899 - INFO - [Rank 0] (epoch: 175, iters: 1600, time: 0.030, data: 0.010) , G_GAN: 1.319, G_L1: 5.620, D_real: 0.616, D_fake: 0.328
+2025-11-16 21:52:58,639 - INFO - [Rank 0] (epoch: 175, iters: 2000, time: 0.013, data: 0.010) , G_GAN: 1.350, G_L1: 6.128, D_real: 0.494, D_fake: 0.334
+2025-11-16 21:53:42,333 - INFO - [Rank 0] (epoch: 175, iters: 2400, time: 0.015, data: 0.008) , G_GAN: 1.077, G_L1: 4.894, D_real: 0.903, D_fake: 0.354
+2025-11-16 21:54:15,406 - INFO - [Rank 0] (epoch: 175, iters: 2800, time: 0.014, data: 0.008) , G_GAN: 0.980, G_L1: 4.102, D_real: 0.793, D_fake: 0.383
+2025-11-16 21:54:57,811 - INFO - [Rank 0] (epoch: 175, iters: 3200, time: 0.014, data: 0.014) , G_GAN: 1.045, G_L1: 4.424, D_real: 0.711, D_fake: 0.378
+2025-11-16 21:55:42,817 - INFO - [Rank 0] (epoch: 175, iters: 3600, time: 0.030, data: 5.427) , G_GAN: 1.175, G_L1: 5.464, D_real: 0.443, D_fake: 0.431
+2025-11-16 21:56:17,768 - INFO - [Rank 0] (epoch: 175, iters: 4000, time: 0.018, data: 0.010) , G_GAN: 1.248, G_L1: 8.426, D_real: 0.243, D_fake: 0.423
+2025-11-16 21:57:02,600 - INFO - [Rank 0] (epoch: 175, iters: 4400, time: 0.022, data: 0.013) , G_GAN: 1.167, G_L1: 5.833, D_real: 0.489, D_fake: 0.432
+2025-11-16 21:57:30,898 - INFO - [Rank 0] (epoch: 175, iters: 4800, time: 0.014, data: 0.012) , G_GAN: 1.110, G_L1: 5.629, D_real: 0.776, D_fake: 0.349
+2025-11-16 21:58:17,077 - INFO - [Rank 0] (epoch: 175, iters: 5200, time: 0.009, data: 0.013) , G_GAN: 1.018, G_L1: 5.370, D_real: 0.485, D_fake: 0.453
+2025-11-16 21:58:48,827 - INFO - [Rank 0] (epoch: 175, iters: 5600, time: 0.033, data: 0.009) , G_GAN: 1.005, G_L1: 6.964, D_real: 0.461, D_fake: 0.498
+2025-11-16 21:59:32,739 - INFO - [Rank 0] (epoch: 175, iters: 6000, time: 0.014, data: 0.010) , G_GAN: 1.179, G_L1: 5.596, D_real: 0.562, D_fake: 0.384
+2025-11-16 22:00:03,064 - INFO - [Rank 0] (epoch: 175, iters: 6400, time: 0.014, data: 0.012) , G_GAN: 0.980, G_L1: 2.757, D_real: 0.872, D_fake: 0.377
+2025-11-16 22:00:49,521 - INFO - [Rank 0] (epoch: 175, iters: 6800, time: 0.009, data: 6.979) , G_GAN: 1.148, G_L1: 4.529, D_real: 0.637, D_fake: 0.377
+2025-11-16 22:01:29,057 - INFO - [Rank 0] (epoch: 175, iters: 7200, time: 0.011, data: 0.017) , G_GAN: 1.011, G_L1: 6.476, D_real: 0.419, D_fake: 0.487
+2025-11-16 22:01:51,179 - INFO - [Rank 0] (epoch: 175, iters: 7600, time: 0.020, data: 0.904) , G_GAN: 1.130, G_L1: 3.903, D_real: 0.566, D_fake: 0.447
+2025-11-16 22:01:51,180 - INFO - Saving latest model (epoch 175, total_iters 190000)
+2025-11-16 22:01:52,441 - INFO - Learning rate updated to: 0.000098
+2025-11-16 22:01:52,442 - INFO - Saving model at end of epoch 175, iters 190000
+2025-11-16 22:01:52,837 - INFO - === EPOCH 175 COMPLETED === Time: 780s
+2025-11-16 22:01:52,838 - INFO - === EPOCH 176 STARTED ===
+2025-11-16 22:03:24,993 - INFO - [Rank 0] (epoch: 176, iters: 400, time: 0.027, data: 63.430) , G_GAN: 1.227, G_L1: 6.029, D_real: 0.339, D_fake: 0.401
+2025-11-16 22:04:13,983 - INFO - [Rank 0] (epoch: 176, iters: 800, time: 0.026, data: 0.017) , G_GAN: 1.070, G_L1: 5.844, D_real: 0.516, D_fake: 0.441
+2025-11-16 22:04:41,426 - INFO - [Rank 0] (epoch: 176, iters: 1200, time: 0.014, data: 0.012) , G_GAN: 1.182, G_L1: 6.325, D_real: 0.409, D_fake: 0.410
+2025-11-16 22:05:33,087 - INFO - [Rank 0] (epoch: 176, iters: 1600, time: 0.014, data: 0.011) , G_GAN: 1.245, G_L1: 7.630, D_real: 0.250, D_fake: 0.420
+2025-11-16 22:05:58,649 - INFO - [Rank 0] (epoch: 176, iters: 2000, time: 0.031, data: 0.010) , G_GAN: 1.252, G_L1: 6.749, D_real: 0.410, D_fake: 0.378
+2025-11-16 22:06:48,801 - INFO - [Rank 0] (epoch: 176, iters: 2400, time: 0.014, data: 0.015) , G_GAN: 1.259, G_L1: 5.820, D_real: 0.610, D_fake: 0.336
+2025-11-16 22:07:15,245 - INFO - [Rank 0] (epoch: 176, iters: 2800, time: 0.014, data: 0.009) , G_GAN: 1.069, G_L1: 4.750, D_real: 0.659, D_fake: 0.414
+2025-11-16 22:08:00,310 - INFO - [Rank 0] (epoch: 176, iters: 3200, time: 0.014, data: 0.013) , G_GAN: 0.941, G_L1: 1.790, D_real: 0.872, D_fake: 0.417
+2025-11-16 22:08:48,614 - INFO - [Rank 0] (epoch: 176, iters: 3600, time: 0.025, data: 0.014) , G_GAN: 1.104, G_L1: 5.628, D_real: 0.444, D_fake: 0.447
+2025-11-16 22:09:15,863 - INFO - [Rank 0] (epoch: 176, iters: 4000, time: 0.059, data: 0.011) , G_GAN: 0.921, G_L1: 3.195, D_real: 0.718, D_fake: 0.467
+2025-11-16 22:10:04,105 - INFO - [Rank 0] (epoch: 176, iters: 4400, time: 0.014, data: 0.189) , G_GAN: 0.988, G_L1: 4.660, D_real: 0.433, D_fake: 0.535
+2025-11-16 22:10:32,253 - INFO - [Rank 0] (epoch: 176, iters: 4800, time: 0.014, data: 0.012) , G_GAN: 1.111, G_L1: 3.776, D_real: 0.472, D_fake: 0.478
+2025-11-16 22:11:18,823 - INFO - [Rank 0] (epoch: 176, iters: 5200, time: 0.013, data: 0.012) , G_GAN: 1.258, G_L1: 5.386, D_real: 0.524, D_fake: 0.328
+2025-11-16 22:11:49,630 - INFO - [Rank 0] (epoch: 176, iters: 5600, time: 0.014, data: 1.534) , G_GAN: 1.299, G_L1: 8.924, D_real: 0.366, D_fake: 0.357
+2025-11-16 22:12:36,349 - INFO - [Rank 0] (epoch: 176, iters: 6000, time: 0.027, data: 0.012) , G_GAN: 1.251, G_L1: 6.003, D_real: 0.445, D_fake: 0.364
+2025-11-16 22:13:03,392 - INFO - [Rank 0] (epoch: 176, iters: 6400, time: 0.013, data: 0.013) , G_GAN: 1.133, G_L1: 3.729, D_real: 0.818, D_fake: 0.343
+2025-11-16 22:13:50,567 - INFO - [Rank 0] (epoch: 176, iters: 6800, time: 0.013, data: 20.569) , G_GAN: 1.140, G_L1: 5.650, D_real: 0.424, D_fake: 0.466
+2025-11-16 22:14:36,784 - INFO - [Rank 0] (epoch: 176, iters: 7200, time: 0.023, data: 0.011) , G_GAN: 1.372, G_L1: 5.392, D_real: 0.501, D_fake: 0.351
+2025-11-16 22:14:53,915 - INFO - [Rank 0] (epoch: 176, iters: 7600, time: 0.014, data: 0.017) , G_GAN: 1.753, G_L1: 3.392, D_real: 0.360, D_fake: 0.205
+2025-11-16 22:14:54,946 - INFO - Learning rate updated to: 0.000094
+2025-11-16 22:14:54,946 - INFO - === EPOCH 176 COMPLETED === Time: 782s
+2025-11-16 22:14:54,946 - INFO - === EPOCH 177 STARTED ===
+2025-11-16 22:16:24,034 - INFO - [Rank 0] (epoch: 177, iters: 400, time: 0.025, data: 62.620) , G_GAN: 1.126, G_L1: 5.679, D_real: 0.482, D_fake: 0.427
+2025-11-16 22:17:08,604 - INFO - [Rank 0] (epoch: 177, iters: 800, time: 0.010, data: 0.009) , G_GAN: 1.288, G_L1: 5.835, D_real: 0.441, D_fake: 0.340
+2025-11-16 22:17:40,591 - INFO - [Rank 0] (epoch: 177, iters: 1200, time: 0.014, data: 2.869) , G_GAN: 1.138, G_L1: 5.754, D_real: 0.457, D_fake: 0.408
+2025-11-16 22:18:27,088 - INFO - [Rank 0] (epoch: 177, iters: 1600, time: 0.012, data: 0.013) , G_GAN: 1.118, G_L1: 4.229, D_real: 0.656, D_fake: 0.376
+2025-11-16 22:18:57,577 - INFO - [Rank 0] (epoch: 177, iters: 2000, time: 0.014, data: 0.008) , G_GAN: 1.204, G_L1: 5.339, D_real: 0.535, D_fake: 0.382
+2025-11-16 22:19:41,864 - INFO - [Rank 0] (epoch: 177, iters: 2400, time: 0.021, data: 0.008) , G_GAN: 1.138, G_L1: 4.539, D_real: 0.626, D_fake: 0.388
+2025-11-16 22:19:41,866 - INFO - Saving latest model (epoch 177, total_iters 200000)
+2025-11-16 22:20:13,917 - INFO - [Rank 0] (epoch: 177, iters: 2800, time: 0.014, data: 0.010) , G_GAN: 1.136, G_L1: 4.527, D_real: 0.616, D_fake: 0.392
+2025-11-16 22:20:59,510 - INFO - [Rank 0] (epoch: 177, iters: 3200, time: 0.009, data: 0.012) , G_GAN: 0.991, G_L1: 4.040, D_real: 0.696, D_fake: 0.421
+2025-11-16 22:21:48,017 - INFO - [Rank 0] (epoch: 177, iters: 3600, time: 0.022, data: 0.586) , G_GAN: 1.364, G_L1: 7.234, D_real: 0.398, D_fake: 0.317
+2025-11-16 22:22:17,183 - INFO - [Rank 0] (epoch: 177, iters: 4000, time: 0.018, data: 0.008) , G_GAN: 1.155, G_L1: 4.933, D_real: 0.620, D_fake: 0.381
+2025-11-16 22:23:03,732 - INFO - [Rank 0] (epoch: 177, iters: 4400, time: 0.075, data: 0.010) , G_GAN: 1.091, G_L1: 4.978, D_real: 0.515, D_fake: 0.450
+2025-11-16 22:23:29,664 - INFO - [Rank 0] (epoch: 177, iters: 4800, time: 0.013, data: 0.012) , G_GAN: 1.252, G_L1: 6.827, D_real: 0.501, D_fake: 0.379
+2025-11-16 22:24:17,356 - INFO - [Rank 0] (epoch: 177, iters: 5200, time: 0.023, data: 0.008) , G_GAN: 1.189, G_L1: 7.915, D_real: 0.349, D_fake: 0.405
+2025-11-16 22:24:45,598 - INFO - [Rank 0] (epoch: 177, iters: 5600, time: 0.014, data: 1.461) , G_GAN: 1.113, G_L1: 6.517, D_real: 0.318, D_fake: 0.441
+2025-11-16 22:25:35,168 - INFO - [Rank 0] (epoch: 177, iters: 6000, time: 0.013, data: 0.009) , G_GAN: 0.947, G_L1: 4.714, D_real: 0.517, D_fake: 0.503
+2025-11-16 22:26:02,348 - INFO - [Rank 0] (epoch: 177, iters: 6400, time: 0.027, data: 0.012) , G_GAN: 1.193, G_L1: 5.158, D_real: 0.430, D_fake: 0.426
+2025-11-16 22:26:49,800 - INFO - [Rank 0] (epoch: 177, iters: 6800, time: 0.014, data: 13.919) , G_GAN: 1.109, G_L1: 6.622, D_real: 0.354, D_fake: 0.484
+2025-11-16 22:27:28,563 - INFO - [Rank 0] (epoch: 177, iters: 7200, time: 0.021, data: 0.012) , G_GAN: 1.024, G_L1: 3.001, D_real: 0.838, D_fake: 0.376
+2025-11-16 22:27:52,641 - INFO - [Rank 0] (epoch: 177, iters: 7600, time: 0.014, data: 4.548) , G_GAN: 1.111, G_L1: 5.226, D_real: 0.487, D_fake: 0.443
+2025-11-16 22:27:53,654 - INFO - Learning rate updated to: 0.000090
+2025-11-16 22:27:53,654 - INFO - === EPOCH 177 COMPLETED === Time: 779s
+2025-11-16 22:27:53,654 - INFO - === EPOCH 178 STARTED ===
+2025-11-16 22:29:25,509 - INFO - [Rank 0] (epoch: 178, iters: 400, time: 0.031, data: 62.108) , G_GAN: 1.350, G_L1: 5.110, D_real: 0.526, D_fake: 0.314
+2025-11-16 22:30:14,745 - INFO - [Rank 0] (epoch: 178, iters: 800, time: 0.042, data: 0.013) , G_GAN: 1.121, G_L1: 6.920, D_real: 0.470, D_fake: 0.395
+2025-11-16 22:30:40,692 - INFO - [Rank 0] (epoch: 178, iters: 1200, time: 0.015, data: 0.008) , G_GAN: 1.074, G_L1: 4.456, D_real: 0.578, D_fake: 0.415
+2025-11-16 22:31:28,872 - INFO - [Rank 0] (epoch: 178, iters: 1600, time: 0.013, data: 0.010) , G_GAN: 1.289, G_L1: 6.387, D_real: 0.360, D_fake: 0.385
+2025-11-16 22:31:55,611 - INFO - [Rank 0] (epoch: 178, iters: 2000, time: 0.013, data: 0.013) , G_GAN: 1.234, G_L1: 3.908, D_real: 0.749, D_fake: 0.323
+2025-11-16 22:32:43,541 - INFO - [Rank 0] (epoch: 178, iters: 2400, time: 0.014, data: 0.011) , G_GAN: 1.219, G_L1: 6.694, D_real: 0.488, D_fake: 0.378
+2025-11-16 22:33:10,847 - INFO - [Rank 0] (epoch: 178, iters: 2800, time: 0.063, data: 0.009) , G_GAN: 1.091, G_L1: 4.822, D_real: 0.642, D_fake: 0.374
+2025-11-16 22:33:57,662 - INFO - [Rank 0] (epoch: 178, iters: 3200, time: 0.015, data: 0.010) , G_GAN: 1.149, G_L1: 5.986, D_real: 0.567, D_fake: 0.378
+2025-11-16 22:34:45,403 - INFO - [Rank 0] (epoch: 178, iters: 3600, time: 0.024, data: 0.078) , G_GAN: 1.763, G_L1: 6.290, D_real: 0.401, D_fake: 0.250
+2025-11-16 22:35:14,822 - INFO - [Rank 0] (epoch: 178, iters: 4000, time: 0.013, data: 0.008) , G_GAN: 1.074, G_L1: 6.212, D_real: 0.495, D_fake: 0.459
+2025-11-16 22:35:58,692 - INFO - [Rank 0] (epoch: 178, iters: 4400, time: 0.013, data: 0.010) , G_GAN: 1.380, G_L1: 5.931, D_real: 0.681, D_fake: 0.293
+2025-11-16 22:36:31,124 - INFO - [Rank 0] (epoch: 178, iters: 4800, time: 0.026, data: 2.060) , G_GAN: 1.126, G_L1: 4.524, D_real: 0.684, D_fake: 0.406
+2025-11-16 22:36:31,125 - INFO - Saving latest model (epoch 178, total_iters 210000)
+2025-11-16 22:37:15,535 - INFO - [Rank 0] (epoch: 178, iters: 5200, time: 0.014, data: 0.012) , G_GAN: 1.219, G_L1: 5.702, D_real: 0.575, D_fake: 0.366
+2025-11-16 22:37:46,490 - INFO - [Rank 0] (epoch: 178, iters: 5600, time: 0.013, data: 1.047) , G_GAN: 1.240, G_L1: 7.288, D_real: 0.307, D_fake: 0.412
+2025-11-16 22:38:30,921 - INFO - [Rank 0] (epoch: 178, iters: 6000, time: 0.015, data: 0.010) , G_GAN: 1.178, G_L1: 6.379, D_real: 0.574, D_fake: 0.376
+2025-11-16 22:39:06,265 - INFO - [Rank 0] (epoch: 178, iters: 6400, time: 0.015, data: 0.011) , G_GAN: 1.297, G_L1: 7.903, D_real: 0.324, D_fake: 0.410
+2025-11-16 22:39:50,258 - INFO - [Rank 0] (epoch: 178, iters: 6800, time: 0.025, data: 11.253) , G_GAN: 1.018, G_L1: 2.301, D_real: 0.878, D_fake: 0.363
+2025-11-16 22:40:27,778 - INFO - [Rank 0] (epoch: 178, iters: 7200, time: 0.009, data: 0.011) , G_GAN: 1.261, G_L1: 5.138, D_real: 0.603, D_fake: 0.324
+2025-11-16 22:40:51,084 - INFO - [Rank 0] (epoch: 178, iters: 7600, time: 0.014, data: 6.101) , G_GAN: 1.280, G_L1: 7.917, D_real: 0.289, D_fake: 0.388
+2025-11-16 22:40:52,148 - INFO - Learning rate updated to: 0.000086
+2025-11-16 22:40:52,148 - INFO - === EPOCH 178 COMPLETED === Time: 778s
+2025-11-16 22:40:52,148 - INFO - === EPOCH 179 STARTED ===
+2025-11-16 22:42:23,164 - INFO - [Rank 0] (epoch: 179, iters: 400, time: 0.030, data: 60.634) , G_GAN: 1.162, G_L1: 4.660, D_real: 0.588, D_fake: 0.355
+2025-11-16 22:43:08,192 - INFO - [Rank 0] (epoch: 179, iters: 800, time: 0.025, data: 0.009) , G_GAN: 1.094, G_L1: 4.898, D_real: 0.588, D_fake: 0.409
+2025-11-16 22:43:40,012 - INFO - [Rank 0] (epoch: 179, iters: 1200, time: 0.065, data: 4.988) , G_GAN: 1.247, G_L1: 7.111, D_real: 0.283, D_fake: 0.391
+2025-11-16 22:44:28,167 - INFO - [Rank 0] (epoch: 179, iters: 1600, time: 0.021, data: 0.012) , G_GAN: 1.060, G_L1: 5.703, D_real: 0.426, D_fake: 0.453
+2025-11-16 22:44:54,108 - INFO - [Rank 0] (epoch: 179, iters: 2000, time: 0.014, data: 0.009) , G_GAN: 1.155, G_L1: 4.827, D_real: 0.755, D_fake: 0.343
+2025-11-16 22:45:41,878 - INFO - [Rank 0] (epoch: 179, iters: 2400, time: 0.013, data: 0.009) , G_GAN: 1.138, G_L1: 5.503, D_real: 0.524, D_fake: 0.397
+2025-11-16 22:46:08,768 - INFO - [Rank 0] (epoch: 179, iters: 2800, time: 0.014, data: 0.014) , G_GAN: 1.104, G_L1: 5.201, D_real: 0.477, D_fake: 0.435
+2025-11-16 22:46:55,311 - INFO - [Rank 0] (epoch: 179, iters: 3200, time: 0.028, data: 0.010) , G_GAN: 1.105, G_L1: 3.122, D_real: 0.603, D_fake: 0.391
+2025-11-16 22:47:41,028 - INFO - [Rank 0] (epoch: 179, iters: 3600, time: 0.018, data: 0.009) , G_GAN: 1.109, G_L1: 4.718, D_real: 0.683, D_fake: 0.402
+2025-11-16 22:48:10,667 - INFO - [Rank 0] (epoch: 179, iters: 4000, time: 0.014, data: 0.014) , G_GAN: 0.976, G_L1: 4.189, D_real: 0.583, D_fake: 0.488
+2025-11-16 22:48:57,331 - INFO - [Rank 0] (epoch: 179, iters: 4400, time: 0.014, data: 0.011) , G_GAN: 1.112, G_L1: 5.251, D_real: 0.510, D_fake: 0.419
+2025-11-16 22:49:25,778 - INFO - [Rank 0] (epoch: 179, iters: 4800, time: 0.014, data: 0.012) , G_GAN: 1.136, G_L1: 4.622, D_real: 0.671, D_fake: 0.390
+2025-11-16 22:50:15,780 - INFO - [Rank 0] (epoch: 179, iters: 5200, time: 0.022, data: 0.017) , G_GAN: 1.104, G_L1: 7.197, D_real: 0.447, D_fake: 0.447
+2025-11-16 22:50:44,037 - INFO - [Rank 0] (epoch: 179, iters: 5600, time: 0.014, data: 0.009) , G_GAN: 1.072, G_L1: 5.399, D_real: 0.648, D_fake: 0.390
+2025-11-16 22:51:32,619 - INFO - [Rank 0] (epoch: 179, iters: 6000, time: 0.017, data: 0.012) , G_GAN: 1.098, G_L1: 5.930, D_real: 0.526, D_fake: 0.411
+2025-11-16 22:52:00,203 - INFO - [Rank 0] (epoch: 179, iters: 6400, time: 0.014, data: 0.008) , G_GAN: 1.407, G_L1: 6.858, D_real: 0.405, D_fake: 0.329
+2025-11-16 22:52:49,253 - INFO - [Rank 0] (epoch: 179, iters: 6800, time: 0.014, data: 14.720) , G_GAN: 1.195, G_L1: 6.151, D_real: 0.537, D_fake: 0.385
+2025-11-16 22:53:30,250 - INFO - [Rank 0] (epoch: 179, iters: 7200, time: 0.048, data: 0.013) , G_GAN: 1.248, G_L1: 6.318, D_real: 0.476, D_fake: 0.317
+2025-11-16 22:53:30,251 - INFO - Saving latest model (epoch 179, total_iters 220000)
+2025-11-16 22:53:52,186 - INFO - [Rank 0] (epoch: 179, iters: 7600, time: 0.014, data: 0.010) , G_GAN: 1.201, G_L1: 6.486, D_real: 0.456, D_fake: 0.417
+2025-11-16 22:53:53,259 - INFO - Learning rate updated to: 0.000082
+2025-11-16 22:53:53,260 - INFO - === EPOCH 179 COMPLETED === Time: 781s
+2025-11-16 22:53:53,260 - INFO - === EPOCH 180 STARTED ===
+2025-11-16 22:55:23,166 - INFO - [Rank 0] (epoch: 180, iters: 400, time: 0.064, data: 62.152) , G_GAN: 1.080, G_L1: 4.178, D_real: 0.633, D_fake: 0.410
+2025-11-16 22:56:10,766 - INFO - [Rank 0] (epoch: 180, iters: 800, time: 0.020, data: 0.011) , G_GAN: 1.118, G_L1: 6.161, D_real: 0.354, D_fake: 0.446
+2025-11-16 22:56:38,222 - INFO - [Rank 0] (epoch: 180, iters: 1200, time: 0.014, data: 0.010) , G_GAN: 1.013, G_L1: 3.150, D_real: 0.725, D_fake: 0.427
+2025-11-16 22:57:26,783 - INFO - [Rank 0] (epoch: 180, iters: 1600, time: 0.027, data: 0.010) , G_GAN: 1.056, G_L1: 4.503, D_real: 0.583, D_fake: 0.439
+2025-11-16 22:57:56,659 - INFO - [Rank 0] (epoch: 180, iters: 2000, time: 0.015, data: 2.745) , G_GAN: 1.203, G_L1: 5.180, D_real: 0.501, D_fake: 0.400
+2025-11-16 22:58:45,394 - INFO - [Rank 0] (epoch: 180, iters: 2400, time: 0.014, data: 0.018) , G_GAN: 1.162, G_L1: 5.345, D_real: 0.442, D_fake: 0.428
+2025-11-16 22:59:12,906 - INFO - [Rank 0] (epoch: 180, iters: 2800, time: 0.014, data: 0.008) , G_GAN: 1.231, G_L1: 6.541, D_real: 0.269, D_fake: 0.411
+2025-11-16 23:00:00,945 - INFO - [Rank 0] (epoch: 180, iters: 3200, time: 0.015, data: 0.011) , G_GAN: 1.117, G_L1: 5.836, D_real: 0.535, D_fake: 0.408
+2025-11-16 23:00:43,460 - INFO - [Rank 0] (epoch: 180, iters: 3600, time: 0.034, data: 0.010) , G_GAN: 1.242, G_L1: 7.381, D_real: 0.405, D_fake: 0.365
+2025-11-16 23:01:18,674 - INFO - [Rank 0] (epoch: 180, iters: 4000, time: 0.014, data: 0.009) , G_GAN: 1.010, G_L1: 5.113, D_real: 0.491, D_fake: 0.473
+2025-11-16 23:02:07,823 - INFO - [Rank 0] (epoch: 180, iters: 4400, time: 0.021, data: 0.008) , G_GAN: 1.136, G_L1: 5.315, D_real: 0.399, D_fake: 0.450
+2025-11-16 23:02:32,133 - INFO - [Rank 0] (epoch: 180, iters: 4800, time: 0.015, data: 0.010) , G_GAN: 1.033, G_L1: 2.766, D_real: 0.660, D_fake: 0.404
+2025-11-16 23:03:24,317 - INFO - [Rank 0] (epoch: 180, iters: 5200, time: 0.013, data: 0.017) , G_GAN: 1.005, G_L1: 4.590, D_real: 0.500, D_fake: 0.468
+2025-11-16 23:03:49,110 - INFO - [Rank 0] (epoch: 180, iters: 5600, time: 0.031, data: 0.009) , G_GAN: 1.056, G_L1: 7.866, D_real: 0.490, D_fake: 0.468
+2025-11-16 23:04:37,847 - INFO - [Rank 0] (epoch: 180, iters: 6000, time: 0.014, data: 0.013) , G_GAN: 1.033, G_L1: 2.898, D_real: 0.857, D_fake: 0.370
+2025-11-16 23:05:02,794 - INFO - [Rank 0] (epoch: 180, iters: 6400, time: 0.015, data: 0.016) , G_GAN: 1.060, G_L1: 3.481, D_real: 0.644, D_fake: 0.429
+2025-11-16 23:05:51,628 - INFO - [Rank 0] (epoch: 180, iters: 6800, time: 0.015, data: 8.791) , G_GAN: 1.094, G_L1: 5.899, D_real: 0.520, D_fake: 0.411
+2025-11-16 23:06:22,367 - INFO - [Rank 0] (epoch: 180, iters: 7200, time: 0.019, data: 0.013) , G_GAN: 1.015, G_L1: 4.724, D_real: 0.459, D_fake: 0.474
+2025-11-16 23:06:49,327 - INFO - [Rank 0] (epoch: 180, iters: 7600, time: 0.035, data: 12.588) , G_GAN: 1.099, G_L1: 7.884, D_real: 0.309, D_fake: 0.515
+2025-11-16 23:06:50,444 - INFO - Learning rate updated to: 0.000078
+2025-11-16 23:06:50,444 - INFO - Saving model at end of epoch 180, iters 228000
+2025-11-16 23:06:50,830 - INFO - === EPOCH 180 COMPLETED === Time: 778s
+2025-11-16 23:06:50,831 - INFO - === EPOCH 181 STARTED ===
+2025-11-16 23:08:20,542 - INFO - [Rank 0] (epoch: 181, iters: 400, time: 0.025, data: 61.983) , G_GAN: 1.100, G_L1: 3.842, D_real: 0.607, D_fake: 0.393
+2025-11-16 23:09:04,407 - INFO - [Rank 0] (epoch: 181, iters: 800, time: 0.026, data: 0.978) , G_GAN: 1.214, G_L1: 5.793, D_real: 0.601, D_fake: 0.345
+2025-11-16 23:09:32,591 - INFO - [Rank 0] (epoch: 181, iters: 1200, time: 0.014, data: 0.351) , G_GAN: 0.935, G_L1: 3.911, D_real: 0.629, D_fake: 0.494
+2025-11-16 23:10:18,509 - INFO - [Rank 0] (epoch: 181, iters: 1600, time: 0.017, data: 0.012) , G_GAN: 1.212, G_L1: 5.224, D_real: 0.673, D_fake: 0.336
+2025-11-16 23:10:45,382 - INFO - [Rank 0] (epoch: 181, iters: 2000, time: 0.029, data: 0.012) , G_GAN: 1.183, G_L1: 7.151, D_real: 0.417, D_fake: 0.391
+2025-11-16 23:10:45,386 - INFO - Saving latest model (epoch 181, total_iters 230000)
+2025-11-16 23:11:31,288 - INFO - [Rank 0] (epoch: 181, iters: 2400, time: 0.015, data: 0.015) , G_GAN: 1.130, G_L1: 7.678, D_real: 0.337, D_fake: 0.469
+2025-11-16 23:11:56,062 - INFO - [Rank 0] (epoch: 181, iters: 2800, time: 0.014, data: 0.010) , G_GAN: 1.249, G_L1: 5.799, D_real: 0.373, D_fake: 0.448
+2025-11-16 23:12:40,360 - INFO - [Rank 0] (epoch: 181, iters: 3200, time: 0.013, data: 0.017) , G_GAN: 1.107, G_L1: 5.132, D_real: 0.630, D_fake: 0.369
+2025-11-16 23:13:19,656 - INFO - [Rank 0] (epoch: 181, iters: 3600, time: 0.020, data: 0.016) , G_GAN: 1.270, G_L1: 5.344, D_real: 0.470, D_fake: 0.384
+2025-11-16 23:13:53,309 - INFO - [Rank 0] (epoch: 181, iters: 4000, time: 0.067, data: 2.073) , G_GAN: 1.029, G_L1: 4.100, D_real: 0.609, D_fake: 0.450
+2025-11-16 23:14:37,011 - INFO - [Rank 0] (epoch: 181, iters: 4400, time: 0.013, data: 0.011) , G_GAN: 1.183, G_L1: 5.001, D_real: 0.602, D_fake: 0.370
+2025-11-16 23:15:04,730 - INFO - [Rank 0] (epoch: 181, iters: 4800, time: 0.016, data: 0.491) , G_GAN: 1.012, G_L1: 5.164, D_real: 0.517, D_fake: 0.462
+2025-11-16 23:15:51,155 - INFO - [Rank 0] (epoch: 181, iters: 5200, time: 0.014, data: 0.016) , G_GAN: 1.096, G_L1: 3.240, D_real: 0.722, D_fake: 0.400
+2025-11-16 23:16:14,213 - INFO - [Rank 0] (epoch: 181, iters: 5600, time: 0.013, data: 0.016) , G_GAN: 1.203, G_L1: 5.350, D_real: 0.466, D_fake: 0.420
+2025-11-16 23:16:59,336 - INFO - [Rank 0] (epoch: 181, iters: 6000, time: 0.033, data: 0.013) , G_GAN: 1.195, G_L1: 5.866, D_real: 0.390, D_fake: 0.414
+2025-11-16 23:17:25,487 - INFO - [Rank 0] (epoch: 181, iters: 6400, time: 0.013, data: 0.009) , G_GAN: 1.018, G_L1: 4.288, D_real: 0.637, D_fake: 0.436
+2025-11-16 23:18:10,792 - INFO - [Rank 0] (epoch: 181, iters: 6800, time: 0.012, data: 9.686) , G_GAN: 1.086, G_L1: 2.111, D_real: 1.061, D_fake: 0.305
+2025-11-16 23:18:49,619 - INFO - [Rank 0] (epoch: 181, iters: 7200, time: 0.026, data: 0.012) , G_GAN: 1.184, G_L1: 6.338, D_real: 0.382, D_fake: 0.425
+2025-11-16 23:19:12,188 - INFO - [Rank 0] (epoch: 181, iters: 7600, time: 0.014, data: 5.123) , G_GAN: 1.212, G_L1: 5.450, D_real: 0.790, D_fake: 0.313
+2025-11-16 23:19:13,276 - INFO - Learning rate updated to: 0.000075
+2025-11-16 23:19:13,277 - INFO - === EPOCH 181 COMPLETED === Time: 742s
+2025-11-16 23:19:13,277 - INFO - === EPOCH 182 STARTED ===
+2025-11-16 23:20:43,326 - INFO - [Rank 0] (epoch: 182, iters: 400, time: 0.029, data: 60.834) , G_GAN: 1.292, G_L1: 5.018, D_real: 0.597, D_fake: 0.338
+2025-11-16 23:21:28,302 - INFO - [Rank 0] (epoch: 182, iters: 800, time: 0.011, data: 0.015) , G_GAN: 1.032, G_L1: 6.684, D_real: 0.398, D_fake: 0.500
+2025-11-16 23:21:55,960 - INFO - [Rank 0] (epoch: 182, iters: 1200, time: 0.015, data: 2.729) , G_GAN: 1.114, G_L1: 5.422, D_real: 0.523, D_fake: 0.416
+2025-11-16 23:22:45,222 - INFO - [Rank 0] (epoch: 182, iters: 1600, time: 0.018, data: 0.010) , G_GAN: 1.188, G_L1: 7.714, D_real: 0.324, D_fake: 0.411
+2025-11-16 23:23:10,953 - INFO - [Rank 0] (epoch: 182, iters: 2000, time: 0.009, data: 0.015) , G_GAN: 1.168, G_L1: 5.771, D_real: 0.507, D_fake: 0.395
+2025-11-16 23:23:55,887 - INFO - [Rank 0] (epoch: 182, iters: 2400, time: 0.029, data: 0.014) , G_GAN: 1.198, G_L1: 7.692, D_real: 0.258, D_fake: 0.413
+2025-11-16 23:24:23,025 - INFO - [Rank 0] (epoch: 182, iters: 2800, time: 0.016, data: 0.019) , G_GAN: 1.198, G_L1: 6.560, D_real: 0.418, D_fake: 0.383
+2025-11-16 23:25:09,435 - INFO - [Rank 0] (epoch: 182, iters: 3200, time: 0.015, data: 0.019) , G_GAN: 1.114, G_L1: 5.599, D_real: 0.530, D_fake: 0.412
+2025-11-16 23:25:50,826 - INFO - [Rank 0] (epoch: 182, iters: 3600, time: 0.024, data: 0.015) , G_GAN: 1.220, G_L1: 5.252, D_real: 0.698, D_fake: 0.327
+2025-11-16 23:26:24,591 - INFO - [Rank 0] (epoch: 182, iters: 4000, time: 0.014, data: 2.315) , G_GAN: 1.193, G_L1: 8.619, D_real: 0.446, D_fake: 0.381
+2025-11-16 23:27:10,048 - INFO - [Rank 0] (epoch: 182, iters: 4400, time: 0.068, data: 0.010) , G_GAN: 1.111, G_L1: 4.028, D_real: 0.746, D_fake: 0.353
+2025-11-16 23:27:10,049 - INFO - Saving latest model (epoch 182, total_iters 240000)
+2025-11-16 23:27:41,059 - INFO - [Rank 0] (epoch: 182, iters: 4800, time: 0.015, data: 1.862) , G_GAN: 1.230, G_L1: 5.778, D_real: 0.439, D_fake: 0.376
+2025-11-16 23:28:31,563 - INFO - [Rank 0] (epoch: 182, iters: 5200, time: 0.029, data: 0.009) , G_GAN: 1.274, G_L1: 7.476, D_real: 0.256, D_fake: 0.412
+2025-11-16 23:28:57,301 - INFO - [Rank 0] (epoch: 182, iters: 5600, time: 0.013, data: 0.013) , G_GAN: 0.957, G_L1: 2.697, D_real: 0.784, D_fake: 0.412
+2025-11-16 23:29:47,478 - INFO - [Rank 0] (epoch: 182, iters: 6000, time: 0.014, data: 0.011) , G_GAN: 1.323, G_L1: 4.296, D_real: 0.552, D_fake: 0.362
+2025-11-16 23:30:11,005 - INFO - [Rank 0] (epoch: 182, iters: 6400, time: 0.024, data: 0.013) , G_GAN: 1.202, G_L1: 4.789, D_real: 0.503, D_fake: 0.397
+2025-11-16 23:31:00,002 - INFO - [Rank 0] (epoch: 182, iters: 6800, time: 0.014, data: 7.709) , G_GAN: 1.158, G_L1: 4.431, D_real: 0.740, D_fake: 0.361
+2025-11-16 23:31:41,301 - INFO - [Rank 0] (epoch: 182, iters: 7200, time: 0.019, data: 0.012) , G_GAN: 1.182, G_L1: 5.210, D_real: 0.635, D_fake: 0.370
+2025-11-16 23:32:00,985 - INFO - [Rank 0] (epoch: 182, iters: 7600, time: 0.014, data: 0.009) , G_GAN: 1.010, G_L1: 3.800, D_real: 0.665, D_fake: 0.440
+2025-11-16 23:32:01,987 - INFO - Learning rate updated to: 0.000071
+2025-11-16 23:32:01,988 - INFO - === EPOCH 182 COMPLETED === Time: 769s
+2025-11-16 23:32:01,989 - INFO - === EPOCH 183 STARTED ===
+2025-11-16 23:33:32,852 - INFO - [Rank 0] (epoch: 183, iters: 400, time: 0.027, data: 60.016) , G_GAN: 1.221, G_L1: 5.134, D_real: 0.518, D_fake: 0.369
+2025-11-16 23:34:15,699 - INFO - [Rank 0] (epoch: 183, iters: 800, time: 0.022, data: 0.024) , G_GAN: 1.262, G_L1: 4.644, D_real: 0.615, D_fake: 0.369
+2025-11-16 23:34:50,099 - INFO - [Rank 0] (epoch: 183, iters: 1200, time: 0.013, data: 3.768) , G_GAN: 1.311, G_L1: 6.907, D_real: 0.543, D_fake: 0.320
+2025-11-16 23:35:40,421 - INFO - [Rank 0] (epoch: 183, iters: 1600, time: 0.016, data: 0.016) , G_GAN: 1.174, G_L1: 5.828, D_real: 0.392, D_fake: 0.408
+2025-11-16 23:36:06,969 - INFO - [Rank 0] (epoch: 183, iters: 2000, time: 0.015, data: 0.000) , G_GAN: 1.402, G_L1: 7.354, D_real: 0.355, D_fake: 0.362
+2025-11-16 23:36:55,533 - INFO - [Rank 0] (epoch: 183, iters: 2400, time: 0.015, data: 0.016) , G_GAN: 0.994, G_L1: 6.085, D_real: 0.424, D_fake: 0.455
+2025-11-16 23:37:24,857 - INFO - [Rank 0] (epoch: 183, iters: 2800, time: 0.065, data: 0.000) , G_GAN: 1.126, G_L1: 5.895, D_real: 0.635, D_fake: 0.382
+2025-11-16 23:38:11,123 - INFO - [Rank 0] (epoch: 183, iters: 3200, time: 0.015, data: 0.000) , G_GAN: 1.124, G_L1: 5.574, D_real: 0.524, D_fake: 0.422
+2025-11-16 23:38:46,606 - INFO - [Rank 0] (epoch: 183, iters: 3600, time: 0.024, data: 0.016) , G_GAN: 1.214, G_L1: 4.996, D_real: 0.584, D_fake: 0.356
+2025-11-16 23:39:27,537 - INFO - [Rank 0] (epoch: 183, iters: 4000, time: 0.015, data: 2.048) , G_GAN: 1.167, G_L1: 4.550, D_real: 0.721, D_fake: 0.351
+2025-11-16 23:40:13,316 - INFO - [Rank 0] (epoch: 183, iters: 4400, time: 0.020, data: 0.016) , G_GAN: 1.150, G_L1: 4.645, D_real: 0.615, D_fake: 0.405
+2025-11-16 23:40:44,018 - INFO - [Rank 0] (epoch: 183, iters: 4800, time: 0.026, data: 1.104) , G_GAN: 1.095, G_L1: 3.479, D_real: 0.838, D_fake: 0.375
+2025-11-16 23:41:30,118 - INFO - [Rank 0] (epoch: 183, iters: 5200, time: 0.015, data: 0.016) , G_GAN: 1.081, G_L1: 7.706, D_real: 0.444, D_fake: 0.435
+2025-11-16 23:41:57,731 - INFO - [Rank 0] (epoch: 183, iters: 5600, time: 0.013, data: 0.641) , G_GAN: 1.141, G_L1: 5.372, D_real: 0.633, D_fake: 0.392
+2025-11-16 23:42:46,293 - INFO - [Rank 0] (epoch: 183, iters: 6000, time: 0.009, data: 0.016) , G_GAN: 1.374, G_L1: 6.568, D_real: 0.384, D_fake: 0.352
+2025-11-16 23:43:12,330 - INFO - [Rank 0] (epoch: 183, iters: 6400, time: 0.012, data: 0.000) , G_GAN: 1.558, G_L1: 7.881, D_real: 0.336, D_fake: 0.345
+2025-11-16 23:44:01,531 - INFO - [Rank 0] (epoch: 183, iters: 6800, time: 0.023, data: 6.566) , G_GAN: 1.118, G_L1: 3.598, D_real: 0.904, D_fake: 0.341
+2025-11-16 23:44:01,531 - INFO - Saving latest model (epoch 183, total_iters 250000)
+2025-11-16 23:44:38,782 - INFO - [Rank 0] (epoch: 183, iters: 7200, time: 0.025, data: 0.016) , G_GAN: 1.153, G_L1: 6.048, D_real: 0.383, D_fake: 0.428
+2025-11-16 23:45:00,837 - INFO - [Rank 0] (epoch: 183, iters: 7600, time: 0.014, data: 5.392) , G_GAN: 1.064, G_L1: 5.475, D_real: 0.430, D_fake: 0.453
+2025-11-16 23:45:01,838 - INFO - Learning rate updated to: 0.000067
+2025-11-16 23:45:01,838 - INFO - === EPOCH 183 COMPLETED === Time: 780s
+2025-11-16 23:45:01,838 - INFO - === EPOCH 184 STARTED ===
+2025-11-16 23:46:35,274 - INFO - [Rank 0] (epoch: 184, iters: 400, time: 0.030, data: 62.462) , G_GAN: 1.205, G_L1: 5.010, D_real: 0.552, D_fake: 0.388
+2025-11-16 23:47:22,874 - INFO - [Rank 0] (epoch: 184, iters: 800, time: 0.013, data: 0.000) , G_GAN: 1.346, G_L1: 7.104, D_real: 0.380, D_fake: 0.340
+2025-11-16 23:47:51,682 - INFO - [Rank 0] (epoch: 184, iters: 1200, time: 0.066, data: 1.220) , G_GAN: 1.266, G_L1: 5.493, D_real: 0.531, D_fake: 0.375
+2025-11-16 23:48:41,080 - INFO - [Rank 0] (epoch: 184, iters: 1600, time: 0.015, data: 0.016) , G_GAN: 1.234, G_L1: 6.300, D_real: 0.551, D_fake: 0.346
+2025-11-16 23:49:07,293 - INFO - [Rank 0] (epoch: 184, iters: 2000, time: 0.014, data: 0.016) , G_GAN: 1.092, G_L1: 5.380, D_real: 0.598, D_fake: 0.412
+2025-11-16 23:49:56,870 - INFO - [Rank 0] (epoch: 184, iters: 2400, time: 0.015, data: 0.016) , G_GAN: 1.174, G_L1: 4.846, D_real: 0.562, D_fake: 0.372
+2025-11-16 23:50:23,233 - INFO - [Rank 0] (epoch: 184, iters: 2800, time: 0.014, data: 0.016) , G_GAN: 1.409, G_L1: 6.014, D_real: 0.568, D_fake: 0.304
+2025-11-16 23:51:13,136 - INFO - [Rank 0] (epoch: 184, iters: 3200, time: 0.025, data: 0.016) , G_GAN: 1.230, G_L1: 6.797, D_real: 0.416, D_fake: 0.387
+2025-11-16 23:51:58,820 - INFO - [Rank 0] (epoch: 184, iters: 3600, time: 0.023, data: 0.016) , G_GAN: 1.174, G_L1: 7.062, D_real: 0.340, D_fake: 0.427
+2025-11-16 23:52:28,460 - INFO - [Rank 0] (epoch: 184, iters: 4000, time: 0.016, data: 0.016) , G_GAN: 1.015, G_L1: 5.263, D_real: 0.467, D_fake: 0.499
+2025-11-16 23:53:15,159 - INFO - [Rank 0] (epoch: 184, iters: 4400, time: 0.009, data: 0.000) , G_GAN: 1.192, G_L1: 7.309, D_real: 0.406, D_fake: 0.392
+2025-11-16 23:53:42,404 - INFO - [Rank 0] (epoch: 184, iters: 4800, time: 0.015, data: 0.172) , G_GAN: 1.316, G_L1: 7.288, D_real: 0.283, D_fake: 0.376
+2025-11-16 23:54:35,738 - INFO - [Rank 0] (epoch: 184, iters: 5200, time: 0.028, data: 0.016) , G_GAN: 1.501, G_L1: 6.902, D_real: 0.556, D_fake: 0.254
+2025-11-16 23:54:59,471 - INFO - [Rank 0] (epoch: 184, iters: 5600, time: 0.015, data: 0.016) , G_GAN: 1.115, G_L1: 5.135, D_real: 0.665, D_fake: 0.373
+2025-11-16 23:55:47,629 - INFO - [Rank 0] (epoch: 184, iters: 6000, time: 0.014, data: 0.000) , G_GAN: 1.166, G_L1: 5.490, D_real: 0.521, D_fake: 0.417
+2025-11-16 23:56:19,523 - INFO - [Rank 0] (epoch: 184, iters: 6400, time: 0.012, data: 0.000) , G_GAN: 1.091, G_L1: 4.664, D_real: 0.626, D_fake: 0.393
+2025-11-16 23:57:01,494 - INFO - [Rank 0] (epoch: 184, iters: 6800, time: 0.014, data: 13.557) , G_GAN: 1.249, G_L1: 5.059, D_real: 0.729, D_fake: 0.311
+2025-11-16 23:57:46,589 - INFO - [Rank 0] (epoch: 184, iters: 7200, time: 0.063, data: 0.000) , G_GAN: 1.247, G_L1: 6.574, D_real: 0.344, D_fake: 0.396
+2025-11-16 23:58:06,728 - INFO - [Rank 0] (epoch: 184, iters: 7600, time: 0.014, data: 0.016) , G_GAN: 1.142, G_L1: 3.519, D_real: 0.676, D_fake: 0.395
+2025-11-16 23:58:07,728 - INFO - Learning rate updated to: 0.000063
+2025-11-16 23:58:07,728 - INFO - === EPOCH 184 COMPLETED === Time: 786s
+2025-11-16 23:58:07,728 - INFO - === EPOCH 185 STARTED ===
+2025-11-16 23:59:38,839 - INFO - [Rank 0] (epoch: 185, iters: 400, time: 0.023, data: 63.586) , G_GAN: 1.171, G_L1: 4.842, D_real: 0.698, D_fake: 0.338
+2025-11-17 00:00:27,371 - INFO - [Rank 0] (epoch: 185, iters: 800, time: 0.030, data: 0.016) , G_GAN: 1.088, G_L1: 4.229, D_real: 0.602, D_fake: 0.397
+2025-11-17 00:00:55,687 - INFO - [Rank 0] (epoch: 185, iters: 1200, time: 0.014, data: 1.063) , G_GAN: 1.216, G_L1: 6.528, D_real: 0.287, D_fake: 0.383
+2025-11-17 00:01:42,793 - INFO - [Rank 0] (epoch: 185, iters: 1600, time: 0.024, data: 0.016) , G_GAN: 1.198, G_L1: 2.429, D_real: 0.886, D_fake: 0.333
+2025-11-17 00:01:42,793 - INFO - Saving latest model (epoch 185, total_iters 260000)
+2025-11-17 00:02:09,371 - INFO - [Rank 0] (epoch: 185, iters: 2000, time: 0.014, data: 0.000) , G_GAN: 1.138, G_L1: 6.407, D_real: 0.375, D_fake: 0.425
+2025-11-17 00:02:55,644 - INFO - [Rank 0] (epoch: 185, iters: 2400, time: 0.015, data: 1.782) , G_GAN: 1.129, G_L1: 7.508, D_real: 0.460, D_fake: 0.418
+2025-11-17 00:03:25,800 - INFO - [Rank 0] (epoch: 185, iters: 2800, time: 0.012, data: 1.125) , G_GAN: 1.038, G_L1: 5.091, D_real: 0.449, D_fake: 0.449
+2025-11-17 00:04:10,886 - INFO - [Rank 0] (epoch: 185, iters: 3200, time: 0.015, data: 0.031) , G_GAN: 1.096, G_L1: 2.915, D_real: 0.792, D_fake: 0.367
+2025-11-17 00:05:02,914 - INFO - [Rank 0] (epoch: 185, iters: 3600, time: 0.039, data: 0.016) , G_GAN: 1.295, G_L1: 7.550, D_real: 0.494, D_fake: 0.335
+2025-11-17 00:05:27,584 - INFO - [Rank 0] (epoch: 185, iters: 4000, time: 0.015, data: 0.000) , G_GAN: 1.205, G_L1: 3.318, D_real: 0.672, D_fake: 0.343
+2025-11-17 00:06:18,513 - INFO - [Rank 0] (epoch: 185, iters: 4400, time: 0.015, data: 0.000) , G_GAN: 1.065, G_L1: 4.799, D_real: 0.494, D_fake: 0.501
+2025-11-17 00:06:43,431 - INFO - [Rank 0] (epoch: 185, iters: 4800, time: 0.014, data: 0.016) , G_GAN: 1.348, G_L1: 9.032, D_real: 0.296, D_fake: 0.345
+2025-11-17 00:07:32,786 - INFO - [Rank 0] (epoch: 185, iters: 5200, time: 0.014, data: 0.016) , G_GAN: 1.281, G_L1: 4.357, D_real: 0.793, D_fake: 0.316
+2025-11-17 00:08:00,393 - INFO - [Rank 0] (epoch: 185, iters: 5600, time: 0.067, data: 0.000) , G_GAN: 1.116, G_L1: 5.684, D_real: 0.375, D_fake: 0.437
+2025-11-17 00:08:47,353 - INFO - [Rank 0] (epoch: 185, iters: 6000, time: 0.015, data: 0.485) , G_GAN: 1.082, G_L1: 1.806, D_real: 0.992, D_fake: 0.362
+2025-11-17 00:09:14,836 - INFO - [Rank 0] (epoch: 185, iters: 6400, time: 0.017, data: 0.016) , G_GAN: 1.255, G_L1: 7.244, D_real: 0.410, D_fake: 0.394
+2025-11-17 00:10:01,281 - INFO - [Rank 0] (epoch: 185, iters: 6800, time: 0.014, data: 19.401) , G_GAN: 1.204, G_L1: 4.676, D_real: 0.540, D_fake: 0.387
+2025-11-17 00:10:47,163 - INFO - [Rank 0] (epoch: 185, iters: 7200, time: 0.030, data: 0.016) , G_GAN: 1.074, G_L1: 5.193, D_real: 0.631, D_fake: 0.434
+2025-11-17 00:11:04,263 - INFO - [Rank 0] (epoch: 185, iters: 7600, time: 0.021, data: 0.016) , G_GAN: 1.094, G_L1: 5.474, D_real: 0.465, D_fake: 0.440
+2025-11-17 00:11:05,264 - INFO - Learning rate updated to: 0.000059
+2025-11-17 00:11:05,264 - INFO - Saving model at end of epoch 185, iters 266000
+2025-11-17 00:11:05,624 - INFO - === EPOCH 185 COMPLETED === Time: 778s
+2025-11-17 00:11:05,624 - INFO - === EPOCH 186 STARTED ===
+2025-11-17 00:12:35,441 - INFO - [Rank 0] (epoch: 186, iters: 400, time: 0.028, data: 62.477) , G_GAN: 1.166, G_L1: 6.995, D_real: 0.395, D_fake: 0.425
+2025-11-17 00:13:24,763 - INFO - [Rank 0] (epoch: 186, iters: 800, time: 0.011, data: 0.016) , G_GAN: 1.086, G_L1: 4.455, D_real: 0.768, D_fake: 0.376
+2025-11-17 00:13:52,652 - INFO - [Rank 0] (epoch: 186, iters: 1200, time: 0.014, data: 0.829) , G_GAN: 1.257, G_L1: 6.443, D_real: 0.358, D_fake: 0.382
+2025-11-17 00:14:39,628 - INFO - [Rank 0] (epoch: 186, iters: 1600, time: 0.017, data: 0.016) , G_GAN: 1.162, G_L1: 6.618, D_real: 0.466, D_fake: 0.405
+2025-11-17 00:15:06,266 - INFO - [Rank 0] (epoch: 186, iters: 2000, time: 0.024, data: 0.016) , G_GAN: 1.158, G_L1: 3.727, D_real: 0.776, D_fake: 0.365
+2025-11-17 00:15:52,183 - INFO - [Rank 0] (epoch: 186, iters: 2400, time: 0.012, data: 0.000) , G_GAN: 1.218, G_L1: 6.211, D_real: 0.507, D_fake: 0.354
+2025-11-17 00:16:19,760 - INFO - [Rank 0] (epoch: 186, iters: 2800, time: 0.014, data: 0.016) , G_GAN: 1.142, G_L1: 4.598, D_real: 0.591, D_fake: 0.381
+2025-11-17 00:17:10,268 - INFO - [Rank 0] (epoch: 186, iters: 3200, time: 0.014, data: 0.016) , G_GAN: 1.189, G_L1: 5.984, D_real: 0.399, D_fake: 0.395
+2025-11-17 00:17:58,825 - INFO - [Rank 0] (epoch: 186, iters: 3600, time: 0.023, data: 0.016) , G_GAN: 1.045, G_L1: 4.525, D_real: 0.446, D_fake: 0.459
+2025-11-17 00:18:25,429 - INFO - [Rank 0] (epoch: 186, iters: 4000, time: 0.057, data: 0.016) , G_GAN: 1.168, G_L1: 7.234, D_real: 0.474, D_fake: 0.396
+2025-11-17 00:18:25,429 - INFO - Saving latest model (epoch 186, total_iters 270000)
+2025-11-17 00:19:10,843 - INFO - [Rank 0] (epoch: 186, iters: 4400, time: 0.016, data: 0.016) , G_GAN: 1.220, G_L1: 5.239, D_real: 0.418, D_fake: 0.361
+2025-11-17 00:19:37,233 - INFO - [Rank 0] (epoch: 186, iters: 4800, time: 0.011, data: 0.016) , G_GAN: 1.100, G_L1: 5.166, D_real: 0.625, D_fake: 0.397
+2025-11-17 00:20:26,867 - INFO - [Rank 0] (epoch: 186, iters: 5200, time: 0.014, data: 0.000) , G_GAN: 1.160, G_L1: 7.374, D_real: 0.368, D_fake: 0.458
+2025-11-17 00:20:54,161 - INFO - [Rank 0] (epoch: 186, iters: 5600, time: 0.013, data: 0.016) , G_GAN: 1.293, G_L1: 7.026, D_real: 0.452, D_fake: 0.341
+2025-11-17 00:21:38,670 - INFO - [Rank 0] (epoch: 186, iters: 6000, time: 0.034, data: 0.000) , G_GAN: 1.310, G_L1: 8.468, D_real: 0.217, D_fake: 0.384
+2025-11-17 00:22:11,435 - INFO - [Rank 0] (epoch: 186, iters: 6400, time: 0.013, data: 0.016) , G_GAN: 1.223, G_L1: 4.375, D_real: 0.722, D_fake: 0.359
+2025-11-17 00:22:55,284 - INFO - [Rank 0] (epoch: 186, iters: 6800, time: 0.009, data: 12.036) , G_GAN: 1.230, G_L1: 5.345, D_real: 0.446, D_fake: 0.398
+2025-11-17 00:23:33,366 - INFO - [Rank 0] (epoch: 186, iters: 7200, time: 0.014, data: 0.016) , G_GAN: 1.102, G_L1: 3.164, D_real: 0.737, D_fake: 0.390
+2025-11-17 00:23:57,652 - INFO - [Rank 0] (epoch: 186, iters: 7600, time: 0.014, data: 8.064) , G_GAN: 1.244, G_L1: 7.433, D_real: 0.290, D_fake: 0.393
+2025-11-17 00:23:58,668 - INFO - Learning rate updated to: 0.000055
+2025-11-17 00:23:58,668 - INFO - === EPOCH 186 COMPLETED === Time: 773s
+2025-11-17 00:23:58,668 - INFO - === EPOCH 187 STARTED ===
+2025-11-17 00:25:30,426 - INFO - [Rank 0] (epoch: 187, iters: 400, time: 0.030, data: 63.526) , G_GAN: 1.262, G_L1: 6.687, D_real: 0.451, D_fake: 0.334
+2025-11-17 00:26:15,763 - INFO - [Rank 0] (epoch: 187, iters: 800, time: 0.028, data: 0.016) , G_GAN: 1.138, G_L1: 5.522, D_real: 0.487, D_fake: 0.394
+2025-11-17 00:26:45,295 - INFO - [Rank 0] (epoch: 187, iters: 1200, time: 0.015, data: 0.016) , G_GAN: 1.255, G_L1: 8.146, D_real: 0.138, D_fake: 0.402
+2025-11-17 00:27:30,897 - INFO - [Rank 0] (epoch: 187, iters: 1600, time: 0.014, data: 0.016) , G_GAN: 1.190, G_L1: 6.041, D_real: 0.578, D_fake: 0.375
+2025-11-17 00:27:59,285 - INFO - [Rank 0] (epoch: 187, iters: 2000, time: 0.015, data: 0.016) , G_GAN: 1.194, G_L1: 5.329, D_real: 0.386, D_fake: 0.416
+2025-11-17 00:28:45,280 - INFO - [Rank 0] (epoch: 187, iters: 2400, time: 0.059, data: 0.016) , G_GAN: 1.234, G_L1: 5.112, D_real: 0.734, D_fake: 0.307
+2025-11-17 00:29:12,623 - INFO - [Rank 0] (epoch: 187, iters: 2800, time: 0.011, data: 0.000) , G_GAN: 1.156, G_L1: 5.365, D_real: 0.561, D_fake: 0.370
+2025-11-17 00:30:02,648 - INFO - [Rank 0] (epoch: 187, iters: 3200, time: 0.012, data: 0.000) , G_GAN: 1.220, G_L1: 4.202, D_real: 0.549, D_fake: 0.353
+2025-11-17 00:30:44,230 - INFO - [Rank 0] (epoch: 187, iters: 3600, time: 0.024, data: 0.000) , G_GAN: 1.264, G_L1: 4.437, D_real: 0.649, D_fake: 0.341
+2025-11-17 00:31:20,219 - INFO - [Rank 0] (epoch: 187, iters: 4000, time: 0.014, data: 6.394) , G_GAN: 1.251, G_L1: 6.861, D_real: 0.335, D_fake: 0.388
+2025-11-17 00:32:08,025 - INFO - [Rank 0] (epoch: 187, iters: 4400, time: 0.037, data: 0.016) , G_GAN: 1.066, G_L1: 3.912, D_real: 0.549, D_fake: 0.443
+2025-11-17 00:32:34,730 - INFO - [Rank 0] (epoch: 187, iters: 4800, time: 0.015, data: 0.016) , G_GAN: 1.206, G_L1: 5.037, D_real: 0.650, D_fake: 0.359
+2025-11-17 00:33:19,978 - INFO - [Rank 0] (epoch: 187, iters: 5200, time: 0.014, data: 0.002) , G_GAN: 1.053, G_L1: 4.650, D_real: 0.674, D_fake: 0.407
+2025-11-17 00:33:49,727 - INFO - [Rank 0] (epoch: 187, iters: 5600, time: 0.015, data: 0.016) , G_GAN: 1.089, G_L1: 6.381, D_real: 0.445, D_fake: 0.443
+2025-11-17 00:34:33,982 - INFO - [Rank 0] (epoch: 187, iters: 6000, time: 0.014, data: 0.016) , G_GAN: 1.369, G_L1: 8.502, D_real: 0.230, D_fake: 0.353
+2025-11-17 00:35:09,205 - INFO - [Rank 0] (epoch: 187, iters: 6400, time: 0.033, data: 6.957) , G_GAN: 1.075, G_L1: 4.891, D_real: 0.574, D_fake: 0.420
+2025-11-17 00:35:09,205 - INFO - Saving latest model (epoch 187, total_iters 280000)
+2025-11-17 00:35:57,290 - INFO - [Rank 0] (epoch: 187, iters: 6800, time: 0.018, data: 11.507) , G_GAN: 1.063, G_L1: 3.492, D_real: 0.805, D_fake: 0.380
+2025-11-17 00:36:35,292 - INFO - [Rank 0] (epoch: 187, iters: 7200, time: 0.012, data: 0.016) , G_GAN: 1.055, G_L1: 3.538, D_real: 0.701, D_fake: 0.423
+2025-11-17 00:36:52,622 - INFO - [Rank 0] (epoch: 187, iters: 7600, time: 0.014, data: 0.016) , G_GAN: 1.161, G_L1: 4.383, D_real: 0.598, D_fake: 0.389
+2025-11-17 00:36:53,638 - INFO - Learning rate updated to: 0.000051
+2025-11-17 00:36:53,638 - INFO - === EPOCH 187 COMPLETED === Time: 775s
+2025-11-17 00:36:53,638 - INFO - === EPOCH 188 STARTED ===
+2025-11-17 00:38:24,004 - INFO - [Rank 0] (epoch: 188, iters: 400, time: 0.026, data: 61.461) , G_GAN: 1.292, G_L1: 5.467, D_real: 0.532, D_fake: 0.318
+2025-11-17 00:39:07,014 - INFO - [Rank 0] (epoch: 188, iters: 800, time: 0.073, data: 0.016) , G_GAN: 1.139, G_L1: 4.786, D_real: 0.652, D_fake: 0.353
+2025-11-17 00:39:40,203 - INFO - [Rank 0] (epoch: 188, iters: 1200, time: 0.014, data: 4.690) , G_GAN: 1.078, G_L1: 4.584, D_real: 0.508, D_fake: 0.416
+2025-11-17 00:40:28,842 - INFO - [Rank 0] (epoch: 188, iters: 1600, time: 0.023, data: 0.000) , G_GAN: 1.110, G_L1: 4.792, D_real: 0.704, D_fake: 0.387
+2025-11-17 00:40:56,453 - INFO - [Rank 0] (epoch: 188, iters: 2000, time: 0.016, data: 0.016) , G_GAN: 1.107, G_L1: 5.805, D_real: 0.514, D_fake: 0.418
+2025-11-17 00:41:40,569 - INFO - [Rank 0] (epoch: 188, iters: 2400, time: 0.014, data: 0.016) , G_GAN: 1.162, G_L1: 6.566, D_real: 0.402, D_fake: 0.422
+2025-11-17 00:42:10,396 - INFO - [Rank 0] (epoch: 188, iters: 2800, time: 0.028, data: 0.000) , G_GAN: 1.205, G_L1: 7.232, D_real: 0.319, D_fake: 0.400
+2025-11-17 00:42:53,730 - INFO - [Rank 0] (epoch: 188, iters: 3200, time: 0.015, data: 0.016) , G_GAN: 1.101, G_L1: 6.482, D_real: 0.464, D_fake: 0.440
+2025-11-17 00:43:37,441 - INFO - [Rank 0] (epoch: 188, iters: 3600, time: 0.020, data: 3.518) , G_GAN: 1.527, G_L1: 10.032, D_real: 0.148, D_fake: 0.333
+2025-11-17 00:44:14,006 - INFO - [Rank 0] (epoch: 188, iters: 4000, time: 0.019, data: 2.157) , G_GAN: 1.145, G_L1: 4.648, D_real: 0.553, D_fake: 0.401
+2025-11-17 00:44:59,612 - INFO - [Rank 0] (epoch: 188, iters: 4400, time: 0.022, data: 0.016) , G_GAN: 1.013, G_L1: 2.190, D_real: 0.704, D_fake: 0.489
+2025-11-17 00:45:29,891 - INFO - [Rank 0] (epoch: 188, iters: 4800, time: 0.039, data: 0.016) , G_GAN: 1.285, G_L1: 4.041, D_real: 0.667, D_fake: 0.333
+2025-11-17 00:46:15,318 - INFO - [Rank 0] (epoch: 188, iters: 5200, time: 0.015, data: 0.016) , G_GAN: 1.093, G_L1: 4.290, D_real: 0.417, D_fake: 0.468
+2025-11-17 00:46:42,208 - INFO - [Rank 0] (epoch: 188, iters: 5600, time: 0.013, data: 0.016) , G_GAN: 1.106, G_L1: 4.312, D_real: 0.553, D_fake: 0.410
+2025-11-17 00:47:29,858 - INFO - [Rank 0] (epoch: 188, iters: 6000, time: 0.014, data: 0.016) , G_GAN: 1.136, G_L1: 5.126, D_real: 0.623, D_fake: 0.369
+2025-11-17 00:47:55,573 - INFO - [Rank 0] (epoch: 188, iters: 6400, time: 0.014, data: 0.016) , G_GAN: 1.267, G_L1: 5.397, D_real: 0.539, D_fake: 0.342
+2025-11-17 00:48:44,627 - INFO - [Rank 0] (epoch: 188, iters: 6800, time: 0.024, data: 13.114) , G_GAN: 1.213, G_L1: 4.044, D_real: 0.623, D_fake: 0.365
+2025-11-17 00:49:25,181 - INFO - [Rank 0] (epoch: 188, iters: 7200, time: 0.024, data: 0.000) , G_GAN: 1.125, G_L1: 5.111, D_real: 0.452, D_fake: 0.403
+2025-11-17 00:49:44,532 - INFO - [Rank 0] (epoch: 188, iters: 7600, time: 0.014, data: 3.877) , G_GAN: 1.095, G_L1: 3.733, D_real: 0.707, D_fake: 0.396
+2025-11-17 00:49:45,548 - INFO - Learning rate updated to: 0.000047
+2025-11-17 00:49:45,548 - INFO - === EPOCH 188 COMPLETED === Time: 772s
+2025-11-17 00:49:45,548 - INFO - === EPOCH 189 STARTED ===
+2025-11-17 00:51:16,003 - INFO - [Rank 0] (epoch: 189, iters: 400, time: 0.069, data: 64.240) , G_GAN: 1.337, G_L1: 4.199, D_real: 0.858, D_fake: 0.295
+2025-11-17 00:52:00,372 - INFO - [Rank 0] (epoch: 189, iters: 800, time: 0.025, data: 0.016) , G_GAN: 1.179, G_L1: 5.544, D_real: 0.539, D_fake: 0.394
+2025-11-17 00:52:33,944 - INFO - [Rank 0] (epoch: 189, iters: 1200, time: 0.025, data: 0.203) , G_GAN: 1.128, G_L1: 4.357, D_real: 0.625, D_fake: 0.387
+2025-11-17 00:52:33,944 - INFO - Saving latest model (epoch 189, total_iters 290000)
+2025-11-17 00:53:18,250 - INFO - [Rank 0] (epoch: 189, iters: 1600, time: 0.014, data: 0.016) , G_GAN: 1.044, G_L1: 3.599, D_real: 0.621, D_fake: 0.434
+2025-11-17 00:53:46,817 - INFO - [Rank 0] (epoch: 189, iters: 2000, time: 0.014, data: 0.000) , G_GAN: 1.266, G_L1: 4.793, D_real: 0.608, D_fake: 0.337
+2025-11-17 00:54:33,280 - INFO - [Rank 0] (epoch: 189, iters: 2400, time: 0.015, data: 0.000) , G_GAN: 1.228, G_L1: 4.107, D_real: 0.858, D_fake: 0.314
+2025-11-17 00:55:00,257 - INFO - [Rank 0] (epoch: 189, iters: 2800, time: 0.014, data: 0.016) , G_GAN: 1.106, G_L1: 4.147, D_real: 0.483, D_fake: 0.414
+2025-11-17 00:55:52,895 - INFO - [Rank 0] (epoch: 189, iters: 3200, time: 0.023, data: 0.000) , G_GAN: 1.059, G_L1: 4.972, D_real: 0.538, D_fake: 0.455
+2025-11-17 00:56:28,039 - INFO - [Rank 0] (epoch: 189, iters: 3600, time: 0.020, data: 0.016) , G_GAN: 1.292, G_L1: 5.037, D_real: 0.513, D_fake: 0.345
+2025-11-17 00:57:04,088 - INFO - [Rank 0] (epoch: 189, iters: 4000, time: 0.015, data: 3.690) , G_GAN: 1.172, G_L1: 7.198, D_real: 0.304, D_fake: 0.444
+2025-11-17 00:57:44,579 - INFO - [Rank 0] (epoch: 189, iters: 4400, time: 0.018, data: 0.016) , G_GAN: 1.078, G_L1: 3.241, D_real: 0.682, D_fake: 0.390
+2025-11-17 00:58:17,688 - INFO - [Rank 0] (epoch: 189, iters: 4800, time: 0.015, data: 4.924) , G_GAN: 1.169, G_L1: 3.643, D_real: 0.709, D_fake: 0.368
+2025-11-17 00:59:07,539 - INFO - [Rank 0] (epoch: 189, iters: 5200, time: 0.080, data: 0.000) , G_GAN: 1.143, G_L1: 6.296, D_real: 0.541, D_fake: 0.412
+2025-11-17 00:59:35,083 - INFO - [Rank 0] (epoch: 189, iters: 5600, time: 0.015, data: 2.188) , G_GAN: 1.230, G_L1: 4.747, D_real: 0.558, D_fake: 0.379
+2025-11-17 01:00:24,545 - INFO - [Rank 0] (epoch: 189, iters: 6000, time: 0.014, data: 0.016) , G_GAN: 1.071, G_L1: 6.625, D_real: 0.481, D_fake: 0.448
+2025-11-17 01:00:49,698 - INFO - [Rank 0] (epoch: 189, iters: 6400, time: 0.014, data: 0.016) , G_GAN: 1.072, G_L1: 4.188, D_real: 0.871, D_fake: 0.398
+2025-11-17 01:01:40,489 - INFO - [Rank 0] (epoch: 189, iters: 6800, time: 0.014, data: 7.956) , G_GAN: 1.297, G_L1: 5.415, D_real: 0.683, D_fake: 0.306
+2025-11-17 01:02:10,254 - INFO - [Rank 0] (epoch: 189, iters: 7200, time: 0.025, data: 0.016) , G_GAN: 1.069, G_L1: 5.289, D_real: 0.492, D_fake: 0.440
+2025-11-17 01:02:38,043 - INFO - [Rank 0] (epoch: 189, iters: 7600, time: 0.014, data: 0.000) , G_GAN: 1.244, G_L1: 5.856, D_real: 0.557, D_fake: 0.340
+2025-11-17 01:02:39,029 - INFO - Learning rate updated to: 0.000043
+2025-11-17 01:02:39,029 - INFO - === EPOCH 189 COMPLETED === Time: 773s
+2025-11-17 01:02:39,029 - INFO - === EPOCH 190 STARTED ===
+2025-11-17 01:04:10,061 - INFO - [Rank 0] (epoch: 190, iters: 400, time: 0.026, data: 62.784) , G_GAN: 1.266, G_L1: 4.189, D_real: 0.604, D_fake: 0.372
+2025-11-17 01:04:57,586 - INFO - [Rank 0] (epoch: 190, iters: 800, time: 0.029, data: 0.016) , G_GAN: 1.156, G_L1: 4.676, D_real: 0.794, D_fake: 0.365
+2025-11-17 01:05:26,852 - INFO - [Rank 0] (epoch: 190, iters: 1200, time: 0.014, data: 0.016) , G_GAN: 1.060, G_L1: 4.908, D_real: 0.679, D_fake: 0.390
+2025-11-17 01:06:08,732 - INFO - [Rank 0] (epoch: 190, iters: 1600, time: 0.023, data: 0.000) , G_GAN: 1.107, G_L1: 3.441, D_real: 0.808, D_fake: 0.363
+2025-11-17 01:06:38,386 - INFO - [Rank 0] (epoch: 190, iters: 2000, time: 0.010, data: 0.016) , G_GAN: 1.126, G_L1: 4.058, D_real: 0.720, D_fake: 0.371
+2025-11-17 01:07:26,113 - INFO - [Rank 0] (epoch: 190, iters: 2400, time: 0.009, data: 0.016) , G_GAN: 1.294, G_L1: 6.048, D_real: 0.500, D_fake: 0.374
+2025-11-17 01:07:52,297 - INFO - [Rank 0] (epoch: 190, iters: 2800, time: 0.013, data: 0.016) , G_GAN: 1.168, G_L1: 6.653, D_real: 0.374, D_fake: 0.413
+2025-11-17 01:08:41,556 - INFO - [Rank 0] (epoch: 190, iters: 3200, time: 0.017, data: 0.016) , G_GAN: 1.155, G_L1: 3.018, D_real: 0.766, D_fake: 0.355
+2025-11-17 01:09:20,763 - INFO - [Rank 0] (epoch: 190, iters: 3600, time: 0.062, data: 0.016) , G_GAN: 1.092, G_L1: 3.051, D_real: 0.775, D_fake: 0.372
+2025-11-17 01:09:20,763 - INFO - Saving latest model (epoch 190, total_iters 300000)
+2025-11-17 01:09:56,297 - INFO - [Rank 0] (epoch: 190, iters: 4000, time: 0.014, data: 0.000) , G_GAN: 1.194, G_L1: 5.345, D_real: 0.578, D_fake: 0.378
+2025-11-17 01:10:34,708 - INFO - [Rank 0] (epoch: 190, iters: 4400, time: 0.015, data: 0.016) , G_GAN: 0.981, G_L1: 4.719, D_real: 0.640, D_fake: 0.440
+2025-11-17 01:11:07,819 - INFO - [Rank 0] (epoch: 190, iters: 4800, time: 0.015, data: 3.846) , G_GAN: 1.130, G_L1: 7.077, D_real: 0.233, D_fake: 0.468
+2025-11-17 01:11:54,157 - INFO - [Rank 0] (epoch: 190, iters: 5200, time: 0.029, data: 0.016) , G_GAN: 1.259, G_L1: 6.148, D_real: 0.414, D_fake: 0.364
+2025-11-17 01:12:21,372 - INFO - [Rank 0] (epoch: 190, iters: 5600, time: 0.029, data: 2.266) , G_GAN: 1.061, G_L1: 5.047, D_real: 0.573, D_fake: 0.432
+2025-11-17 01:13:09,084 - INFO - [Rank 0] (epoch: 190, iters: 6000, time: 0.015, data: 0.016) , G_GAN: 1.273, G_L1: 5.140, D_real: 0.598, D_fake: 0.345
+2025-11-17 01:13:37,552 - INFO - [Rank 0] (epoch: 190, iters: 6400, time: 0.015, data: 0.016) , G_GAN: 1.283, G_L1: 6.570, D_real: 0.449, D_fake: 0.348
+2025-11-17 01:14:24,185 - INFO - [Rank 0] (epoch: 190, iters: 6800, time: 0.019, data: 4.783) , G_GAN: 1.169, G_L1: 6.906, D_real: 0.417, D_fake: 0.392
+2025-11-17 01:15:01,936 - INFO - [Rank 0] (epoch: 190, iters: 7200, time: 0.009, data: 0.016) , G_GAN: 1.302, G_L1: 3.966, D_real: 0.739, D_fake: 0.329
+2025-11-17 01:15:29,075 - INFO - [Rank 0] (epoch: 190, iters: 7600, time: 0.020, data: 0.007) , G_GAN: 1.113, G_L1: 4.797, D_real: 0.515, D_fake: 0.405
+2025-11-17 01:15:30,148 - INFO - Learning rate updated to: 0.000039
+2025-11-17 01:15:30,149 - INFO - Saving model at end of epoch 190, iters 304000
+2025-11-17 01:15:30,541 - INFO - === EPOCH 190 COMPLETED === Time: 772s
+2025-11-17 01:15:30,541 - INFO - === EPOCH 191 STARTED ===
+2025-11-17 01:17:05,324 - INFO - [Rank 0] (epoch: 191, iters: 400, time: 0.030, data: 64.773) , G_GAN: 1.222, G_L1: 6.484, D_real: 0.448, D_fake: 0.403
+2025-11-17 01:17:55,696 - INFO - [Rank 0] (epoch: 191, iters: 800, time: 0.013, data: 0.009) , G_GAN: 1.157, G_L1: 7.047, D_real: 0.472, D_fake: 0.396
+2025-11-17 01:18:24,146 - INFO - [Rank 0] (epoch: 191, iters: 1200, time: 0.014, data: 0.860) , G_GAN: 1.274, G_L1: 5.743, D_real: 0.401, D_fake: 0.371
+2025-11-17 01:19:13,695 - INFO - [Rank 0] (epoch: 191, iters: 1600, time: 0.015, data: 0.012) , G_GAN: 1.137, G_L1: 2.870, D_real: 0.877, D_fake: 0.356
+2025-11-17 01:19:42,854 - INFO - [Rank 0] (epoch: 191, iters: 2000, time: 0.063, data: 0.016) , G_GAN: 1.072, G_L1: 6.143, D_real: 0.429, D_fake: 0.439
+2025-11-17 01:20:32,765 - INFO - [Rank 0] (epoch: 191, iters: 2400, time: 0.010, data: 0.014) , G_GAN: 1.339, G_L1: 7.707, D_real: 0.550, D_fake: 0.306
+2025-11-17 01:21:01,014 - INFO - [Rank 0] (epoch: 191, iters: 2800, time: 0.015, data: 1.444) , G_GAN: 1.110, G_L1: 2.498, D_real: 0.766, D_fake: 0.386
+2025-11-17 01:21:50,110 - INFO - [Rank 0] (epoch: 191, iters: 3200, time: 0.014, data: 0.011) , G_GAN: 1.279, G_L1: 5.831, D_real: 0.408, D_fake: 0.365
+2025-11-17 01:22:23,276 - INFO - [Rank 0] (epoch: 191, iters: 3600, time: 0.013, data: 0.010) , G_GAN: 1.047, G_L1: 5.172, D_real: 0.492, D_fake: 0.447
+2025-11-17 01:23:10,025 - INFO - [Rank 0] (epoch: 191, iters: 4000, time: 0.027, data: 10.469) , G_GAN: 1.211, G_L1: 7.123, D_real: 0.419, D_fake: 0.367
+2025-11-17 01:23:56,878 - INFO - [Rank 0] (epoch: 191, iters: 4400, time: 0.018, data: 0.013) , G_GAN: 1.313, G_L1: 5.526, D_real: 0.516, D_fake: 0.359
+2025-11-17 01:24:29,313 - INFO - [Rank 0] (epoch: 191, iters: 4800, time: 0.014, data: 0.011) , G_GAN: 1.112, G_L1: 6.349, D_real: 0.371, D_fake: 0.440
+2025-11-17 01:25:14,959 - INFO - [Rank 0] (epoch: 191, iters: 5200, time: 0.014, data: 0.011) , G_GAN: 1.201, G_L1: 8.953, D_real: 0.206, D_fake: 0.410
+2025-11-17 01:25:44,247 - INFO - [Rank 0] (epoch: 191, iters: 5600, time: 0.015, data: 3.622) , G_GAN: 1.116, G_L1: 4.586, D_real: 0.598, D_fake: 0.398
+2025-11-17 01:26:36,253 - INFO - [Rank 0] (epoch: 191, iters: 6000, time: 0.033, data: 0.010) , G_GAN: 1.115, G_L1: 4.465, D_real: 0.573, D_fake: 0.400
+2025-11-17 01:26:36,254 - INFO - Saving latest model (epoch 191, total_iters 310000)
+2025-11-17 01:27:02,278 - INFO - [Rank 0] (epoch: 191, iters: 6400, time: 0.010, data: 0.009) , G_GAN: 1.347, G_L1: 8.102, D_real: 0.388, D_fake: 0.327
+2025-11-17 01:27:53,039 - INFO - [Rank 0] (epoch: 191, iters: 6800, time: 0.015, data: 4.330) , G_GAN: 1.097, G_L1: 5.029, D_real: 0.642, D_fake: 0.413
+2025-11-17 01:28:26,025 - INFO - [Rank 0] (epoch: 191, iters: 7200, time: 0.024, data: 0.016) , G_GAN: 1.391, G_L1: 6.827, D_real: 0.374, D_fake: 0.360
+2025-11-17 01:28:50,876 - INFO - [Rank 0] (epoch: 191, iters: 7600, time: 0.014, data: 2.641) , G_GAN: 1.180, G_L1: 4.120, D_real: 0.641, D_fake: 0.368
+2025-11-17 01:28:51,877 - INFO - Learning rate updated to: 0.000035
+2025-11-17 01:28:51,877 - INFO - === EPOCH 191 COMPLETED === Time: 801s
+2025-11-17 01:28:51,877 - INFO - === EPOCH 192 STARTED ===
+2025-11-17 01:30:22,041 - INFO - [Rank 0] (epoch: 192, iters: 400, time: 0.067, data: 62.666) , G_GAN: 1.127, G_L1: 3.116, D_real: 0.751, D_fake: 0.370
+2025-11-17 01:31:07,905 - INFO - [Rank 0] (epoch: 192, iters: 800, time: 0.013, data: 0.016) , G_GAN: 1.033, G_L1: 4.251, D_real: 0.710, D_fake: 0.425
+2025-11-17 01:31:37,866 - INFO - [Rank 0] (epoch: 192, iters: 1200, time: 0.014, data: 0.016) , G_GAN: 1.158, G_L1: 5.128, D_real: 0.742, D_fake: 0.361
+2025-11-17 01:32:22,108 - INFO - [Rank 0] (epoch: 192, iters: 1600, time: 0.012, data: 0.063) , G_GAN: 1.235, G_L1: 5.186, D_real: 0.599, D_fake: 0.356
+2025-11-17 01:32:53,499 - INFO - [Rank 0] (epoch: 192, iters: 2000, time: 0.015, data: 0.016) , G_GAN: 1.148, G_L1: 8.615, D_real: 0.185, D_fake: 0.439
+2025-11-17 01:33:40,930 - INFO - [Rank 0] (epoch: 192, iters: 2400, time: 0.024, data: 0.016) , G_GAN: 1.021, G_L1: 4.184, D_real: 0.650, D_fake: 0.424
+2025-11-17 01:34:05,661 - INFO - [Rank 0] (epoch: 192, iters: 2800, time: 0.015, data: 0.000) , G_GAN: 1.252, G_L1: 5.937, D_real: 0.607, D_fake: 0.339
+2025-11-17 01:34:55,577 - INFO - [Rank 0] (epoch: 192, iters: 3200, time: 0.015, data: 0.000) , G_GAN: 1.395, G_L1: 5.739, D_real: 0.378, D_fake: 0.339
+2025-11-17 01:35:35,471 - INFO - [Rank 0] (epoch: 192, iters: 3600, time: 0.022, data: 0.000) , G_GAN: 1.099, G_L1: 5.844, D_real: 0.434, D_fake: 0.429
+2025-11-17 01:36:10,130 - INFO - [Rank 0] (epoch: 192, iters: 4000, time: 0.015, data: 3.251) , G_GAN: 1.043, G_L1: 2.234, D_real: 0.826, D_fake: 0.389
+2025-11-17 01:36:53,744 - INFO - [Rank 0] (epoch: 192, iters: 4400, time: 0.023, data: 0.016) , G_GAN: 1.158, G_L1: 4.091, D_real: 0.703, D_fake: 0.367
+2025-11-17 01:37:23,572 - INFO - [Rank 0] (epoch: 192, iters: 4800, time: 0.014, data: 0.016) , G_GAN: 1.209, G_L1: 5.365, D_real: 0.533, D_fake: 0.395
+2025-11-17 01:38:10,361 - INFO - [Rank 0] (epoch: 192, iters: 5200, time: 0.014, data: 0.016) , G_GAN: 1.231, G_L1: 5.704, D_real: 0.594, D_fake: 0.353
+2025-11-17 01:38:40,127 - INFO - [Rank 0] (epoch: 192, iters: 5600, time: 0.015, data: 1.751) , G_GAN: 1.112, G_L1: 5.038, D_real: 0.665, D_fake: 0.401
+2025-11-17 01:39:26,199 - INFO - [Rank 0] (epoch: 192, iters: 6000, time: 0.014, data: 0.016) , G_GAN: 1.180, G_L1: 3.004, D_real: 0.827, D_fake: 0.365
+2025-11-17 01:39:53,494 - INFO - [Rank 0] (epoch: 192, iters: 6400, time: 0.031, data: 0.016) , G_GAN: 1.107, G_L1: 5.954, D_real: 0.456, D_fake: 0.415
+2025-11-17 01:40:40,898 - INFO - [Rank 0] (epoch: 192, iters: 6800, time: 0.015, data: 11.680) , G_GAN: 1.093, G_L1: 3.996, D_real: 0.507, D_fake: 0.432
+2025-11-17 01:41:26,472 - INFO - [Rank 0] (epoch: 192, iters: 7200, time: 0.021, data: 0.016) , G_GAN: 1.353, G_L1: 5.067, D_real: 0.491, D_fake: 0.375
+2025-11-17 01:41:42,323 - INFO - [Rank 0] (epoch: 192, iters: 7600, time: 0.014, data: 0.016) , G_GAN: 1.148, G_L1: 6.587, D_real: 0.356, D_fake: 0.408
+2025-11-17 01:41:43,340 - INFO - Learning rate updated to: 0.000031
+2025-11-17 01:41:43,340 - INFO - === EPOCH 192 COMPLETED === Time: 771s
+2025-11-17 01:41:43,340 - INFO - === EPOCH 193 STARTED ===
+2025-11-17 01:43:15,672 - INFO - [Rank 0] (epoch: 193, iters: 400, time: 0.072, data: 63.553) , G_GAN: 1.244, G_L1: 3.072, D_real: 0.704, D_fake: 0.382
+2025-11-17 01:44:02,742 - INFO - [Rank 0] (epoch: 193, iters: 800, time: 0.021, data: 0.016) , G_GAN: 1.065, G_L1: 5.306, D_real: 0.546, D_fake: 0.436
+2025-11-17 01:44:02,742 - INFO - Saving latest model (epoch 193, total_iters 320000)
+2025-11-17 01:44:29,304 - INFO - [Rank 0] (epoch: 193, iters: 1200, time: 0.014, data: 0.016) , G_GAN: 1.207, G_L1: 6.642, D_real: 0.421, D_fake: 0.384
+2025-11-17 01:45:14,875 - INFO - [Rank 0] (epoch: 193, iters: 1600, time: 0.014, data: 0.000) , G_GAN: 1.147, G_L1: 6.301, D_real: 0.476, D_fake: 0.405
+2025-11-17 01:45:43,390 - INFO - [Rank 0] (epoch: 193, iters: 2000, time: 0.013, data: 0.000) , G_GAN: 1.242, G_L1: 3.977, D_real: 0.590, D_fake: 0.345
+2025-11-17 01:46:31,601 - INFO - [Rank 0] (epoch: 193, iters: 2400, time: 0.016, data: 0.203) , G_GAN: 1.100, G_L1: 5.181, D_real: 0.497, D_fake: 0.433
+2025-11-17 01:47:02,633 - INFO - [Rank 0] (epoch: 193, iters: 2800, time: 0.032, data: 0.000) , G_GAN: 1.147, G_L1: 4.951, D_real: 0.552, D_fake: 0.426
+2025-11-17 01:47:44,060 - INFO - [Rank 0] (epoch: 193, iters: 3200, time: 0.015, data: 0.016) , G_GAN: 1.282, G_L1: 8.474, D_real: 0.302, D_fake: 0.357
+2025-11-17 01:48:31,661 - INFO - [Rank 0] (epoch: 193, iters: 3600, time: 0.025, data: 0.016) , G_GAN: 1.090, G_L1: 2.853, D_real: 0.823, D_fake: 0.375
+2025-11-17 01:48:58,253 - INFO - [Rank 0] (epoch: 193, iters: 4000, time: 0.013, data: 0.016) , G_GAN: 1.279, G_L1: 7.137, D_real: 0.269, D_fake: 0.350
+2025-11-17 01:49:46,496 - INFO - [Rank 0] (epoch: 193, iters: 4400, time: 0.017, data: 0.750) , G_GAN: 1.054, G_L1: 4.562, D_real: 0.662, D_fake: 0.440
+2025-11-17 01:50:18,405 - INFO - [Rank 0] (epoch: 193, iters: 4800, time: 0.062, data: 0.016) , G_GAN: 1.292, G_L1: 6.128, D_real: 0.606, D_fake: 0.331
+2025-11-17 01:51:01,503 - INFO - [Rank 0] (epoch: 193, iters: 5200, time: 0.014, data: 0.016) , G_GAN: 1.078, G_L1: 2.907, D_real: 0.871, D_fake: 0.390
+2025-11-17 01:51:36,068 - INFO - [Rank 0] (epoch: 193, iters: 5600, time: 0.013, data: 0.000) , G_GAN: 1.165, G_L1: 6.503, D_real: 0.563, D_fake: 0.388
+2025-11-17 01:52:13,557 - INFO - [Rank 0] (epoch: 193, iters: 6000, time: 0.014, data: 0.016) , G_GAN: 1.153, G_L1: 4.202, D_real: 0.682, D_fake: 0.383
+2025-11-17 01:52:48,561 - INFO - [Rank 0] (epoch: 193, iters: 6400, time: 0.014, data: 0.000) , G_GAN: 1.127, G_L1: 8.562, D_real: 0.280, D_fake: 0.479
+2025-11-17 01:53:27,971 - INFO - [Rank 0] (epoch: 193, iters: 6800, time: 0.024, data: 6.551) , G_GAN: 1.181, G_L1: 6.796, D_real: 0.347, D_fake: 0.393
+2025-11-17 01:54:15,104 - INFO - [Rank 0] (epoch: 193, iters: 7200, time: 0.018, data: 0.016) , G_GAN: 1.244, G_L1: 2.743, D_real: 0.868, D_fake: 0.339
+2025-11-17 01:54:33,954 - INFO - [Rank 0] (epoch: 193, iters: 7600, time: 0.014, data: 0.016) , G_GAN: 1.171, G_L1: 7.342, D_real: 0.513, D_fake: 0.386
+2025-11-17 01:54:35,001 - INFO - Learning rate updated to: 0.000027
+2025-11-17 01:54:35,001 - INFO - === EPOCH 193 COMPLETED === Time: 772s
+2025-11-17 01:54:35,001 - INFO - === EPOCH 194 STARTED ===
+2025-11-17 01:56:06,878 - INFO - [Rank 0] (epoch: 194, iters: 400, time: 0.029, data: 63.098) , G_GAN: 1.151, G_L1: 6.624, D_real: 0.339, D_fake: 0.395
+2025-11-17 01:56:51,808 - INFO - [Rank 0] (epoch: 194, iters: 800, time: 0.028, data: 0.016) , G_GAN: 1.108, G_L1: 6.857, D_real: 0.552, D_fake: 0.400
+2025-11-17 01:57:21,558 - INFO - [Rank 0] (epoch: 194, iters: 1200, time: 0.031, data: 0.000) , G_GAN: 1.149, G_L1: 6.870, D_real: 0.514, D_fake: 0.379
+2025-11-17 01:58:06,661 - INFO - [Rank 0] (epoch: 194, iters: 1600, time: 0.014, data: 0.016) , G_GAN: 1.289, G_L1: 4.633, D_real: 0.635, D_fake: 0.323
+2025-11-17 01:58:35,487 - INFO - [Rank 0] (epoch: 194, iters: 2000, time: 0.014, data: 0.016) , G_GAN: 1.274, G_L1: 5.795, D_real: 0.596, D_fake: 0.342
+2025-11-17 01:59:20,666 - INFO - [Rank 0] (epoch: 194, iters: 2400, time: 0.014, data: 0.016) , G_GAN: 1.080, G_L1: 5.804, D_real: 0.595, D_fake: 0.420
+2025-11-17 01:59:51,711 - INFO - [Rank 0] (epoch: 194, iters: 2800, time: 0.014, data: 6.362) , G_GAN: 1.250, G_L1: 2.919, D_real: 0.772, D_fake: 0.334
+2025-11-17 02:00:37,344 - INFO - [Rank 0] (epoch: 194, iters: 3200, time: 0.055, data: 0.016) , G_GAN: 1.184, G_L1: 5.784, D_real: 0.508, D_fake: 0.364
+2025-11-17 02:00:37,344 - INFO - Saving latest model (epoch 194, total_iters 330000)
+2025-11-17 02:01:21,257 - INFO - [Rank 0] (epoch: 194, iters: 3600, time: 0.021, data: 0.000) , G_GAN: 1.312, G_L1: 4.817, D_real: 0.679, D_fake: 0.320
+2025-11-17 02:01:52,616 - INFO - [Rank 0] (epoch: 194, iters: 4000, time: 0.015, data: 0.063) , G_GAN: 1.225, G_L1: 4.028, D_real: 0.750, D_fake: 0.342
+2025-11-17 02:02:33,825 - INFO - [Rank 0] (epoch: 194, iters: 4400, time: 0.015, data: 0.016) , G_GAN: 1.164, G_L1: 4.754, D_real: 0.530, D_fake: 0.408
+2025-11-17 02:03:11,236 - INFO - [Rank 0] (epoch: 194, iters: 4800, time: 0.015, data: 0.016) , G_GAN: 1.173, G_L1: 5.803, D_real: 0.479, D_fake: 0.390
+2025-11-17 02:03:58,743 - INFO - [Rank 0] (epoch: 194, iters: 5200, time: 0.033, data: 0.016) , G_GAN: 1.309, G_L1: 5.730, D_real: 0.467, D_fake: 0.335
+2025-11-17 02:04:23,957 - INFO - [Rank 0] (epoch: 194, iters: 5600, time: 0.015, data: 0.000) , G_GAN: 1.201, G_L1: 6.927, D_real: 0.490, D_fake: 0.384
+2025-11-17 02:05:14,357 - INFO - [Rank 0] (epoch: 194, iters: 6000, time: 0.014, data: 0.000) , G_GAN: 1.383, G_L1: 6.359, D_real: 0.407, D_fake: 0.342
+2025-11-17 02:05:39,057 - INFO - [Rank 0] (epoch: 194, iters: 6400, time: 0.014, data: 0.016) , G_GAN: 1.238, G_L1: 5.539, D_real: 0.457, D_fake: 0.384
+2025-11-17 02:06:26,473 - INFO - [Rank 0] (epoch: 194, iters: 6800, time: 0.014, data: 10.271) , G_GAN: 1.197, G_L1: 7.684, D_real: 0.205, D_fake: 0.405
+2025-11-17 02:07:04,086 - INFO - [Rank 0] (epoch: 194, iters: 7200, time: 0.022, data: 0.000) , G_GAN: 1.193, G_L1: 5.975, D_real: 0.496, D_fake: 0.381
+2025-11-17 02:07:27,015 - INFO - [Rank 0] (epoch: 194, iters: 7600, time: 0.014, data: 3.721) , G_GAN: 1.179, G_L1: 6.304, D_real: 0.285, D_fake: 0.415
+2025-11-17 02:07:28,016 - INFO - Learning rate updated to: 0.000024
+2025-11-17 02:07:28,016 - INFO - === EPOCH 194 COMPLETED === Time: 773s
+2025-11-17 02:07:28,016 - INFO - === EPOCH 195 STARTED ===
+2025-11-17 02:08:58,254 - INFO - [Rank 0] (epoch: 195, iters: 400, time: 0.063, data: 62.146) , G_GAN: 1.138, G_L1: 3.027, D_real: 0.693, D_fake: 0.391
+2025-11-17 02:09:46,606 - INFO - [Rank 0] (epoch: 195, iters: 800, time: 0.028, data: 0.016) , G_GAN: 1.323, G_L1: 7.948, D_real: 0.299, D_fake: 0.329
+2025-11-17 02:10:14,715 - INFO - [Rank 0] (epoch: 195, iters: 1200, time: 0.014, data: 0.020) , G_GAN: 1.163, G_L1: 3.943, D_real: 0.675, D_fake: 0.358
+2025-11-17 02:11:03,928 - INFO - [Rank 0] (epoch: 195, iters: 1600, time: 0.029, data: 0.016) , G_GAN: 1.229, G_L1: 4.604, D_real: 0.584, D_fake: 0.389
+2025-11-17 02:11:30,208 - INFO - [Rank 0] (epoch: 195, iters: 2000, time: 0.014, data: 0.000) , G_GAN: 1.156, G_L1: 5.059, D_real: 0.606, D_fake: 0.391
+2025-11-17 02:12:16,967 - INFO - [Rank 0] (epoch: 195, iters: 2400, time: 0.014, data: 0.016) , G_GAN: 1.165, G_L1: 5.868, D_real: 0.443, D_fake: 0.400
+2025-11-17 02:12:42,713 - INFO - [Rank 0] (epoch: 195, iters: 2800, time: 0.015, data: 0.000) , G_GAN: 1.261, G_L1: 5.427, D_real: 0.477, D_fake: 0.385
+2025-11-17 02:13:31,096 - INFO - [Rank 0] (epoch: 195, iters: 3200, time: 0.014, data: 0.016) , G_GAN: 1.065, G_L1: 3.410, D_real: 0.711, D_fake: 0.424
+2025-11-17 02:14:15,227 - INFO - [Rank 0] (epoch: 195, iters: 3600, time: 0.031, data: 0.000) , G_GAN: 1.187, G_L1: 4.395, D_real: 0.699, D_fake: 0.368
+2025-11-17 02:14:46,382 - INFO - [Rank 0] (epoch: 195, iters: 4000, time: 0.014, data: 5.534) , G_GAN: 1.111, G_L1: 5.301, D_real: 0.526, D_fake: 0.410
+2025-11-17 02:15:34,782 - INFO - [Rank 0] (epoch: 195, iters: 4400, time: 0.026, data: 0.016) , G_GAN: 1.089, G_L1: 6.873, D_real: 0.517, D_fake: 0.440
+2025-11-17 02:15:59,168 - INFO - [Rank 0] (epoch: 195, iters: 4800, time: 0.016, data: 0.016) , G_GAN: 1.144, G_L1: 2.947, D_real: 0.944, D_fake: 0.366
+2025-11-17 02:16:47,083 - INFO - [Rank 0] (epoch: 195, iters: 5200, time: 0.016, data: 0.016) , G_GAN: 1.180, G_L1: 7.432, D_real: 0.398, D_fake: 0.389
+2025-11-17 02:17:11,063 - INFO - [Rank 0] (epoch: 195, iters: 5600, time: 0.027, data: 0.000) , G_GAN: 1.114, G_L1: 5.018, D_real: 0.464, D_fake: 0.414
+2025-11-17 02:17:11,063 - INFO - Saving latest model (epoch 195, total_iters 340000)
+2025-11-17 02:18:00,527 - INFO - [Rank 0] (epoch: 195, iters: 6000, time: 0.013, data: 0.016) , G_GAN: 1.202, G_L1: 4.170, D_real: 0.730, D_fake: 0.357
+2025-11-17 02:18:27,055 - INFO - [Rank 0] (epoch: 195, iters: 6400, time: 0.014, data: 0.000) , G_GAN: 1.079, G_L1: 2.771, D_real: 0.880, D_fake: 0.395
+2025-11-17 02:19:15,048 - INFO - [Rank 0] (epoch: 195, iters: 6800, time: 0.013, data: 16.930) , G_GAN: 1.202, G_L1: 5.112, D_real: 0.481, D_fake: 0.384
+2025-11-17 02:20:01,650 - INFO - [Rank 0] (epoch: 195, iters: 7200, time: 0.010, data: 0.016) , G_GAN: 1.151, G_L1: 4.916, D_real: 0.470, D_fake: 0.411
+2025-11-17 02:20:18,919 - INFO - [Rank 0] (epoch: 195, iters: 7600, time: 0.028, data: 0.016) , G_GAN: 1.238, G_L1: 4.683, D_real: 0.536, D_fake: 0.384
+2025-11-17 02:20:19,920 - INFO - Learning rate updated to: 0.000020
+2025-11-17 02:20:19,920 - INFO - Saving model at end of epoch 195, iters 342000
+2025-11-17 02:20:20,295 - INFO - === EPOCH 195 COMPLETED === Time: 772s
+2025-11-17 02:20:20,295 - INFO - === EPOCH 196 STARTED ===
+2025-11-17 02:21:50,502 - INFO - [Rank 0] (epoch: 196, iters: 400, time: 0.027, data: 63.958) , G_GAN: 1.095, G_L1: 5.632, D_real: 0.522, D_fake: 0.429
+2025-11-17 02:22:40,386 - INFO - [Rank 0] (epoch: 196, iters: 800, time: 0.029, data: 0.016) , G_GAN: 1.165, G_L1: 6.523, D_real: 0.488, D_fake: 0.382
+2025-11-17 02:23:07,603 - INFO - [Rank 0] (epoch: 196, iters: 1200, time: 0.014, data: 0.016) , G_GAN: 1.418, G_L1: 4.859, D_real: 0.709, D_fake: 0.303
+2025-11-17 02:23:56,112 - INFO - [Rank 0] (epoch: 196, iters: 1600, time: 0.015, data: 0.000) , G_GAN: 1.066, G_L1: 4.675, D_real: 0.589, D_fake: 0.424
+2025-11-17 02:24:20,438 - INFO - [Rank 0] (epoch: 196, iters: 2000, time: 0.029, data: 0.000) , G_GAN: 1.305, G_L1: 4.645, D_real: 0.571, D_fake: 0.348
+2025-11-17 02:25:08,196 - INFO - [Rank 0] (epoch: 196, iters: 2400, time: 0.014, data: 0.000) , G_GAN: 1.100, G_L1: 4.517, D_real: 0.589, D_fake: 0.415
+2025-11-17 02:25:34,913 - INFO - [Rank 0] (epoch: 196, iters: 2800, time: 0.014, data: 0.016) , G_GAN: 1.184, G_L1: 7.325, D_real: 0.421, D_fake: 0.377
+2025-11-17 02:26:23,461 - INFO - [Rank 0] (epoch: 196, iters: 3200, time: 0.015, data: 0.016) , G_GAN: 1.120, G_L1: 3.117, D_real: 0.758, D_fake: 0.379
+2025-11-17 02:27:08,454 - INFO - [Rank 0] (epoch: 196, iters: 3600, time: 0.021, data: 0.000) , G_GAN: 1.064, G_L1: 7.345, D_real: 0.374, D_fake: 0.458
+2025-11-17 02:27:41,205 - INFO - [Rank 0] (epoch: 196, iters: 4000, time: 0.072, data: 1.548) , G_GAN: 1.061, G_L1: 5.754, D_real: 0.417, D_fake: 0.458
+2025-11-17 02:28:28,073 - INFO - [Rank 0] (epoch: 196, iters: 4400, time: 0.017, data: 0.016) , G_GAN: 1.140, G_L1: 5.631, D_real: 0.413, D_fake: 0.398
+2025-11-17 02:28:54,854 - INFO - [Rank 0] (epoch: 196, iters: 4800, time: 0.014, data: 0.000) , G_GAN: 1.054, G_L1: 5.844, D_real: 0.663, D_fake: 0.416
+2025-11-17 02:29:42,411 - INFO - [Rank 0] (epoch: 196, iters: 5200, time: 0.014, data: 0.016) , G_GAN: 1.158, G_L1: 5.559, D_real: 0.411, D_fake: 0.412
+2025-11-17 02:30:09,456 - INFO - [Rank 0] (epoch: 196, iters: 5600, time: 0.015, data: 0.016) , G_GAN: 1.224, G_L1: 5.982, D_real: 0.642, D_fake: 0.347
+2025-11-17 02:30:58,152 - INFO - [Rank 0] (epoch: 196, iters: 6000, time: 0.032, data: 0.016) , G_GAN: 1.125, G_L1: 4.676, D_real: 0.630, D_fake: 0.387
+2025-11-17 02:31:24,555 - INFO - [Rank 0] (epoch: 196, iters: 6400, time: 0.014, data: 0.250) , G_GAN: 1.175, G_L1: 3.617, D_real: 0.718, D_fake: 0.359
+2025-11-17 02:32:12,846 - INFO - [Rank 0] (epoch: 196, iters: 6800, time: 0.014, data: 19.995) , G_GAN: 1.170, G_L1: 8.111, D_real: 0.453, D_fake: 0.401
+2025-11-17 02:32:56,240 - INFO - [Rank 0] (epoch: 196, iters: 7200, time: 0.009, data: 0.016) , G_GAN: 1.183, G_L1: 6.583, D_real: 0.416, D_fake: 0.386
+2025-11-17 02:33:11,995 - INFO - [Rank 0] (epoch: 196, iters: 7600, time: 0.014, data: 0.016) , G_GAN: 1.116, G_L1: 6.055, D_real: 0.554, D_fake: 0.402
+2025-11-17 02:33:13,042 - INFO - Learning rate updated to: 0.000016
+2025-11-17 02:33:13,042 - INFO - === EPOCH 196 COMPLETED === Time: 773s
+2025-11-17 02:33:13,042 - INFO - === EPOCH 197 STARTED ===
+2025-11-17 02:34:42,951 - INFO - [Rank 0] (epoch: 197, iters: 400, time: 0.025, data: 61.972) , G_GAN: 1.126, G_L1: 6.638, D_real: 0.461, D_fake: 0.399
+2025-11-17 02:34:42,967 - INFO - Saving latest model (epoch 197, total_iters 350000)
+2025-11-17 02:35:31,147 - INFO - [Rank 0] (epoch: 197, iters: 800, time: 0.013, data: 0.016) , G_GAN: 1.182, G_L1: 8.033, D_real: 0.269, D_fake: 0.388
+2025-11-17 02:36:00,709 - INFO - [Rank 0] (epoch: 197, iters: 1200, time: 0.013, data: 0.000) , G_GAN: 1.029, G_L1: 3.075, D_real: 0.764, D_fake: 0.432
+2025-11-17 02:36:44,499 - INFO - [Rank 0] (epoch: 197, iters: 1600, time: 0.014, data: 0.016) , G_GAN: 1.198, G_L1: 5.304, D_real: 0.495, D_fake: 0.371
+2025-11-17 02:37:11,214 - INFO - [Rank 0] (epoch: 197, iters: 2000, time: 0.013, data: 0.016) , G_GAN: 1.144, G_L1: 6.008, D_real: 0.619, D_fake: 0.388
+2025-11-17 02:37:58,220 - INFO - [Rank 0] (epoch: 197, iters: 2400, time: 0.023, data: 0.016) , G_GAN: 1.228, G_L1: 5.009, D_real: 0.595, D_fake: 0.347
+2025-11-17 02:38:26,360 - INFO - [Rank 0] (epoch: 197, iters: 2800, time: 0.015, data: 0.015) , G_GAN: 1.183, G_L1: 6.108, D_real: 0.481, D_fake: 0.381
+2025-11-17 02:39:14,574 - INFO - [Rank 0] (epoch: 197, iters: 3200, time: 0.012, data: 0.016) , G_GAN: 0.991, G_L1: 4.476, D_real: 0.594, D_fake: 0.474
+2025-11-17 02:39:58,839 - INFO - [Rank 0] (epoch: 197, iters: 3600, time: 0.025, data: 0.016) , G_GAN: 1.207, G_L1: 4.468, D_real: 0.637, D_fake: 0.362
+2025-11-17 02:40:28,998 - INFO - [Rank 0] (epoch: 197, iters: 4000, time: 0.014, data: 0.000) , G_GAN: 1.069, G_L1: 3.696, D_real: 0.703, D_fake: 0.414
+2025-11-17 02:41:15,791 - INFO - [Rank 0] (epoch: 197, iters: 4400, time: 0.065, data: 0.016) , G_GAN: 1.259, G_L1: 4.717, D_real: 0.586, D_fake: 0.374
+2025-11-17 02:41:42,132 - INFO - [Rank 0] (epoch: 197, iters: 4800, time: 0.010, data: 0.016) , G_GAN: 1.165, G_L1: 5.557, D_real: 0.481, D_fake: 0.391
+2025-11-17 02:42:28,841 - INFO - [Rank 0] (epoch: 197, iters: 5200, time: 0.010, data: 0.016) , G_GAN: 1.191, G_L1: 6.012, D_real: 0.501, D_fake: 0.398
+2025-11-17 02:42:56,981 - INFO - [Rank 0] (epoch: 197, iters: 5600, time: 0.015, data: 0.016) , G_GAN: 1.212, G_L1: 6.396, D_real: 0.411, D_fake: 0.373
+2025-11-17 02:43:44,177 - INFO - [Rank 0] (epoch: 197, iters: 6000, time: 0.015, data: 0.016) , G_GAN: 1.177, G_L1: 4.562, D_real: 0.582, D_fake: 0.394
+2025-11-17 02:44:12,691 - INFO - [Rank 0] (epoch: 197, iters: 6400, time: 0.025, data: 0.016) , G_GAN: 1.130, G_L1: 3.729, D_real: 0.627, D_fake: 0.397
+2025-11-17 02:44:59,135 - INFO - [Rank 0] (epoch: 197, iters: 6800, time: 0.014, data: 15.101) , G_GAN: 1.088, G_L1: 4.099, D_real: 0.658, D_fake: 0.410
+2025-11-17 02:45:39,623 - INFO - [Rank 0] (epoch: 197, iters: 7200, time: 0.009, data: 0.000) , G_GAN: 1.134, G_L1: 4.904, D_real: 0.594, D_fake: 0.396
+2025-11-17 02:46:03,582 - INFO - [Rank 0] (epoch: 197, iters: 7600, time: 0.014, data: 1.282) , G_GAN: 1.226, G_L1: 5.949, D_real: 0.562, D_fake: 0.353
+2025-11-17 02:46:04,582 - INFO - Learning rate updated to: 0.000012
+2025-11-17 02:46:04,582 - INFO - === EPOCH 197 COMPLETED === Time: 772s
+2025-11-17 02:46:04,582 - INFO - === EPOCH 198 STARTED ===
+2025-11-17 02:47:34,178 - INFO - [Rank 0] (epoch: 198, iters: 400, time: 0.023, data: 63.520) , G_GAN: 1.104, G_L1: 7.305, D_real: 0.395, D_fake: 0.413
+2025-11-17 02:48:19,402 - INFO - [Rank 0] (epoch: 198, iters: 800, time: 0.070, data: 0.016) , G_GAN: 1.148, G_L1: 9.427, D_real: 0.272, D_fake: 0.402
+2025-11-17 02:48:49,104 - INFO - [Rank 0] (epoch: 198, iters: 1200, time: 0.013, data: 0.469) , G_GAN: 1.153, G_L1: 6.514, D_real: 0.404, D_fake: 0.396
+2025-11-17 02:49:36,504 - INFO - [Rank 0] (epoch: 198, iters: 1600, time: 0.009, data: 0.016) , G_GAN: 1.062, G_L1: 5.013, D_real: 0.502, D_fake: 0.440
+2025-11-17 02:50:02,172 - INFO - [Rank 0] (epoch: 198, iters: 2000, time: 0.014, data: 0.016) , G_GAN: 1.138, G_L1: 6.030, D_real: 0.472, D_fake: 0.405
+2025-11-17 02:50:51,888 - INFO - [Rank 0] (epoch: 198, iters: 2400, time: 0.014, data: 0.000) , G_GAN: 1.258, G_L1: 3.355, D_real: 0.766, D_fake: 0.374
+2025-11-17 02:51:17,993 - INFO - [Rank 0] (epoch: 198, iters: 2800, time: 0.022, data: 0.000) , G_GAN: 1.128, G_L1: 6.377, D_real: 0.474, D_fake: 0.405
+2025-11-17 02:51:17,993 - INFO - Saving latest model (epoch 198, total_iters 360000)
+2025-11-17 02:52:04,754 - INFO - [Rank 0] (epoch: 198, iters: 3200, time: 0.009, data: 0.016) , G_GAN: 1.155, G_L1: 6.280, D_real: 0.488, D_fake: 0.397
+2025-11-17 02:52:52,704 - INFO - [Rank 0] (epoch: 198, iters: 3600, time: 0.019, data: 0.016) , G_GAN: 1.154, G_L1: 6.921, D_real: 0.463, D_fake: 0.390
+2025-11-17 02:53:22,827 - INFO - [Rank 0] (epoch: 198, iters: 4000, time: 0.014, data: 0.000) , G_GAN: 1.177, G_L1: 3.684, D_real: 0.650, D_fake: 0.373
+2025-11-17 02:54:12,336 - INFO - [Rank 0] (epoch: 198, iters: 4400, time: 0.014, data: 0.016) , G_GAN: 1.073, G_L1: 3.653, D_real: 0.719, D_fake: 0.422
+2025-11-17 02:54:39,196 - INFO - [Rank 0] (epoch: 198, iters: 4800, time: 0.029, data: 0.000) , G_GAN: 1.096, G_L1: 6.783, D_real: 0.542, D_fake: 0.412
+2025-11-17 02:55:25,030 - INFO - [Rank 0] (epoch: 198, iters: 5200, time: 0.015, data: 0.016) , G_GAN: 1.069, G_L1: 5.546, D_real: 0.571, D_fake: 0.428
+2025-11-17 02:55:50,715 - INFO - [Rank 0] (epoch: 198, iters: 5600, time: 0.013, data: 0.016) , G_GAN: 1.214, G_L1: 5.339, D_real: 0.654, D_fake: 0.354
+2025-11-17 02:56:38,723 - INFO - [Rank 0] (epoch: 198, iters: 6000, time: 0.014, data: 0.016) , G_GAN: 1.206, G_L1: 7.856, D_real: 0.422, D_fake: 0.373
+2025-11-17 02:57:04,533 - INFO - [Rank 0] (epoch: 198, iters: 6400, time: 0.013, data: 0.891) , G_GAN: 1.117, G_L1: 3.862, D_real: 0.624, D_fake: 0.402
+2025-11-17 02:57:54,011 - INFO - [Rank 0] (epoch: 198, iters: 6800, time: 0.026, data: 22.495) , G_GAN: 1.140, G_L1: 6.021, D_real: 0.480, D_fake: 0.395
+2025-11-17 02:58:40,567 - INFO - [Rank 0] (epoch: 198, iters: 7200, time: 0.030, data: 0.016) , G_GAN: 1.085, G_L1: 5.422, D_real: 0.512, D_fake: 0.423
+2025-11-17 02:58:55,977 - INFO - [Rank 0] (epoch: 198, iters: 7600, time: 0.014, data: 0.016) , G_GAN: 1.186, G_L1: 7.226, D_real: 0.450, D_fake: 0.373
+2025-11-17 02:58:57,023 - INFO - Learning rate updated to: 0.000008
+2025-11-17 02:58:57,023 - INFO - === EPOCH 198 COMPLETED === Time: 772s
+2025-11-17 02:58:57,023 - INFO - === EPOCH 199 STARTED ===
+2025-11-17 03:00:28,664 - INFO - [Rank 0] (epoch: 199, iters: 400, time: 0.075, data: 64.283) , G_GAN: 1.176, G_L1: 4.182, D_real: 0.455, D_fake: 0.379
+2025-11-17 03:01:18,250 - INFO - [Rank 0] (epoch: 199, iters: 800, time: 0.018, data: 0.000) , G_GAN: 1.143, G_L1: 4.946, D_real: 0.566, D_fake: 0.392
+2025-11-17 03:01:45,687 - INFO - [Rank 0] (epoch: 199, iters: 1200, time: 0.024, data: 0.000) , G_GAN: 1.270, G_L1: 4.025, D_real: 0.529, D_fake: 0.336
+2025-11-17 03:02:34,178 - INFO - [Rank 0] (epoch: 199, iters: 1600, time: 0.016, data: 0.000) , G_GAN: 1.094, G_L1: 4.716, D_real: 0.665, D_fake: 0.407
+2025-11-17 03:02:59,457 - INFO - [Rank 0] (epoch: 199, iters: 2000, time: 0.015, data: 0.016) , G_GAN: 1.255, G_L1: 5.836, D_real: 0.338, D_fake: 0.394
+2025-11-17 03:03:48,012 - INFO - [Rank 0] (epoch: 199, iters: 2400, time: 0.014, data: 0.016) , G_GAN: 1.126, G_L1: 4.996, D_real: 0.597, D_fake: 0.398
+2025-11-17 03:04:15,370 - INFO - [Rank 0] (epoch: 199, iters: 2800, time: 0.015, data: 0.000) , G_GAN: 1.238, G_L1: 5.361, D_real: 0.475, D_fake: 0.385
+2025-11-17 03:05:03,971 - INFO - [Rank 0] (epoch: 199, iters: 3200, time: 0.028, data: 0.000) , G_GAN: 1.195, G_L1: 5.504, D_real: 0.635, D_fake: 0.374
+2025-11-17 03:05:35,689 - INFO - [Rank 0] (epoch: 199, iters: 3600, time: 0.012, data: 0.016) , G_GAN: 1.183, G_L1: 6.715, D_real: 0.461, D_fake: 0.379
+2025-11-17 03:06:19,693 - INFO - [Rank 0] (epoch: 199, iters: 4000, time: 0.015, data: 18.275) , G_GAN: 1.117, G_L1: 4.647, D_real: 0.585, D_fake: 0.402
+2025-11-17 03:07:05,216 - INFO - [Rank 0] (epoch: 199, iters: 4400, time: 0.023, data: 0.000) , G_GAN: 1.182, G_L1: 4.092, D_real: 0.605, D_fake: 0.370
+2025-11-17 03:07:30,182 - INFO - [Rank 0] (epoch: 199, iters: 4800, time: 0.014, data: 0.016) , G_GAN: 1.112, G_L1: 5.011, D_real: 0.528, D_fake: 0.408
+2025-11-17 03:08:20,722 - INFO - [Rank 0] (epoch: 199, iters: 5200, time: 0.065, data: 0.000) , G_GAN: 1.174, G_L1: 5.965, D_real: 0.443, D_fake: 0.410
+2025-11-17 03:08:20,722 - INFO - Saving latest model (epoch 199, total_iters 370000)
+2025-11-17 03:08:48,049 - INFO - [Rank 0] (epoch: 199, iters: 5600, time: 0.013, data: 0.016) , G_GAN: 1.268, G_L1: 6.250, D_real: 0.414, D_fake: 0.364
+2025-11-17 03:09:36,809 - INFO - [Rank 0] (epoch: 199, iters: 6000, time: 0.014, data: 0.016) , G_GAN: 1.095, G_L1: 3.730, D_real: 0.655, D_fake: 0.411
+2025-11-17 03:10:02,508 - INFO - [Rank 0] (epoch: 199, iters: 6400, time: 0.015, data: 0.016) , G_GAN: 1.172, G_L1: 6.001, D_real: 0.490, D_fake: 0.382
+2025-11-17 03:10:51,266 - INFO - [Rank 0] (epoch: 199, iters: 6800, time: 0.014, data: 4.315) , G_GAN: 1.154, G_L1: 5.551, D_real: 0.465, D_fake: 0.388
+2025-11-17 03:11:35,991 - INFO - [Rank 0] (epoch: 199, iters: 7200, time: 0.034, data: 0.016) , G_GAN: 1.141, G_L1: 4.166, D_real: 0.555, D_fake: 0.403
+2025-11-17 03:11:49,543 - INFO - [Rank 0] (epoch: 199, iters: 7600, time: 0.014, data: 0.016) , G_GAN: 1.122, G_L1: 7.341, D_real: 0.438, D_fake: 0.405
+2025-11-17 03:11:50,606 - INFO - Learning rate updated to: 0.000004
+2025-11-17 03:11:50,606 - INFO - === EPOCH 199 COMPLETED === Time: 774s
+2025-11-17 03:11:50,606 - INFO - === EPOCH 200 STARTED ===
+2025-11-17 03:13:20,750 - INFO - [Rank 0] (epoch: 200, iters: 400, time: 0.033, data: 62.740) , G_GAN: 1.219, G_L1: 6.243, D_real: 0.538, D_fake: 0.384
+2025-11-17 03:14:06,054 - INFO - [Rank 0] (epoch: 200, iters: 800, time: 0.012, data: 0.000) , G_GAN: 1.268, G_L1: 4.408, D_real: 0.607, D_fake: 0.365
+2025-11-17 03:14:32,757 - INFO - [Rank 0] (epoch: 200, iters: 1200, time: 0.016, data: 0.016) , G_GAN: 1.138, G_L1: 5.687, D_real: 0.434, D_fake: 0.398
+2025-11-17 03:15:22,346 - INFO - [Rank 0] (epoch: 200, iters: 1600, time: 0.041, data: 1.266) , G_GAN: 1.235, G_L1: 3.733, D_real: 0.651, D_fake: 0.372
+2025-11-17 03:15:47,497 - INFO - [Rank 0] (epoch: 200, iters: 2000, time: 0.014, data: 0.016) , G_GAN: 1.122, G_L1: 7.318, D_real: 0.257, D_fake: 0.408
+2025-11-17 03:16:34,381 - INFO - [Rank 0] (epoch: 200, iters: 2400, time: 0.015, data: 0.000) , G_GAN: 1.115, G_L1: 4.737, D_real: 0.586, D_fake: 0.405
+2025-11-17 03:17:04,224 - INFO - [Rank 0] (epoch: 200, iters: 2800, time: 0.015, data: 0.016) , G_GAN: 1.099, G_L1: 6.860, D_real: 0.490, D_fake: 0.415
+2025-11-17 03:17:49,169 - INFO - [Rank 0] (epoch: 200, iters: 3200, time: 0.016, data: 0.000) , G_GAN: 1.170, G_L1: 3.087, D_real: 0.634, D_fake: 0.379
+2025-11-17 03:18:32,159 - INFO - [Rank 0] (epoch: 200, iters: 3600, time: 0.077, data: 1.798) , G_GAN: 1.169, G_L1: 6.706, D_real: 0.489, D_fake: 0.383
+2025-11-17 03:19:06,973 - INFO - [Rank 0] (epoch: 200, iters: 4000, time: 0.012, data: 0.547) , G_GAN: 1.085, G_L1: 5.562, D_real: 0.439, D_fake: 0.423
+2025-11-17 03:19:49,651 - INFO - [Rank 0] (epoch: 200, iters: 4400, time: 0.018, data: 0.016) , G_GAN: 1.107, G_L1: 5.026, D_real: 0.542, D_fake: 0.412
+2025-11-17 03:20:21,058 - INFO - [Rank 0] (epoch: 200, iters: 4800, time: 0.014, data: 1.860) , G_GAN: 1.255, G_L1: 6.283, D_real: 0.404, D_fake: 0.381
+2025-11-17 03:21:08,412 - INFO - [Rank 0] (epoch: 200, iters: 5200, time: 0.028, data: 0.016) , G_GAN: 1.135, G_L1: 5.226, D_real: 0.456, D_fake: 0.398
+2025-11-17 03:21:35,725 - INFO - [Rank 0] (epoch: 200, iters: 5600, time: 0.029, data: 0.016) , G_GAN: 1.127, G_L1: 5.093, D_real: 0.516, D_fake: 0.400
+2025-11-17 03:22:24,062 - INFO - [Rank 0] (epoch: 200, iters: 6000, time: 0.013, data: 0.016) , G_GAN: 1.163, G_L1: 8.811, D_real: 0.213, D_fake: 0.390
+2025-11-17 03:22:52,028 - INFO - [Rank 0] (epoch: 200, iters: 6400, time: 0.016, data: 0.016) , G_GAN: 1.228, G_L1: 5.931, D_real: 0.550, D_fake: 0.386
+2025-11-17 03:23:40,174 - INFO - [Rank 0] (epoch: 200, iters: 6800, time: 0.014, data: 8.676) , G_GAN: 1.150, G_L1: 8.399, D_real: 0.435, D_fake: 0.403
+2025-11-17 03:24:22,462 - INFO - [Rank 0] (epoch: 200, iters: 7200, time: 0.016, data: 0.016) , G_GAN: 1.156, G_L1: 7.422, D_real: 0.326, D_fake: 0.390
+2025-11-17 03:24:40,279 - INFO - [Rank 0] (epoch: 200, iters: 7600, time: 0.020, data: 0.016) , G_GAN: 1.160, G_L1: 4.828, D_real: 0.509, D_fake: 0.383
+2025-11-17 03:24:40,279 - INFO - Saving latest model (epoch 200, total_iters 380000)
+2025-11-17 03:24:41,498 - INFO - Learning rate updated to: 0.000000
+2025-11-17 03:24:41,498 - INFO - Saving model at end of epoch 200, iters 380000
+2025-11-17 03:24:41,857 - INFO - === EPOCH 200 COMPLETED === Time: 771s
+2025-11-17 03:24:41,857 - INFO - === TRAINING COMPLETED SUCCESSFULLY ===
+2025-11-17 03:24:41,857 - INFO - === TRAINING SESSION ENDED ===

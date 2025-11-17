@@ -184,7 +184,16 @@ class RobustNiftiDataset(BaseDataset):
                 A = self.transform(A)
                 B = self.transform(B)
 
-                return {'A': A, 'B': B, 'A_paths': A_path, 'B_paths': B_path}
+                # Create unique identifiers for each slice
+                patient_name = os.path.splitext(os.path.basename(A_path))[0]
+                slice_identifier = f"{patient_name}_slice{slice_idx:03d}"
+                
+                return {
+                    'A': A, 
+                    'B': B, 
+                    'A_paths': slice_identifier, 
+                    'B_paths': slice_identifier
+                }
                 
             except Exception as e:
                 self.logger.warning(f"Error loading sample {index} (retry {retry+1}): {str(e)}")
