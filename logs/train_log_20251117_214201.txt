@@ -1,0 +1,5 @@
+2025-11-17 21:42:01,657 - INFO - === TRAINING STARTED ===
+2025-11-17 21:42:01,658 - INFO - Command: python train.py --dataroot D:\ct_phases_datasets\ct_phase1_dataset --name ct_phase1_generator_5090 --model pix2pix --dataset_mode robust_nifti --skip_corrupted --preprocess none --input_nc 1 --output_nc 1 --axial_slice --norm instance --netG unet_512 --batch_size 16 --lambda_L1 50 --lr 0.0001 --resize_to 512 --display_freq 50 --save_epoch_freq 5 --num_threads 16 --continue_train --load_pretrain ct_phase0_generator_5090 --epoch_count 1 --n_epochs 25 --n_epochs_decay 25
+2025-11-17 21:42:01,658 - INFO - Log file: logs/train_log_20251117_214201.txt
+2025-11-17 21:42:01,658 - INFO - Working directory: C:\Users\Wahbi Saied\Documents\GitHub\pix2pix
+2025-11-17 21:42:01,692 - INFO - === TRAINING SESSION ENDED ===

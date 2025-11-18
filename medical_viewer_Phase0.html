@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Image Comparison</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #f5f5f5; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+        .controls { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .control-group { margin-bottom: 15px; }
+        label { font-weight: bold; margin-right: 10px; }
+        select, input { padding: 8px; margin: 5px; border: 1px solid #ddd; border-radius: 4px; }
+        .checkbox-group { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 10px; }
+        .checkbox-item { display: flex; align-items: center; }
+        .viewer { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .column-title { text-align: center; font-weight: bold; margin-bottom: 15px; padding: 10px; background: #007bff; color: white; border-radius: 4px; }
+        .slice-row { display: flex; align-items: center; justify-content: center; margin-bottom: 15px; gap: 20px; }
+        .slice-row { position: relative; }
+        .slice-row img { width: var(--image-size, 300px); height: var(--image-size, 300px); object-fit: contain; border: 1px solid #ddd; border-radius: 4px; transform: rotate(90deg); }
+        .epoch-headers { display: flex; gap: var(--image-gap, 20px); justify-content: center; margin-bottom: 15px; }
+        .epoch-header { text-align: center; width: var(--image-size, 300px); }
+        .epoch-label { font-size: 14px; font-weight: bold; }
+        .avg-label { color: #28a745; }
+        .phase-label { color: #dc3545; }
+        .epoch-num-label { color: #007bff; }
+        .slice-number { position: absolute; left: -50px; top: 50%; transform: translateY(-50%); font-size: 14px; font-weight: bold; color: #333; }
+        .viewer { width: fit-content; margin: 0 auto; }
+        .size-control { margin-bottom: 15px; }
+        .size-slider { width: 200px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center; margin-bottom: 30px; color: #333;">Medical Image Comparison Tool</h1>
+        
+        <div class="controls">
+
+            
+            <div class="control-group" style="display: flex; align-items: flex-start; justify-content: space-between;">
+                <div>
+                    <label for="file-select">CT File:</label>
+                    <select id="file-select">
+                        <!-- Files will be populated dynamically -->
+                    </select>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 15px;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <label for="size-slider">Image Size:</label>
+                        <input type="range" id="size-slider" class="size-slider" min="200" max="500" value="300" step="25">
+                        <span id="size-value">300px</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="control-group" style="display: flex; align-items: center; justify-content: space-between;">
+                <div>
+                    <label>Training Epochs to Compare:</label>
+                    <div class="checkbox-group" style="margin-top: 10px;">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="epoch50" value="50">
+                            <label for="epoch50">Epoch 50</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="epoch100" value="100" checked>
+                            <label for="epoch100">Epoch 100</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="epoch150" value="150">
+                            <label for="epoch150">Epoch 150</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="epoch200" value="200">
+                            <label for="epoch200">Epoch 200</label>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: flex-end;">
+                    <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                        <button id="toggle-avg" class="toggle-btn" style="padding: 5px 10px; border: 1px solid #28a745; background: #28a745; color: white; border-radius: 4px; cursor: pointer;">Hide Avg</button>
+                        <button id="toggle-phase" class="toggle-btn" style="padding: 5px 10px; border: 1px solid #dc3545; background: #dc3545; color: white; border-radius: 4px; cursor: pointer;">Hide Target</button>
+                    </div>
+                    <div style="font-size: 12px; color: #666;">
+                        Made by Wahbi Saied <span style="color: #e74c3c;">♥</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="viewer">
+            <div class="column-title">Medical Image Comparison</div>
+            <div id="epoch-headers"></div>
+            <div id="all-images"></div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            <div style="font-size: 24px; font-weight: bold; color: #007bff; margin-bottom: 15px;">
+                Smart Lab FMM
+            </div>
+            <div style="font-size: 14px; color: #666; border-top: 1px solid #eee; padding-top: 15px;">
+                Made by Wahbi Saied <span style="color: #e74c3c;">♥</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const fileSelect = document.getElementById('file-select');
+        const epochCheckboxes = document.querySelectorAll('input[type="checkbox"]');
+        const epochHeaders = document.getElementById('epoch-headers');
+        const allImages = document.getElementById('all-images');
+        const sizeSlider = document.getElementById('size-slider');
+        const sizeValue = document.getElementById('size-value');
+        const viewer = document.querySelector('.viewer');
+        const toggleAvgBtn = document.getElementById('toggle-avg');
+        const togglePhaseBtn = document.getElementById('toggle-phase');
+        
+        let showAvg = true;
+        let showPhase = true;
+
+        // Available files from your results
+        const availableFiles = [
+            'patient_12', 'patient_13', 'patient_2', 'patient_21', 'patient_22', 
+            'patient_25', 'patient_35', 'patient_38', 'patient_41', 'patient_59', 
+            'patient_72', 'patient_75'
+        ];
+        
+        // Populate file selector
+        function populateFileSelector() {
+            fileSelect.innerHTML = '';
+            availableFiles.forEach(file => {
+                const option = document.createElement('option');
+                option.value = file;
+                option.textContent = file;
+                fileSelect.appendChild(option);
+            });
+        }
+
+        function updateImages() {
+            const selectedFile = fileSelect.value;
+            const selectedEpochs = Array.from(epochCheckboxes)
+                .filter(cb => cb.checked)
+                .map(cb => cb.value);
+
+            // Clear previous content
+            epochHeaders.innerHTML = '';
+            allImages.innerHTML = '';
+
+            // Create headers row
+            const headerRow = document.createElement('div');
+            headerRow.className = 'epoch-headers';
+            
+            // Add Avg header
+            if (showAvg) {
+                const avgHeader = document.createElement('div');
+                avgHeader.className = 'epoch-header';
+                avgHeader.innerHTML = '<div class="epoch-label avg-label">Avg</div>';
+                headerRow.appendChild(avgHeader);
+            }
+            
+            // Add epoch headers
+            selectedEpochs.forEach(epoch => {
+                const epochHeader = document.createElement('div');
+                epochHeader.className = 'epoch-header';
+                epochHeader.innerHTML = `<div class="epoch-label epoch-num-label">Epoch ${epoch}</div>`;
+                headerRow.appendChild(epochHeader);
+            });
+            
+            // Add Target header
+            if (showPhase) {
+                const phaseHeader = document.createElement('div');
+                phaseHeader.className = 'epoch-header';
+                phaseHeader.innerHTML = '<div class="epoch-label phase-label">Target</div>';
+                headerRow.appendChild(phaseHeader);
+            }
+            
+            epochHeaders.appendChild(headerRow);
+
+            // Create image rows - check how many slices exist
+            for (let slice = 0; slice < 200; slice++) { // Increased to 200 to handle more slices
+                const sliceNum = slice.toString().padStart(3, '0');
+                const sliceRow = document.createElement('div');
+                sliceRow.className = 'slice-row';
+                
+                let hasImages = false;
+                
+                // Add slice number
+                const sliceNumber = document.createElement('div');
+                sliceNumber.className = 'slice-number';
+                sliceNumber.textContent = slice + 1;
+                sliceRow.appendChild(sliceNumber);
+                
+                // Avg image (testA_png)
+                if (showAvg) {
+                    const avgImg = document.createElement('img');
+                    avgImg.src = `file:///D:/viewer/testA_png/${selectedFile}_slice_${sliceNum}.png`;
+                    avgImg.onerror = function() { 
+                        this.style.display = 'none';
+                    };
+                    sliceRow.appendChild(avgImg);
+                }
+                
+                // Generated images from different epochs
+                selectedEpochs.forEach(epoch => {
+                    const epochImg = document.createElement('img');
+                    epochImg.src = `file:///D:/viewer/results_epoch_${epoch}/${selectedFile}/generated_slice_${sliceNum}.png`;
+                    epochImg.onerror = function() { 
+                        this.style.display = 'none';
+                    };
+                    epochImg.onload = function() {
+                        hasImages = true;
+                    };
+                    sliceRow.appendChild(epochImg);
+                });
+                
+                // Target image (testB_png)
+                if (showPhase) {
+                    const targetImg = document.createElement('img');
+                    targetImg.src = `file:///D:/viewer/testB_png/${selectedFile}_slice_${sliceNum}.png`;
+                    targetImg.onerror = function() { 
+                        this.style.display = 'none';
+                    };
+                    sliceRow.appendChild(targetImg);
+                }
+                
+
+                
+                // Add row and check if it has visible images
+                allImages.appendChild(sliceRow);
+                
+                // Hide empty rows after images load
+                setTimeout(() => {
+                    const visibleImages = sliceRow.querySelectorAll('img:not([style*="display: none"])');
+                    if (visibleImages.length === 0) {
+                        sliceRow.style.display = 'none';
+                    }
+                }, 500);
+            }
+        }
+
+        // Size control
+        function updateImageSize() {
+            const size = sizeSlider.value;
+            const gap = Math.max(20, size * 0.08);
+            sizeValue.textContent = size + 'px';
+            document.documentElement.style.setProperty('--image-size', size + 'px');
+            document.documentElement.style.setProperty('--image-gap', gap + 'px');
+        }
+        
+        sizeSlider.addEventListener('input', updateImageSize);
+        
+        // Toggle buttons
+        toggleAvgBtn.addEventListener('click', () => {
+            showAvg = !showAvg;
+            toggleAvgBtn.textContent = showAvg ? 'Hide Avg' : 'Show Avg';
+            toggleAvgBtn.style.background = showAvg ? '#28a745' : '#6c757d';
+            toggleAvgBtn.style.borderColor = showAvg ? '#28a745' : '#6c757d';
+            updateImages();
+        });
+        
+
+        
+        // Toggle buttons
+        toggleAvgBtn.addEventListener('click', () => {
+            showAvg = !showAvg;
+            toggleAvgBtn.textContent = showAvg ? 'Hide Avg' : 'Show Avg';
+            toggleAvgBtn.style.background = showAvg ? '#28a745' : '#6c757d';
+            toggleAvgBtn.style.borderColor = showAvg ? '#28a745' : '#6c757d';
+            updateImages();
+        });
+        
+        togglePhaseBtn.addEventListener('click', () => {
+            showPhase = !showPhase;
+            togglePhaseBtn.textContent = showPhase ? 'Hide Target' : 'Show Target';
+            togglePhaseBtn.style.background = showPhase ? '#dc3545' : '#6c757d';
+            togglePhaseBtn.style.borderColor = showPhase ? '#dc3545' : '#6c757d';
+            updateImages();
+        });
+        
+        // Event listeners
+        fileSelect.addEventListener('change', updateImages);
+        epochCheckboxes.forEach(cb => {
+            cb.addEventListener('change', updateImages);
+        });
+
+        // Initial load
+        populateFileSelector();
+        updateImageSize();
+        updateImages();
+    </script>
+</body>
+</html>
